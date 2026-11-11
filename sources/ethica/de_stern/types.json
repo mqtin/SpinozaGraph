@@ -1,0 +1,27 @@
+{
+    "name": "German (Stern)",
+    "language": "de",
+    "translator": "Jakob Stern",
+    "types": {
+        "ethica": "Ethik",
+        "pars": "Teil",
+        "definitiones": "Definitionen",
+        "definitio": "Definition",
+        "explicatio": "Erläuterung",
+        "axiomata": "Axiome",
+        "axioma": "Axiom",
+        "propositio": "Lehrsatz",
+        "demonstratio": "Beweis",
+        "corollarium": "Zusatz",
+        "aliter": "Anderer Beweis",
+        "scholium": "Anmerkung",
+        "appendix": "Anhang",
+        "praefatio": "Vorwort",
+        "lemma": "Hilfssatz",
+        "postulatum": "Postulat",
+        "postulata": "Postulate",
+        "affectuum_definitiones": "Definitionen der Affekte",
+        "affectuum_generalis_definitio": "Allgemeine Definition der Affekte",
+        "caput": "§"
+    }
+}

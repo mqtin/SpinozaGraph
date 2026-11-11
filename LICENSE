@@ -1,0 +1,30 @@
+SpinozaGraph — licenses
+
+This repository contains material under several licenses. See NOTICE.md for
+sources, authors and the notices that must be preserved.
+
+1. Code (outils/, and the JavaScript/CSS in explorer.html)
+   GNU General Public License, version 3 (GPL-3.0-only).
+   Full text: LICENSES/GPL-3.0.txt
+
+2. Project data (corrections.yaml, documentation) and the text
+   formatting taken from lou/ethica (sources/ethica/, elements/, the data
+   embedded in explorer.html)
+   Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0).
+   Full text: LICENSES/CC-BY-SA-4.0.txt
+
+3. Latin text, structure and reference metadata (sources/ethica/meta.json,
+   sources/ethica/la_spinoza/, and what is derived from them: the
+   depends_on / voir fields and Latin sections in elements/, the graph in
+   explorer.html)
+   Derived from the SpinozaBase, Baptiste Mélès' hypertext edition (itself
+   adapted from Gilles Louise's edition), published under GPL-3.0, and
+   therefore also distributed under GPL-3.0.
+
+   CC BY-SA 4.0 is one-way compatible with GPL-3.0, so explorer.html as a
+   whole may be distributed under GPL-3.0.
+
+4. The text of the Ethics (Latin, 1677) and its translations (Elwes, Appuhn,
+   Stern, Saisset, Auerbach) are in the public domain. The digitizations may
+   carry attribution requirements, reproduced in NOTICE.md and in
+   sources/ethica/*/ethica.md; they must not be removed.

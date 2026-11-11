@@ -1,0 +1,26 @@
+{
+    "name": "Latin (Orig.)",
+    "language": "la",
+    "types": {
+        "ethica": "Ethica",
+        "pars": "Pars",
+        "definitiones": "Definitiones",
+        "definitio": "Definitio",
+        "explicatio": "Explicatio",
+        "axiomata": "Axiomata",
+        "axioma": "Axioma",
+        "propositio": "Propositio",
+        "demonstratio": "Demonstratio",
+        "corollarium": "Corollarium",
+        "aliter": "Aliter",
+        "scholium": "Scholium",
+        "appendix": "Appendix",
+        "praefatio": "Praefatio",
+        "lemma": "Lemma",
+        "postulatum": "Postulatum",
+        "postulata": "Postulata",
+        "affectuum_definitiones": "Affectuum Definitiones",
+        "affectuum_generalis_definitio": "Affectuum Generalis Definitio",
+        "caput": "Caput"
+    }
+}

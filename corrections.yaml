@@ -1,0 +1,24 @@
+# Corrections apportées aux renvois de sources/ethica/meta.json.
+#
+# Les sources ne sont jamais modifiées : chaque écart est consigné ici, avec sa justification.
+# Appliquées par outils/ethica.py (generate.py, check.py, build_explorer.py).
+#
+# Champs :
+#   id      identifiant stable de la correction (c0001, c0002…), jamais réutilisé
+#   op      ajouter | retirer | reclasser
+#   de      élément qui cite (id du projet : 1p11, 1p11sc, 3ad12…)
+#   vers    élément cité
+#   type    logique | voir (pour ajouter et reclasser ; logique par défaut)
+#   note    pourquoi (obligatoire)
+#   source  où l'erreur est signalée : Gebhardt, Appuhn, Curley, lecture du latin… (obligatoire)
+#
+# Exemple :
+#   - id: c0001
+#     op: reclasser
+#     de: 4p37sc1
+#     vers: 3p59sc
+#     type: voir
+#     note: Renvoi illustratif, pas un pas de la démonstration.
+#     source: lecture du latin
+
+corrections: []

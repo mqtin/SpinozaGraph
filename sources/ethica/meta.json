@@ -1,0 +1,8447 @@
+{
+    "ethica": {
+        "id": "ethica",
+        "children": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "type": "ethica"
+    },
+    "1": {
+        "id": "1",
+        "children": [
+            "1def",
+            "1ax",
+            "1p1",
+            "1p2",
+            "1p3",
+            "1p4",
+            "1p5",
+            "1p6",
+            "1p7",
+            "1p8",
+            "1p9",
+            "1p10",
+            "1p11",
+            "1p12",
+            "1p13",
+            "1p14",
+            "1p15",
+            "1p16",
+            "1p17",
+            "1p18",
+            "1p19",
+            "1p20",
+            "1p21",
+            "1p22",
+            "1p23",
+            "1p24",
+            "1p25",
+            "1p26",
+            "1p27",
+            "1p28",
+            "1p29",
+            "1p30",
+            "1p31",
+            "1p32",
+            "1p33",
+            "1p34",
+            "1p35",
+            "1p36",
+            "1app"
+        ],
+        "type": "pars",
+        "number": 1,
+        "title": "De Deo"
+    },
+    "1app": {
+        "id": "1app",
+        "ref": [
+            "1p16",
+            "1p32c1",
+            "1p32c2",
+            "1p21",
+            "1p22",
+            "1p23"
+        ],
+        "type": "appendix"
+    },
+    "1ax": {
+        "id": "1ax",
+        "children": [
+            "1ax1",
+            "1ax2",
+            "1ax3",
+            "1ax4",
+            "1ax5",
+            "1ax6",
+            "1ax7"
+        ],
+        "type": "axiomata"
+    },
+    "1ax1": {
+        "id": "1ax1",
+        "type": "axioma",
+        "number": 1
+    },
+    "1ax2": {
+        "id": "1ax2",
+        "type": "axioma",
+        "number": 2
+    },
+    "1ax3": {
+        "id": "1ax3",
+        "type": "axioma",
+        "number": 3
+    },
+    "1ax4": {
+        "id": "1ax4",
+        "type": "axioma",
+        "number": 4
+    },
+    "1ax5": {
+        "id": "1ax5",
+        "type": "axioma",
+        "number": 5
+    },
+    "1ax6": {
+        "id": "1ax6",
+        "type": "axioma",
+        "number": 6
+    },
+    "1ax7": {
+        "id": "1ax7",
+        "type": "axioma",
+        "number": 7
+    },
+    "1def": {
+        "id": "1def",
+        "children": [
+            "1def1",
+            "1def2",
+            "1def3",
+            "1def4",
+            "1def5",
+            "1def6",
+            "1def7",
+            "1def8"
+        ],
+        "type": "definitiones"
+    },
+    "1def1": {
+        "id": "1def1",
+        "type": "definitio",
+        "number": 1
+    },
+    "1def2": {
+        "id": "1def2",
+        "type": "definitio",
+        "number": 2
+    },
+    "1def3": {
+        "id": "1def3",
+        "type": "definitio",
+        "number": 3
+    },
+    "1def4": {
+        "id": "1def4",
+        "type": "definitio",
+        "number": 4
+    },
+    "1def5": {
+        "id": "1def5",
+        "type": "definitio",
+        "number": 5
+    },
+    "1def6": {
+        "id": "1def6",
+        "children": [
+            "1def6e"
+        ],
+        "type": "definitio",
+        "number": 6
+    },
+    "1def6e": {
+        "id": "1def6e",
+        "type": "explicatio"
+    },
+    "1def7": {
+        "id": "1def7",
+        "type": "definitio",
+        "number": 7
+    },
+    "1def8": {
+        "id": "1def8",
+        "children": [
+            "1def8e"
+        ],
+        "type": "definitio",
+        "number": 8
+    },
+    "1def8e": {
+        "id": "1def8e",
+        "type": "explicatio"
+    },
+    "1p1": {
+        "id": "1p1",
+        "children": [
+            "1p1d"
+        ],
+        "type": "propositio",
+        "number": 1
+    },
+    "1p10": {
+        "id": "1p10",
+        "children": [
+            "1p10d",
+            "1p10sc"
+        ],
+        "type": "propositio",
+        "number": 10
+    },
+    "1p10d": {
+        "id": "1p10d",
+        "ref": [
+            "1def4",
+            "1def3"
+        ],
+        "type": "demonstratio"
+    },
+    "1p10sc": {
+        "id": "1p10sc",
+        "ref": [
+            "1def6"
+        ],
+        "type": "scholium"
+    },
+    "1p11": {
+        "id": "1p11",
+        "children": [
+            "1p11d",
+            "1p11a1",
+            "1p11a2",
+            "1p11sc"
+        ],
+        "type": "propositio",
+        "number": 11
+    },
+    "1p11a1": {
+        "id": "1p11a1",
+        "ref": [
+            "1p7",
+            "1p2"
+        ],
+        "type": "aliter",
+        "number": 1
+    },
+    "1p11a2": {
+        "id": "1p11a2",
+        "ref": [
+            "1ax1",
+            "1p7",
+            "1def6"
+        ],
+        "type": "aliter",
+        "number": 2
+    },
+    "1p11d": {
+        "id": "1p11d",
+        "ref": [
+            "1ax7",
+            "1p7"
+        ],
+        "type": "demonstratio"
+    },
+    "1p11sc": {
+        "id": "1p11sc",
+        "ref": [
+            "1p6"
+        ],
+        "type": "scholium"
+    },
+    "1p12": {
+        "id": "1p12",
+        "children": [
+            "1p12d"
+        ],
+        "type": "propositio",
+        "number": 12
+    },
+    "1p12d": {
+        "id": "1p12d",
+        "ref": [
+            "1p8",
+            "1p6",
+            "1p5",
+            "1p6",
+            "1p2",
+            "1def4",
+            "1p10",
+            "1p7"
+        ],
+        "type": "demonstratio"
+    },
+    "1p13": {
+        "id": "1p13",
+        "children": [
+            "1p13d",
+            "1p13c"
+        ],
+        "type": "propositio",
+        "number": 13
+    },
+    "1p13c": {
+        "id": "1p13c",
+        "children": [
+            "1p13csc"
+        ],
+        "type": "corollarium"
+    },
+    "1p13csc": {
+        "id": "1p13csc",
+        "ref": [
+            "1p8"
+        ],
+        "type": "scholium"
+    },
+    "1p13d": {
+        "id": "1p13d",
+        "ref": [
+            "1p5",
+            "1p11"
+        ],
+        "type": "demonstratio"
+    },
+    "1p14": {
+        "id": "1p14",
+        "children": [
+            "1p14d",
+            "1p14c1",
+            "1p14c2"
+        ],
+        "type": "propositio",
+        "number": 14
+    },
+    "1p14c1": {
+        "id": "1p14c1",
+        "ref": [
+            "1def6",
+            "1p10sc"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "1p14c2": {
+        "id": "1p14c2",
+        "ref": [
+            "1ax1"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "1p14d": {
+        "id": "1p14d",
+        "ref": [
+            "1def6",
+            "1p11",
+            "1p5"
+        ],
+        "type": "demonstratio"
+    },
+    "1p15": {
+        "id": "1p15",
+        "children": [
+            "1p15d",
+            "1p15sc"
+        ],
+        "type": "propositio",
+        "number": 15
+    },
+    "1p15d": {
+        "id": "1p15d",
+        "ref": [
+            "1p14",
+            "1def3",
+            "1def5",
+            "1ax1"
+        ],
+        "type": "demonstratio"
+    },
+    "1p15sc": {
+        "id": "1p15sc",
+        "ref": [
+            "1p6c",
+            "1p8sc2",
+            "1p14",
+            "1p12",
+            "1p13c",
+            "1p12",
+            "1p8",
+            "1p5",
+            "1p12",
+            "1p14"
+        ],
+        "type": "scholium"
+    },
+    "1p16": {
+        "id": "1p16",
+        "children": [
+            "1p16d",
+            "1p16c1",
+            "1p16c2",
+            "1p16c3"
+        ],
+        "type": "propositio",
+        "number": 16
+    },
+    "1p16c1": {
+        "id": "1p16c1",
+        "type": "corollarium",
+        "number": 1
+    },
+    "1p16c2": {
+        "id": "1p16c2",
+        "type": "corollarium",
+        "number": 2
+    },
+    "1p16c3": {
+        "id": "1p16c3",
+        "type": "corollarium",
+        "number": 3
+    },
+    "1p16d": {
+        "id": "1p16d",
+        "ref": [
+            "1def6"
+        ],
+        "type": "demonstratio"
+    },
+    "1p17": {
+        "id": "1p17",
+        "children": [
+            "1p17d",
+            "1p17c1",
+            "1p17c2"
+        ],
+        "type": "propositio",
+        "number": 17
+    },
+    "1p17c1": {
+        "id": "1p17c1",
+        "type": "corollarium",
+        "number": 1
+    },
+    "1p17c2": {
+        "id": "1p17c2",
+        "children": [
+            "1p17c2sc"
+        ],
+        "ref": [
+            "1p11",
+            "1p14c1",
+            "1p17",
+            "1def7"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "1p17c2sc": {
+        "id": "1p17c2sc",
+        "ref": [
+            "1p16",
+            "1p16c1"
+        ],
+        "type": "scholium"
+    },
+    "1p17d": {
+        "id": "1p17d",
+        "ref": [
+            "1p16",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "1p18": {
+        "id": "1p18",
+        "children": [
+            "1p18d"
+        ],
+        "type": "propositio",
+        "number": 18
+    },
+    "1p18d": {
+        "id": "1p18d",
+        "ref": [
+            "1p15",
+            "1p16c1",
+            "1p14",
+            "1def3"
+        ],
+        "type": "demonstratio"
+    },
+    "1p19": {
+        "id": "1p19",
+        "children": [
+            "1p19d",
+            "1p19sc"
+        ],
+        "type": "propositio",
+        "number": 19
+    },
+    "1p19d": {
+        "id": "1p19d",
+        "ref": [
+            "1def6",
+            "1p11",
+            "1p7",
+            "1def8",
+            "1def4",
+            "1p7"
+        ],
+        "type": "demonstratio"
+    },
+    "1p19sc": {
+        "id": "1p19sc",
+        "ref": [
+            "1p11"
+        ],
+        "type": "scholium"
+    },
+    "1p1d": {
+        "id": "1p1d",
+        "ref": [
+            "1def3",
+            "1def5"
+        ],
+        "type": "demonstratio"
+    },
+    "1p2": {
+        "id": "1p2",
+        "children": [
+            "1p2d"
+        ],
+        "type": "propositio",
+        "number": 2
+    },
+    "1p20": {
+        "id": "1p20",
+        "children": [
+            "1p20d",
+            "1p20c1",
+            "1p20c2"
+        ],
+        "type": "propositio",
+        "number": 20
+    },
+    "1p20c1": {
+        "id": "1p20c1",
+        "type": "corollarium",
+        "number": 1
+    },
+    "1p20c2": {
+        "id": "1p20c2",
+        "ref": [
+            "1p20"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "1p20d": {
+        "id": "1p20d",
+        "ref": [
+            "1p19",
+            "1def8",
+            "1def4"
+        ],
+        "type": "demonstratio"
+    },
+    "1p21": {
+        "id": "1p21",
+        "children": [
+            "1p21d"
+        ],
+        "type": "propositio",
+        "number": 21
+    },
+    "1p21d": {
+        "id": "1p21d",
+        "ref": [
+            "1p11",
+            "1def2",
+            "1p11",
+            "1p11",
+            "1p20c2"
+        ],
+        "type": "demonstratio"
+    },
+    "1p22": {
+        "id": "1p22",
+        "children": [
+            "1p22d"
+        ],
+        "type": "propositio",
+        "number": 22
+    },
+    "1p22d": {
+        "id": "1p22d",
+        "ref": [
+            "1def2",
+            "1p11",
+            "1p20c2"
+        ],
+        "type": "demonstratio"
+    },
+    "1p23": {
+        "id": "1p23",
+        "children": [
+            "1p23d"
+        ],
+        "type": "propositio",
+        "number": 23
+    },
+    "1p23d": {
+        "id": "1p23d",
+        "ref": [
+            "1def5",
+            "1p15",
+            "1def8",
+            "1def6",
+            "1p19",
+            "1p21",
+            "1p22"
+        ],
+        "type": "demonstratio"
+    },
+    "1p24": {
+        "id": "1p24",
+        "children": [
+            "1p24d",
+            "1p24c"
+        ],
+        "type": "propositio",
+        "number": 24
+    },
+    "1p24c": {
+        "id": "1p24c",
+        "ref": [
+            "1p14c1"
+        ],
+        "type": "corollarium"
+    },
+    "1p24d": {
+        "id": "1p24d",
+        "ref": [
+            "1def1"
+        ],
+        "type": "demonstratio"
+    },
+    "1p25": {
+        "id": "1p25",
+        "children": [
+            "1p25d",
+            "1p25sc",
+            "1p25c"
+        ],
+        "type": "propositio",
+        "number": 25
+    },
+    "1p25c": {
+        "id": "1p25c",
+        "ref": [
+            "1p15",
+            "1def5"
+        ],
+        "type": "corollarium"
+    },
+    "1p25d": {
+        "id": "1p25d",
+        "ref": [
+            "1ax4",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "1p25sc": {
+        "id": "1p25sc",
+        "ref": [
+            "1p16"
+        ],
+        "type": "scholium"
+    },
+    "1p26": {
+        "id": "1p26",
+        "children": [
+            "1p26d"
+        ],
+        "type": "propositio",
+        "number": 26
+    },
+    "1p26d": {
+        "id": "1p26d",
+        "ref": [
+            "1p25",
+            "1p16"
+        ],
+        "type": "demonstratio"
+    },
+    "1p27": {
+        "id": "1p27",
+        "children": [
+            "1p27d"
+        ],
+        "type": "propositio",
+        "number": 27
+    },
+    "1p27d": {
+        "id": "1p27d",
+        "ref": [
+            "1ax3"
+        ],
+        "type": "demonstratio"
+    },
+    "1p28": {
+        "id": "1p28",
+        "children": [
+            "1p28d",
+            "1p28sc"
+        ],
+        "type": "propositio",
+        "number": 28
+    },
+    "1p28d": {
+        "id": "1p28d",
+        "ref": [
+            "1p26",
+            "1p24c",
+            "1p21",
+            "1ax1",
+            "1def3",
+            "1def5",
+            "1p25c",
+            "1p22"
+        ],
+        "type": "demonstratio"
+    },
+    "1p28sc": {
+        "id": "1p28sc",
+        "ref": [
+            "1p15",
+            "1p24c"
+        ],
+        "type": "scholium"
+    },
+    "1p29": {
+        "id": "1p29",
+        "children": [
+            "1p29d",
+            "1p29sc"
+        ],
+        "type": "propositio",
+        "number": 29
+    },
+    "1p29d": {
+        "id": "1p29d",
+        "ref": [
+            "1p15",
+            "1p11",
+            "1p16",
+            "1p21",
+            "1p27",
+            "1p24c",
+            "1p26",
+            "1p26",
+            "1p27"
+        ],
+        "type": "demonstratio"
+    },
+    "1p29sc": {
+        "id": "1p29sc",
+        "ref": [
+            "1p14c1",
+            "1p17c2"
+        ],
+        "type": "scholium"
+    },
+    "1p2d": {
+        "id": "1p2d",
+        "ref": [
+            "1def3"
+        ],
+        "type": "demonstratio"
+    },
+    "1p3": {
+        "id": "1p3",
+        "children": [
+            "1p3d"
+        ],
+        "type": "propositio",
+        "number": 3
+    },
+    "1p30": {
+        "id": "1p30",
+        "children": [
+            "1p30d"
+        ],
+        "type": "propositio",
+        "number": 30
+    },
+    "1p30d": {
+        "id": "1p30d",
+        "ref": [
+            "1ax6",
+            "1p14c1",
+            "1p15",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "1p31": {
+        "id": "1p31",
+        "children": [
+            "1p31d",
+            "1p31sc"
+        ],
+        "type": "propositio",
+        "number": 31
+    },
+    "1p31d": {
+        "id": "1p31d",
+        "ref": [
+            "1def5",
+            "1p15",
+            "1def6",
+            "1p29sc"
+        ],
+        "type": "demonstratio"
+    },
+    "1p31sc": {
+        "id": "1p31sc",
+        "type": "scholium"
+    },
+    "1p32": {
+        "id": "1p32",
+        "children": [
+            "1p32d",
+            "1p32c1",
+            "1p32c2"
+        ],
+        "type": "propositio",
+        "number": 32
+    },
+    "1p32c1": {
+        "id": "1p32c1",
+        "type": "corollarium",
+        "number": 1
+    },
+    "1p32c2": {
+        "id": "1p32c2",
+        "ref": [
+            "1p29"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "1p32d": {
+        "id": "1p32d",
+        "ref": [
+            "1p28",
+            "1p23",
+            "1def7"
+        ],
+        "type": "demonstratio"
+    },
+    "1p33": {
+        "id": "1p33",
+        "children": [
+            "1p33d",
+            "1p33sc1",
+            "1p33sc2"
+        ],
+        "type": "propositio",
+        "number": 33
+    },
+    "1p33d": {
+        "id": "1p33d",
+        "ref": [
+            "1p16",
+            "1p29",
+            "1p11",
+            "1p14c1"
+        ],
+        "type": "demonstratio"
+    },
+    "1p33sc1": {
+        "id": "1p33sc1",
+        "type": "scholium",
+        "number": 1
+    },
+    "1p33sc2": {
+        "id": "1p33sc2",
+        "ref": [
+            "1def7",
+            "1p17c2sc"
+        ],
+        "type": "scholium",
+        "number": 2
+    },
+    "1p34": {
+        "id": "1p34",
+        "children": [
+            "1p34d"
+        ],
+        "type": "propositio",
+        "number": 34
+    },
+    "1p34d": {
+        "id": "1p34d",
+        "ref": [
+            "1p11",
+            "1p16",
+            "1p16c1"
+        ],
+        "type": "demonstratio"
+    },
+    "1p35": {
+        "id": "1p35",
+        "children": [
+            "1p35d"
+        ],
+        "type": "propositio",
+        "number": 35
+    },
+    "1p35d": {
+        "id": "1p35d",
+        "ref": [
+            "1p34"
+        ],
+        "type": "demonstratio"
+    },
+    "1p36": {
+        "id": "1p36",
+        "children": [
+            "1p36d"
+        ],
+        "type": "propositio",
+        "number": 36
+    },
+    "1p36d": {
+        "id": "1p36d",
+        "ref": [
+            "1p25c",
+            "1p34",
+            "1p16"
+        ],
+        "type": "demonstratio"
+    },
+    "1p3d": {
+        "id": "1p3d",
+        "ref": [
+            "1ax5",
+            "1ax4"
+        ],
+        "type": "demonstratio"
+    },
+    "1p4": {
+        "id": "1p4",
+        "children": [
+            "1p4d"
+        ],
+        "type": "propositio",
+        "number": 4
+    },
+    "1p4d": {
+        "id": "1p4d",
+        "ref": [
+            "1ax1",
+            "1def3",
+            "1def5",
+            "1def4"
+        ],
+        "type": "demonstratio"
+    },
+    "1p5": {
+        "id": "1p5",
+        "children": [
+            "1p5d"
+        ],
+        "type": "propositio",
+        "number": 5
+    },
+    "1p5d": {
+        "id": "1p5d",
+        "ref": [
+            "1p4",
+            "1p1",
+            "1def3",
+            "1ax6",
+            "1p4"
+        ],
+        "type": "demonstratio"
+    },
+    "1p6": {
+        "id": "1p6",
+        "children": [
+            "1p6d",
+            "1p6c"
+        ],
+        "type": "propositio",
+        "number": 6
+    },
+    "1p6c": {
+        "id": "1p6c",
+        "children": [
+            "1p6ca"
+        ],
+        "ref": [
+            "1ax1",
+            "1def3",
+            "1def5",
+            "1p5"
+        ],
+        "type": "corollarium"
+    },
+    "1p6ca": {
+        "id": "1p6ca",
+        "ref": [
+            "1ax4",
+            "1def3"
+        ],
+        "type": "aliter"
+    },
+    "1p6d": {
+        "id": "1p6d",
+        "ref": [
+            "1p5",
+            "1p2",
+            "1p3"
+        ],
+        "type": "demonstratio"
+    },
+    "1p7": {
+        "id": "1p7",
+        "children": [
+            "1p7d"
+        ],
+        "type": "propositio",
+        "number": 7
+    },
+    "1p7d": {
+        "id": "1p7d",
+        "ref": [
+            "1p6c",
+            "1def1"
+        ],
+        "type": "demonstratio"
+    },
+    "1p8": {
+        "id": "1p8",
+        "children": [
+            "1p8d",
+            "1p8sc1",
+            "1p8sc2"
+        ],
+        "type": "propositio",
+        "number": 8
+    },
+    "1p8d": {
+        "id": "1p8d",
+        "ref": [
+            "1p5",
+            "1p7",
+            "1def2",
+            "1p7",
+            "1p5"
+        ],
+        "type": "demonstratio"
+    },
+    "1p8sc1": {
+        "id": "1p8sc1",
+        "ref": [
+            "1p7"
+        ],
+        "type": "scholium",
+        "number": 1
+    },
+    "1p8sc2": {
+        "id": "1p8sc2",
+        "ref": [
+            "1p7",
+            "1p7"
+        ],
+        "type": "scholium",
+        "number": 2
+    },
+    "1p9": {
+        "id": "1p9",
+        "children": [
+            "1p9d"
+        ],
+        "type": "propositio",
+        "number": 9
+    },
+    "1p9d": {
+        "id": "1p9d",
+        "ref": [
+            "1def4"
+        ],
+        "type": "demonstratio"
+    },
+    "2": {
+        "id": "2",
+        "children": [
+            "2pr",
+            "2def",
+            "2ax",
+            "2p1",
+            "2p2",
+            "2p3",
+            "2p4",
+            "2p5",
+            "2p6",
+            "2p7",
+            "2p8",
+            "2p9",
+            "2p10",
+            "2p11",
+            "2p12",
+            "2p13",
+            "2p14",
+            "2p15",
+            "2p16",
+            "2p17",
+            "2p18",
+            "2p19",
+            "2p20",
+            "2p21",
+            "2p22",
+            "2p23",
+            "2p24",
+            "2p25",
+            "2p26",
+            "2p27",
+            "2p28",
+            "2p29",
+            "2p30",
+            "2p31",
+            "2p32",
+            "2p33",
+            "2p34",
+            "2p35",
+            "2p36",
+            "2p37",
+            "2p38",
+            "2p39",
+            "2p40",
+            "2p41",
+            "2p42",
+            "2p43",
+            "2p44",
+            "2p45",
+            "2p46",
+            "2p47",
+            "2p48",
+            "2p49"
+        ],
+        "type": "pars",
+        "number": 2,
+        "title": "De natura et origine mentis"
+    },
+    "2ax": {
+        "id": "2ax",
+        "children": [
+            "2ax1",
+            "2ax2",
+            "2ax3",
+            "2ax4",
+            "2ax5"
+        ],
+        "type": "axiomata"
+    },
+    "2ax1": {
+        "id": "2ax1",
+        "type": "axioma",
+        "number": 1
+    },
+    "2ax2": {
+        "id": "2ax2",
+        "type": "axioma",
+        "number": 2
+    },
+    "2ax3": {
+        "id": "2ax3",
+        "type": "axioma",
+        "number": 3
+    },
+    "2ax4": {
+        "id": "2ax4",
+        "type": "axioma",
+        "number": 4
+    },
+    "2ax5": {
+        "id": "2ax5",
+        "ref": [
+            "2p13post1",
+            "2p13post2",
+            "2p13post3",
+            "2p13post4",
+            "2p13post5",
+            "2p13post6"
+        ],
+        "type": "axioma",
+        "number": 5
+    },
+    "2def": {
+        "id": "2def",
+        "children": [
+            "2def1",
+            "2def2",
+            "2def3",
+            "2def4",
+            "2def5",
+            "2def6",
+            "2def7"
+        ],
+        "type": "definitiones"
+    },
+    "2def1": {
+        "id": "2def1",
+        "ref": [
+            "1p25c"
+        ],
+        "type": "definitio",
+        "number": 1
+    },
+    "2def2": {
+        "id": "2def2",
+        "type": "definitio",
+        "number": 2
+    },
+    "2def3": {
+        "id": "2def3",
+        "children": [
+            "2def3e"
+        ],
+        "type": "definitio",
+        "number": 3
+    },
+    "2def3e": {
+        "id": "2def3e",
+        "type": "explicatio"
+    },
+    "2def4": {
+        "id": "2def4",
+        "children": [
+            "2def4e"
+        ],
+        "type": "definitio",
+        "number": 4
+    },
+    "2def4e": {
+        "id": "2def4e",
+        "type": "explicatio"
+    },
+    "2def5": {
+        "id": "2def5",
+        "children": [
+            "2def5e"
+        ],
+        "type": "definitio",
+        "number": 5
+    },
+    "2def5e": {
+        "id": "2def5e",
+        "type": "explicatio"
+    },
+    "2def6": {
+        "id": "2def6",
+        "type": "definitio",
+        "number": 6
+    },
+    "2def7": {
+        "id": "2def7",
+        "type": "definitio",
+        "number": 7
+    },
+    "2p1": {
+        "id": "2p1",
+        "children": [
+            "2p1d",
+            "2p1sc"
+        ],
+        "type": "propositio",
+        "number": 1
+    },
+    "2p10": {
+        "id": "2p10",
+        "children": [
+            "2p10d",
+            "2p10sc",
+            "2p10c"
+        ],
+        "type": "propositio",
+        "number": 10
+    },
+    "2p10c": {
+        "id": "2p10c",
+        "children": [
+            "2p10cd",
+            "2p10csc"
+        ],
+        "type": "corollarium"
+    },
+    "2p10cd": {
+        "id": "2p10cd",
+        "ref": [
+            "2p10",
+            "1p15",
+            "1p25c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p10csc": {
+        "id": "2p10csc",
+        "type": "scholium"
+    },
+    "2p10d": {
+        "id": "2p10d",
+        "ref": [
+            "1p7",
+            "2def2",
+            "2ax1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p10sc": {
+        "id": "2p10sc",
+        "ref": [
+            "1p5"
+        ],
+        "type": "scholium"
+    },
+    "2p11": {
+        "id": "2p11",
+        "children": [
+            "2p11d",
+            "2p11c"
+        ],
+        "type": "propositio",
+        "number": 11
+    },
+    "2p11c": {
+        "id": "2p11c",
+        "children": [
+            "2p11csc"
+        ],
+        "type": "corollarium"
+    },
+    "2p11csc": {
+        "id": "2p11csc",
+        "type": "scholium"
+    },
+    "2p11d": {
+        "id": "2p11d",
+        "ref": [
+            "2p10c",
+            "2ax2",
+            "2ax3",
+            "2ax3",
+            "2p8c",
+            "1p21",
+            "1p22",
+            "2ax1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p12": {
+        "id": "2p12",
+        "children": [
+            "2p12d",
+            "2p12sc"
+        ],
+        "type": "propositio",
+        "number": 12
+    },
+    "2p12d": {
+        "id": "2p12d",
+        "ref": [
+            "2p9c",
+            "2p11",
+            "2p11c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p12sc": {
+        "id": "2p12sc",
+        "ref": [
+            "2p7csc"
+        ],
+        "type": "scholium"
+    },
+    "2p13": {
+        "id": "2p13",
+        "children": [
+            "2p13d",
+            "2p13c",
+            "2p13sc",
+            "2p13ax1",
+            "2p13ax2",
+            "2p13l1",
+            "2p13l2",
+            "2p13l3",
+            "2p13ax1a",
+            "2p13ax2a",
+            "2p13def",
+            "2p13ax3",
+            "2p13l4",
+            "2p13l5",
+            "2p13l6",
+            "2p13l7",
+            "2p13post"
+        ],
+        "type": "propositio",
+        "number": 13
+    },
+    "2p13ax1": {
+        "id": "2p13ax1",
+        "type": "axioma",
+        "number": 1
+    },
+    "2p13ax1a": {
+        "id": "2p13ax1a",
+        "type": "axioma",
+        "number": "1a"
+    },
+    "2p13ax2": {
+        "id": "2p13ax2",
+        "type": "axioma",
+        "number": 2
+    },
+    "2p13ax2a": {
+        "id": "2p13ax2a",
+        "type": "axioma",
+        "number": "2a"
+    },
+    "2p13ax3": {
+        "id": "2p13ax3",
+        "type": "axioma",
+        "number": 3
+    },
+    "2p13c": {
+        "id": "2p13c",
+        "type": "corollarium"
+    },
+    "2p13d": {
+        "id": "2p13d",
+        "ref": [
+            "2p9c",
+            "2p11c",
+            "2ax4",
+            "2p11",
+            "1p36",
+            "2p12",
+            "2ax5"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13def": {
+        "id": "2p13def",
+        "type": "definitio"
+    },
+    "2p13l1": {
+        "id": "2p13l1",
+        "children": [
+            "2p13l1d"
+        ],
+        "type": "lemma",
+        "number": 1
+    },
+    "2p13l1d": {
+        "id": "2p13l1d",
+        "ref": [
+            "1p5",
+            "1p8",
+            "1p15sc"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13l2": {
+        "id": "2p13l2",
+        "children": [
+            "2p13l2d"
+        ],
+        "type": "lemma",
+        "number": 2
+    },
+    "2p13l2d": {
+        "id": "2p13l2d",
+        "ref": [
+            "2def1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13l3": {
+        "id": "2p13l3",
+        "children": [
+            "2p13l3d",
+            "2p13l3c"
+        ],
+        "type": "lemma",
+        "number": 3
+    },
+    "2p13l3c": {
+        "id": "2p13l3c",
+        "type": "corollarium"
+    },
+    "2p13l3d": {
+        "id": "2p13l3d",
+        "ref": [
+            "2def1",
+            "2p13l1",
+            "1p28",
+            "2p6",
+            "2ax1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13l4": {
+        "id": "2p13l4",
+        "children": [
+            "2p13l4d"
+        ],
+        "type": "lemma",
+        "number": 4
+    },
+    "2p13l4d": {
+        "id": "2p13l4d",
+        "ref": [
+            "2p13l1",
+            "2p13def"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13l5": {
+        "id": "2p13l5",
+        "children": [
+            "2p13l5d"
+        ],
+        "type": "lemma",
+        "number": 5
+    },
+    "2p13l5d": {
+        "id": "2p13l5d",
+        "ref": [
+            "2p13l1",
+            "2p13def"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13l6": {
+        "id": "2p13l6",
+        "children": [
+            "2p13l6d"
+        ],
+        "type": "lemma",
+        "number": 6
+    },
+    "2p13l6d": {
+        "id": "2p13l6d",
+        "type": "demonstratio"
+    },
+    "2p13l7": {
+        "id": "2p13l7",
+        "children": [
+            "2p13l7d",
+            "2p13l7sc"
+        ],
+        "type": "lemma",
+        "number": 7
+    },
+    "2p13l7d": {
+        "id": "2p13l7d",
+        "ref": [
+            "2p13def"
+        ],
+        "type": "demonstratio"
+    },
+    "2p13l7sc": {
+        "id": "2p13l7sc",
+        "ref": [
+            "2p13l7"
+        ],
+        "type": "scholium"
+    },
+    "2p13post": {
+        "id": "2p13post",
+        "type": "postulata",
+        "children": [
+            "2p13post1",
+            "2p13post2",
+            "2p13post3",
+            "2p13post4",
+            "2p13post5",
+            "2p13post6"
+        ]
+    },
+    "2p13post1": {
+        "id": "2p13post1",
+        "type": "postulatum",
+        "number": 1
+    },
+    "2p13post2": {
+        "id": "2p13post2",
+        "type": "postulatum",
+        "number": 2
+    },
+    "2p13post3": {
+        "id": "2p13post3",
+        "type": "postulatum",
+        "number": 3
+    },
+    "2p13post4": {
+        "id": "2p13post4",
+        "type": "postulatum",
+        "number": 4
+    },
+    "2p13post5": {
+        "id": "2p13post5",
+        "type": "postulatum",
+        "number": 5
+    },
+    "2p13post6": {
+        "id": "2p13post6",
+        "type": "postulatum",
+        "number": 6
+    },
+    "2p13sc": {
+        "id": "2p13sc",
+        "type": "scholium"
+    },
+    "2p14": {
+        "id": "2p14",
+        "children": [
+            "2p14d"
+        ],
+        "type": "propositio",
+        "number": 14
+    },
+    "2p14d": {
+        "id": "2p14d",
+        "ref": [
+            "2p13post3",
+            "2p13post6",
+            "2p12"
+        ],
+        "type": "demonstratio"
+    },
+    "2p15": {
+        "id": "2p15",
+        "children": [
+            "2p15d"
+        ],
+        "type": "propositio",
+        "number": 15
+    },
+    "2p15d": {
+        "id": "2p15d",
+        "ref": [
+            "2p13",
+            "2p13post1",
+            "2p8c",
+            "2p7"
+        ],
+        "type": "demonstratio"
+    },
+    "2p16": {
+        "id": "2p16",
+        "children": [
+            "2p16d",
+            "2p16c1",
+            "2p16c2"
+        ],
+        "type": "propositio",
+        "number": 16
+    },
+    "2p16c1": {
+        "id": "2p16c1",
+        "type": "corollarium",
+        "number": 1
+    },
+    "2p16c2": {
+        "id": "2p16c2",
+        "ref": [
+            "1app"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "2p16d": {
+        "id": "2p16d",
+        "ref": [
+            "2p13ax1a",
+            "1ax4"
+        ],
+        "type": "demonstratio"
+    },
+    "2p17": {
+        "id": "2p17",
+        "children": [
+            "2p17d",
+            "2p17c"
+        ],
+        "type": "propositio",
+        "number": 17
+    },
+    "2p17c": {
+        "id": "2p17c",
+        "children": [
+            "2p17cd",
+            "2p17csc"
+        ],
+        "type": "corollarium"
+    },
+    "2p17cd": {
+        "id": "2p17cd",
+        "ref": [
+            "2p13post5",
+            "2p13ax2a",
+            "2p12",
+            "2p17"
+        ],
+        "type": "demonstratio"
+    },
+    "2p17csc": {
+        "id": "2p17csc",
+        "ref": [
+            "2p13c",
+            "2p17c",
+            "2p16c2",
+            "1def7"
+        ],
+        "type": "scholium"
+    },
+    "2p17d": {
+        "id": "2p17d",
+        "ref": [
+            "2p12",
+            "2p16",
+            "2p16c1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p18": {
+        "id": "2p18",
+        "children": [
+            "2p18d",
+            "2p18sc"
+        ],
+        "type": "propositio",
+        "number": 18
+    },
+    "2p18d": {
+        "id": "2p18d",
+        "ref": [
+            "2p17c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p18sc": {
+        "id": "2p18sc",
+        "ref": [
+            "2p16"
+        ],
+        "type": "scholium"
+    },
+    "2p19": {
+        "id": "2p19",
+        "children": [
+            "2p19d"
+        ],
+        "type": "propositio",
+        "number": 19
+    },
+    "2p19d": {
+        "id": "2p19d",
+        "ref": [
+            "2p13",
+            "2p9",
+            "2p13post4",
+            "2p7",
+            "2p11c",
+            "2p12",
+            "2p16",
+            "2p17"
+        ],
+        "type": "demonstratio"
+    },
+    "2p1d": {
+        "id": "2p1d",
+        "ref": [
+            "1p25c",
+            "1def5",
+            "1def6"
+        ],
+        "type": "demonstratio"
+    },
+    "2p1sc": {
+        "id": "2p1sc",
+        "ref": [
+            "1def4",
+            "1def6"
+        ],
+        "type": "scholium"
+    },
+    "2p2": {
+        "id": "2p2",
+        "children": [
+            "2p2d"
+        ],
+        "type": "propositio",
+        "number": 2
+    },
+    "2p20": {
+        "id": "2p20",
+        "children": [
+            "2p20d"
+        ],
+        "type": "propositio",
+        "number": 20
+    },
+    "2p20d": {
+        "id": "2p20d",
+        "ref": [
+            "2p1",
+            "2p3",
+            "2p11",
+            "2p9",
+            "2p7"
+        ],
+        "type": "demonstratio"
+    },
+    "2p21": {
+        "id": "2p21",
+        "children": [
+            "2p21d",
+            "2p21sc"
+        ],
+        "type": "propositio",
+        "number": 21
+    },
+    "2p21d": {
+        "id": "2p21d",
+        "ref": [
+            "2p12",
+            "2p13"
+        ],
+        "type": "demonstratio"
+    },
+    "2p21sc": {
+        "id": "2p21sc",
+        "ref": [
+            "2p7csc",
+            "2p13"
+        ],
+        "type": "scholium"
+    },
+    "2p22": {
+        "id": "2p22",
+        "children": [
+            "2p22d"
+        ],
+        "type": "propositio",
+        "number": 22
+    },
+    "2p22d": {
+        "id": "2p22d",
+        "ref": [
+            "2p20",
+            "2p12",
+            "2p11c",
+            "2p21"
+        ],
+        "type": "demonstratio"
+    },
+    "2p23": {
+        "id": "2p23",
+        "children": [
+            "2p23d"
+        ],
+        "type": "propositio",
+        "number": 23
+    },
+    "2p23d": {
+        "id": "2p23d",
+        "ref": [
+            "2p20",
+            "2p19",
+            "2p11c",
+            "2p11c",
+            "2p16",
+            "2p13",
+            "2p22"
+        ],
+        "type": "demonstratio"
+    },
+    "2p24": {
+        "id": "2p24",
+        "children": [
+            "2p24d"
+        ],
+        "type": "propositio",
+        "number": 24
+    },
+    "2p24d": {
+        "id": "2p24d",
+        "ref": [
+            "2p13def",
+            "2p13post1",
+            "2p13l4",
+            "2p13ax1a",
+            "2p3",
+            "2p9",
+            "2p7",
+            "2p13",
+            "2p11c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p25": {
+        "id": "2p25",
+        "children": [
+            "2p25d"
+        ],
+        "type": "propositio",
+        "number": 25
+    },
+    "2p25d": {
+        "id": "2p25d",
+        "ref": [
+            "2p16",
+            "2p9",
+            "2p7"
+        ],
+        "type": "demonstratio"
+    },
+    "2p26": {
+        "id": "2p26",
+        "children": [
+            "2p26d",
+            "2p26c"
+        ],
+        "type": "propositio",
+        "number": 26
+    },
+    "2p26c": {
+        "id": "2p26c",
+        "children": [
+            "2p26cd"
+        ],
+        "type": "corollarium"
+    },
+    "2p26cd": {
+        "id": "2p26cd",
+        "ref": [
+            "2p17csc",
+            "2p26",
+            "2p25"
+        ],
+        "type": "demonstratio"
+    },
+    "2p26d": {
+        "id": "2p26d",
+        "ref": [
+            "2p7",
+            "2p13",
+            "2p16",
+            "2p16c1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p27": {
+        "id": "2p27",
+        "children": [
+            "2p27d"
+        ],
+        "type": "propositio",
+        "number": 27
+    },
+    "2p27d": {
+        "id": "2p27d",
+        "ref": [
+            "2p16",
+            "2p25"
+        ],
+        "type": "demonstratio"
+    },
+    "2p28": {
+        "id": "2p28",
+        "children": [
+            "2p28d",
+            "2p28sc"
+        ],
+        "type": "propositio",
+        "number": 28
+    },
+    "2p28d": {
+        "id": "2p28d",
+        "ref": [
+            "2p16",
+            "2p13post3",
+            "2p24",
+            "2p25"
+        ],
+        "type": "demonstratio"
+    },
+    "2p28sc": {
+        "id": "2p28sc",
+        "type": "scholium"
+    },
+    "2p29": {
+        "id": "2p29",
+        "children": [
+            "2p29d",
+            "2p29c"
+        ],
+        "type": "propositio",
+        "number": 29
+    },
+    "2p29c": {
+        "id": "2p29c",
+        "children": [
+            "2p29csc"
+        ],
+        "ref": [
+            "2p23",
+            "2p19",
+            "2p26",
+            "2p29",
+            "2p27",
+            "2p25",
+            "2p28",
+            "2p28sc"
+        ],
+        "type": "corollarium"
+    },
+    "2p29csc": {
+        "id": "2p29csc",
+        "type": "scholium"
+    },
+    "2p29d": {
+        "id": "2p29d",
+        "ref": [
+            "2p27",
+            "2p13",
+            "1ax6"
+        ],
+        "type": "demonstratio"
+    },
+    "2p2d": {
+        "id": "2p2d",
+        "ref": [
+            "1def5",
+            "1def6",
+            "1p25c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p3": {
+        "id": "2p3",
+        "children": [
+            "2p3d",
+            "2p3sc"
+        ],
+        "type": "propositio",
+        "number": 3
+    },
+    "2p30": {
+        "id": "2p30",
+        "children": [
+            "2p30d"
+        ],
+        "type": "propositio",
+        "number": 30
+    },
+    "2p30d": {
+        "id": "2p30d",
+        "ref": [
+            "2ax1",
+            "1p21",
+            "1p28",
+            "2p9c",
+            "2p11c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p31": {
+        "id": "2p31",
+        "children": [
+            "2p31d",
+            "2p31c"
+        ],
+        "type": "propositio",
+        "number": 31
+    },
+    "2p31c": {
+        "id": "2p31c",
+        "ref": [
+            "1p31",
+            "1p33sc1",
+            "1p29"
+        ],
+        "type": "corollarium"
+    },
+    "2p31d": {
+        "id": "2p31d",
+        "ref": [
+            "1p28"
+        ],
+        "type": "demonstratio"
+    },
+    "2p32": {
+        "id": "2p32",
+        "children": [
+            "2p32d"
+        ],
+        "type": "propositio",
+        "number": 32
+    },
+    "2p32d": {
+        "id": "2p32d",
+        "ref": [
+            "2p7c",
+            "1ax6"
+        ],
+        "type": "demonstratio"
+    },
+    "2p33": {
+        "id": "2p33",
+        "children": [
+            "2p33d"
+        ],
+        "type": "propositio",
+        "number": 33
+    },
+    "2p33d": {
+        "id": "2p33d",
+        "ref": [
+            "2p32",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "2p34": {
+        "id": "2p34",
+        "children": [
+            "2p34d"
+        ],
+        "type": "propositio",
+        "number": 34
+    },
+    "2p34d": {
+        "id": "2p34d",
+        "ref": [
+            "2p11c",
+            "2p32"
+        ],
+        "type": "demonstratio"
+    },
+    "2p35": {
+        "id": "2p35",
+        "children": [
+            "2p35d",
+            "2p35sc"
+        ],
+        "type": "propositio",
+        "number": 35
+    },
+    "2p35d": {
+        "id": "2p35d",
+        "ref": [
+            "2p33"
+        ],
+        "type": "demonstratio"
+    },
+    "2p35sc": {
+        "id": "2p35sc",
+        "ref": [
+            "2p17csc"
+        ],
+        "type": "scholium"
+    },
+    "2p36": {
+        "id": "2p36",
+        "children": [
+            "2p36d"
+        ],
+        "type": "propositio",
+        "number": 36
+    },
+    "2p36d": {
+        "id": "2p36d",
+        "ref": [
+            "1p15",
+            "2p32",
+            "2p7c",
+            "2p24",
+            "2p28",
+            "2p6c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p37": {
+        "id": "2p37",
+        "children": [
+            "2p37d"
+        ],
+        "ref": [
+            "2p13l2"
+        ],
+        "type": "propositio",
+        "number": 37
+    },
+    "2p37d": {
+        "id": "2p37d",
+        "ref": [
+            "2def2"
+        ],
+        "type": "demonstratio"
+    },
+    "2p38": {
+        "id": "2p38",
+        "children": [
+            "2p38d",
+            "2p38c"
+        ],
+        "type": "propositio",
+        "number": 38
+    },
+    "2p38c": {
+        "id": "2p38c",
+        "ref": [
+            "2p13l2",
+            "2p38"
+        ],
+        "type": "corollarium"
+    },
+    "2p38d": {
+        "id": "2p38d",
+        "ref": [
+            "2p7c",
+            "2p16",
+            "2p25",
+            "2p27",
+            "2p12",
+            "2p13",
+            "2p11c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p39": {
+        "id": "2p39",
+        "children": [
+            "2p39d",
+            "2p39c"
+        ],
+        "type": "propositio",
+        "number": 39
+    },
+    "2p39c": {
+        "id": "2p39c",
+        "type": "corollarium"
+    },
+    "2p39d": {
+        "id": "2p39d",
+        "ref": [
+            "2p7c",
+            "2p16",
+            "2p7c",
+            "2p13",
+            "2p11c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p3d": {
+        "id": "2p3d",
+        "ref": [
+            "2p1",
+            "1p16",
+            "1p35",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "2p3sc": {
+        "id": "2p3sc",
+        "ref": [
+            "1p32c1",
+            "1p32c2",
+            "1p16",
+            "1p34"
+        ],
+        "type": "scholium"
+    },
+    "2p4": {
+        "id": "2p4",
+        "children": [
+            "2p4d"
+        ],
+        "type": "propositio",
+        "number": 4
+    },
+    "2p40": {
+        "id": "2p40",
+        "children": [
+            "2p40d",
+            "2p40sc1",
+            "2p40sc2"
+        ],
+        "type": "propositio",
+        "number": 40
+    },
+    "2p40d": {
+        "id": "2p40d",
+        "ref": [
+            "2p11c"
+        ],
+        "type": "demonstratio"
+    },
+    "2p40sc1": {
+        "id": "2p40sc1",
+        "ref": [
+            "2p17csc",
+            "2p17c",
+            "2p18"
+        ],
+        "type": "scholium",
+        "number": 1
+    },
+    "2p40sc2": {
+        "id": "2p40sc2",
+        "ref": [
+            "2p29c",
+            "2p18sc",
+            "2p38c",
+            "2p39",
+            "2p39c",
+            "2p40"
+        ],
+        "type": "scholium",
+        "number": 2
+    },
+    "2p41": {
+        "id": "2p41",
+        "children": [
+            "2p41d"
+        ],
+        "type": "propositio",
+        "number": 41
+    },
+    "2p41d": {
+        "id": "2p41d",
+        "ref": [
+            "2p35",
+            "2p34"
+        ],
+        "type": "demonstratio"
+    },
+    "2p42": {
+        "id": "2p42",
+        "children": [
+            "2p42d"
+        ],
+        "type": "propositio",
+        "number": 42
+    },
+    "2p42d": {
+        "id": "2p42d",
+        "ref": [
+            "2p40sc2"
+        ],
+        "type": "demonstratio"
+    },
+    "2p43": {
+        "id": "2p43",
+        "children": [
+            "2p43d",
+            "2p43sc"
+        ],
+        "type": "propositio",
+        "number": 43
+    },
+    "2p43d": {
+        "id": "2p43d",
+        "ref": [
+            "2p11c",
+            "2p20",
+            "2p11c",
+            "2p34"
+        ],
+        "type": "demonstratio"
+    },
+    "2p43sc": {
+        "id": "2p43sc",
+        "ref": [
+            "2p21sc",
+            "2p35",
+            "1p19",
+            "2p20",
+            "2p21",
+            "2p22",
+            "2p23",
+            "2p24",
+            "2p25",
+            "2p26",
+            "2p27",
+            "2p28",
+            "2p29",
+            "2p30",
+            "2p31",
+            "2p32",
+            "2p33",
+            "2p34",
+            "2p35",
+            "2p35sc",
+            "2p11c"
+        ],
+        "type": "scholium"
+    },
+    "2p44": {
+        "id": "2p44",
+        "children": [
+            "2p44d",
+            "2p44c1",
+            "2p44c2"
+        ],
+        "type": "propositio",
+        "number": 44
+    },
+    "2p44c1": {
+        "id": "2p44c1",
+        "children": [
+            "2p44c1sc"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "2p44c1sc": {
+        "id": "2p44c1sc",
+        "ref": [
+            "2p17",
+            "2p17c",
+            "2p18"
+        ],
+        "type": "scholium"
+    },
+    "2p44c2": {
+        "id": "2p44c2",
+        "children": [
+            "2p44c2d"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "2p44c2d": {
+        "id": "2p44c2d",
+        "ref": [
+            "2p44",
+            "2p41",
+            "1ax6",
+            "1p16",
+            "2p38",
+            "2p37"
+        ],
+        "type": "demonstratio"
+    },
+    "2p44d": {
+        "id": "2p44d",
+        "ref": [
+            "2p41",
+            "1ax6",
+            "1p29"
+        ],
+        "type": "demonstratio"
+    },
+    "2p45": {
+        "id": "2p45",
+        "children": [
+            "2p45d",
+            "2p45sc"
+        ],
+        "type": "propositio",
+        "number": 45
+    },
+    "2p45d": {
+        "id": "2p45d",
+        "ref": [
+            "2p8c",
+            "1p15",
+            "2p6",
+            "1ax4",
+            "1def6"
+        ],
+        "type": "demonstratio"
+    },
+    "2p45sc": {
+        "id": "2p45sc",
+        "ref": [
+            "1p16",
+            "1p24c"
+        ],
+        "type": "scholium"
+    },
+    "2p46": {
+        "id": "2p46",
+        "children": [
+            "2p46d"
+        ],
+        "type": "propositio",
+        "number": 46
+    },
+    "2p46d": {
+        "id": "2p46d",
+        "ref": [
+            "2p45",
+            "2p38"
+        ],
+        "type": "demonstratio"
+    },
+    "2p47": {
+        "id": "2p47",
+        "children": [
+            "2p47d",
+            "2p47sc"
+        ],
+        "type": "propositio",
+        "number": 47
+    },
+    "2p47d": {
+        "id": "2p47d",
+        "ref": [
+            "2p22",
+            "2p23",
+            "2p19",
+            "2p16c1",
+            "2p17",
+            "2p45",
+            "2p46"
+        ],
+        "type": "demonstratio"
+    },
+    "2p47sc": {
+        "id": "2p47sc",
+        "ref": [
+            "2p40sc2"
+        ],
+        "type": "scholium"
+    },
+    "2p48": {
+        "id": "2p48",
+        "children": [
+            "2p48d",
+            "2p48sc"
+        ],
+        "type": "propositio",
+        "number": 48
+    },
+    "2p48d": {
+        "id": "2p48d",
+        "ref": [
+            "2p11",
+            "1p17c2",
+            "1p28"
+        ],
+        "type": "demonstratio"
+    },
+    "2p48sc": {
+        "id": "2p48sc",
+        "ref": [
+            "2p11",
+            "1p17c2",
+            "1p28"
+        ],
+        "type": "scholium"
+    },
+    "2p49": {
+        "id": "2p49",
+        "children": [
+            "2p49d",
+            "2p49c"
+        ],
+        "type": "propositio",
+        "number": 49
+    },
+    "2p49c": {
+        "id": "2p49c",
+        "children": [
+            "2p49cd",
+            "2p49csc"
+        ],
+        "type": "corollarium"
+    },
+    "2p49cd": {
+        "id": "2p49cd",
+        "ref": [
+            "2p48",
+            "2p48sc",
+            "2p49"
+        ],
+        "type": "demonstratio"
+    },
+    "2p49csc": {
+        "id": "2p49csc",
+        "ref": [
+            "2p44c1sc",
+            "2p43",
+            "2p43sc",
+            "2p17c",
+            "2p17csc",
+            "2p35",
+            "2p35sc",
+            "2p47sc"
+        ],
+        "type": "scholium"
+    },
+    "2p49d": {
+        "id": "2p49d",
+        "ref": [
+            "2p48",
+            "2ax3",
+            "2def2"
+        ],
+        "type": "demonstratio"
+    },
+    "2p4d": {
+        "id": "2p4d",
+        "ref": [
+            "1p30",
+            "1p14c1"
+        ],
+        "type": "demonstratio"
+    },
+    "2p5": {
+        "id": "2p5",
+        "children": [
+            "2p5d"
+        ],
+        "type": "propositio",
+        "number": 5
+    },
+    "2p5d": {
+        "id": "2p5d",
+        "ref": [
+            "2p3",
+            "1p25c",
+            "1p10",
+            "1ax4"
+        ],
+        "type": "demonstratio"
+    },
+    "2p6": {
+        "id": "2p6",
+        "children": [
+            "2p6d",
+            "2p6c"
+        ],
+        "type": "propositio",
+        "number": 6
+    },
+    "2p6c": {
+        "id": "2p6c",
+        "type": "corollarium"
+    },
+    "2p6d": {
+        "id": "2p6d",
+        "ref": [
+            "1p10",
+            "1ax4"
+        ],
+        "type": "demonstratio"
+    },
+    "2p7": {
+        "id": "2p7",
+        "children": [
+            "2p7d",
+            "2p7c"
+        ],
+        "type": "propositio",
+        "number": 7
+    },
+    "2p7c": {
+        "id": "2p7c",
+        "children": [
+            "2p7csc"
+        ],
+        "type": "corollarium"
+    },
+    "2p7csc": {
+        "id": "2p7csc",
+        "type": "scholium"
+    },
+    "2p7d": {
+        "id": "2p7d",
+        "ref": [
+            "1ax4"
+        ],
+        "type": "demonstratio"
+    },
+    "2p8": {
+        "id": "2p8",
+        "children": [
+            "2p8d",
+            "2p8c"
+        ],
+        "type": "propositio",
+        "number": 8
+    },
+    "2p8c": {
+        "id": "2p8c",
+        "children": [
+            "2p8csc"
+        ],
+        "type": "corollarium"
+    },
+    "2p8csc": {
+        "id": "2p8csc",
+        "type": "scholium"
+    },
+    "2p8d": {
+        "id": "2p8d",
+        "ref": [
+            "2p7",
+            "2p7csc"
+        ],
+        "type": "demonstratio"
+    },
+    "2p9": {
+        "id": "2p9",
+        "children": [
+            "2p9d",
+            "2p9c"
+        ],
+        "type": "propositio",
+        "number": 9
+    },
+    "2p9c": {
+        "id": "2p9c",
+        "children": [
+            "2p9cd"
+        ],
+        "type": "corollarium"
+    },
+    "2p9cd": {
+        "id": "2p9cd",
+        "ref": [
+            "2p3",
+            "2p9",
+            "2p7"
+        ],
+        "type": "demonstratio"
+    },
+    "2p9d": {
+        "id": "2p9d",
+        "ref": [
+            "2p8c",
+            "2p8csc",
+            "2p6",
+            "1p28",
+            "2p7"
+        ],
+        "type": "demonstratio"
+    },
+    "2pr": {
+        "id": "2pr",
+        "ref": [
+            "1p16"
+        ],
+        "type": "praefatio"
+    },
+    "3": {
+        "id": "3",
+        "children": [
+            "3pr",
+            "3def",
+            "3post",
+            "3p1",
+            "3p2",
+            "3p3",
+            "3p4",
+            "3p5",
+            "3p6",
+            "3p7",
+            "3p8",
+            "3p9",
+            "3p10",
+            "3p11",
+            "3p12",
+            "3p13",
+            "3p14",
+            "3p15",
+            "3p16",
+            "3p17",
+            "3p18",
+            "3p19",
+            "3p20",
+            "3p21",
+            "3p22",
+            "3p23",
+            "3p24",
+            "3p25",
+            "3p26",
+            "3p27",
+            "3p28",
+            "3p29",
+            "3p30",
+            "3p31",
+            "3p32",
+            "3p33",
+            "3p34",
+            "3p35",
+            "3p36",
+            "3p37",
+            "3p38",
+            "3p39",
+            "3p40",
+            "3p41",
+            "3p42",
+            "3p43",
+            "3p44",
+            "3p45",
+            "3p46",
+            "3p47",
+            "3p48",
+            "3p49",
+            "3p50",
+            "3p51",
+            "3p52",
+            "3p53",
+            "3p54",
+            "3p55",
+            "3p56",
+            "3p57",
+            "3p58",
+            "3p59",
+            "3ad",
+            "3agd"
+        ],
+        "type": "pars",
+        "number": 3,
+        "title": "De origine et natura affectuum"
+    },
+    "3ad": {
+        "id": "3ad",
+        "children": [
+            "3ad1",
+            "3ad2",
+            "3ad3",
+            "3ad4",
+            "3ad5",
+            "3ad6",
+            "3ad7",
+            "3ad8",
+            "3ad9",
+            "3ad10",
+            "3ad11",
+            "3ad12",
+            "3ad13",
+            "3ad14",
+            "3ad15",
+            "3ad16",
+            "3ad17",
+            "3ad18",
+            "3ad19",
+            "3ad20",
+            "3ad21",
+            "3ad22",
+            "3ad23",
+            "3ad24",
+            "3ad25",
+            "3ad26",
+            "3ad27",
+            "3ad28",
+            "3ad29",
+            "3ad30",
+            "3ad31",
+            "3ad32",
+            "3ad33",
+            "3ad34",
+            "3ad35",
+            "3ad36",
+            "3ad37",
+            "3ad38",
+            "3ad39",
+            "3ad40",
+            "3ad41",
+            "3ad42",
+            "3ad43",
+            "3ad44",
+            "3ad45",
+            "3ad46",
+            "3ad47",
+            "3ad48"
+        ],
+        "type": "affectuum_definitiones"
+    },
+    "3ad1": {
+        "id": "3ad1",
+        "children": [
+            "3ad1e"
+        ],
+        "type": "definitio",
+        "number": 1
+    },
+    "3ad10": {
+        "id": "3ad10",
+        "children": [
+            "3ad10e"
+        ],
+        "type": "definitio",
+        "number": 10
+    },
+    "3ad10e": {
+        "id": "3ad10e",
+        "ref": [
+            "3p52"
+        ],
+        "type": "explicatio"
+    },
+    "3ad11": {
+        "id": "3ad11",
+        "children": [
+            "3ad11e"
+        ],
+        "type": "definitio",
+        "number": 11
+    },
+    "3ad11e": {
+        "id": "3ad11e",
+        "ref": [
+            "3p52sc",
+            "3p20",
+            "3p47sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad12": {
+        "id": "3ad12",
+        "ref": [
+            "3p18sc2",
+            "3p19",
+            "3p20"
+        ],
+        "type": "definitio",
+        "number": 12
+    },
+    "3ad13": {
+        "id": "3ad13",
+        "children": [
+            "3ad13e"
+        ],
+        "ref": [
+            "3p18sc2"
+        ],
+        "type": "definitio",
+        "number": 13
+    },
+    "3ad13e": {
+        "id": "3ad13e",
+        "ref": [
+            "3p19",
+            "3p20"
+        ],
+        "type": "explicatio"
+    },
+    "3ad14": {
+        "id": "3ad14",
+        "ref": [
+            "2p31c",
+            "2p49csc"
+        ],
+        "type": "definitio",
+        "number": 14
+    },
+    "3ad15": {
+        "id": "3ad15",
+        "children": [
+            "3ad15e"
+        ],
+        "type": "definitio",
+        "number": 15
+    },
+    "3ad15e": {
+        "id": "3ad15e",
+        "ref": [
+            "2p31c",
+            "2p49csc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad16": {
+        "id": "3ad16",
+        "type": "definitio",
+        "number": 16
+    },
+    "3ad17": {
+        "id": "3ad17",
+        "type": "definitio",
+        "number": 17
+    },
+    "3ad18": {
+        "id": "3ad18",
+        "children": [
+            "3ad18e"
+        ],
+        "ref": [
+            "3p22sc",
+            "3p27sc"
+        ],
+        "type": "definitio",
+        "number": 18
+    },
+    "3ad18e": {
+        "id": "3ad18e",
+        "ref": [
+            "3p22sc",
+            "3p27c1"
+        ],
+        "type": "explicatio"
+    },
+    "3ad19": {
+        "id": "3ad19",
+        "ref": [
+            "3p22sc",
+            "3p27c1"
+        ],
+        "type": "definitio",
+        "number": 19
+    },
+    "3ad1e": {
+        "id": "3ad1e",
+        "ref": [
+            "3p9sc",
+            "2p23",
+            "2p23"
+        ],
+        "type": "explicatio"
+    },
+    "3ad2": {
+        "id": "3ad2",
+        "ref": [
+            "3p11sc"
+        ],
+        "type": "definitio",
+        "number": 2
+    },
+    "3ad20": {
+        "id": "3ad20",
+        "children": [
+            "3ad20e"
+        ],
+        "type": "definitio",
+        "number": 20
+    },
+    "3ad20e": {
+        "id": "3ad20e",
+        "ref": [
+            "3p27c1",
+            "3p22sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad21": {
+        "id": "3ad21",
+        "ref": [
+            "3p26sc"
+        ],
+        "type": "definitio",
+        "number": 21
+    },
+    "3ad22": {
+        "id": "3ad22",
+        "children": [
+            "3ad22e"
+        ],
+        "ref": [
+            "3p26sc"
+        ],
+        "type": "definitio",
+        "number": 22
+    },
+    "3ad22e": {
+        "id": "3ad22e",
+        "ref": [
+            "3p26sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad23": {
+        "id": "3ad23",
+        "children": [
+            "3ad23e"
+        ],
+        "type": "definitio",
+        "number": 23
+    },
+    "3ad23e": {
+        "id": "3ad23e",
+        "ref": [
+            "3p24sc",
+            "3p32sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad24": {
+        "id": "3ad24",
+        "children": [
+            "3ad24e"
+        ],
+        "type": "definitio",
+        "number": 24
+    },
+    "3ad24e": {
+        "id": "3ad24e",
+        "ref": [
+            "3p24sc",
+            "3p32sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad25": {
+        "id": "3ad25",
+        "type": "definitio",
+        "number": 25
+    },
+    "3ad26": {
+        "id": "3ad26",
+        "children": [
+            "3ad26e"
+        ],
+        "type": "definitio",
+        "number": 26
+    },
+    "3ad26e": {
+        "id": "3ad26e",
+        "type": "explicatio"
+    },
+    "3ad27": {
+        "id": "3ad27",
+        "children": [
+            "3ad27e"
+        ],
+        "type": "definitio",
+        "number": 27
+    },
+    "3ad27e": {
+        "id": "3ad27e",
+        "ref": [
+            "3p51sc",
+            "3p53",
+            "3p54",
+            "3p55",
+            "3p55c1sc",
+            "2p35sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad28": {
+        "id": "3ad28",
+        "children": [
+            "3ad28e"
+        ],
+        "type": "definitio",
+        "number": 28
+    },
+    "3ad28e": {
+        "id": "3ad28e",
+        "ref": [
+            "3p26sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad29": {
+        "id": "3ad29",
+        "children": [
+            "3ad29e"
+        ],
+        "type": "definitio",
+        "number": 29
+    },
+    "3ad29e": {
+        "id": "3ad29e",
+        "ref": [
+            "3p30sc",
+            "3p13",
+            "3p54"
+        ],
+        "type": "explicatio"
+    },
+    "3ad3": {
+        "id": "3ad3",
+        "children": [
+            "3ad3e"
+        ],
+        "type": "definitio",
+        "number": 3
+    },
+    "3ad30": {
+        "id": "3ad30",
+        "ref": [
+            "3p30sc"
+        ],
+        "type": "definitio",
+        "number": 30
+    },
+    "3ad31": {
+        "id": "3ad31",
+        "children": [
+            "3ad31e"
+        ],
+        "type": "definitio",
+        "number": 31
+    },
+    "3ad31e": {
+        "id": "3ad31e",
+        "ref": [
+            "3p30sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad32": {
+        "id": "3ad32",
+        "children": [
+            "3ad32e"
+        ],
+        "type": "definitio",
+        "number": 32
+    },
+    "3ad32e": {
+        "id": "3ad32e",
+        "ref": [
+            "3p47sc"
+        ],
+        "type": "explicatio",
+        "number": 2
+    },
+    "3ad33": {
+        "id": "3ad33",
+        "children": [
+            "3ad33e"
+        ],
+        "type": "definitio",
+        "number": 33
+    },
+    "3ad33e": {
+        "id": "3ad33e",
+        "ref": [
+            "3p27",
+            "3p27sc",
+            "3p32",
+            "3p32sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad34": {
+        "id": "3ad34",
+        "ref": [
+            "3p39",
+            "3p41sc"
+        ],
+        "type": "definitio",
+        "number": 34
+    },
+    "3ad35": {
+        "id": "3ad35",
+        "ref": [
+            "3p27sc"
+        ],
+        "type": "definitio",
+        "number": 35
+    },
+    "3ad36": {
+        "id": "3ad36",
+        "ref": [
+            "3p39"
+        ],
+        "type": "definitio",
+        "number": 36
+    },
+    "3ad37": {
+        "id": "3ad37",
+        "ref": [
+            "3p40c2",
+            "3p40c2sc"
+        ],
+        "type": "definitio",
+        "number": 37
+    },
+    "3ad38": {
+        "id": "3ad38",
+        "children": [
+            "3ad38e"
+        ],
+        "type": "definitio",
+        "number": 38
+    },
+    "3ad38e": {
+        "id": "3ad38e",
+        "type": "explicatio"
+    },
+    "3ad39": {
+        "id": "3ad39",
+        "ref": [
+            "3p39sc"
+        ],
+        "type": "definitio",
+        "number": 39
+    },
+    "3ad3e": {
+        "id": "3ad3e",
+        "ref": [
+            "3p11sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad4": {
+        "id": "3ad4",
+        "children": [
+            "3ad4e"
+        ],
+        "ref": [
+            "3p52",
+            "3p52sc"
+        ],
+        "type": "definitio",
+        "number": 4
+    },
+    "3ad40": {
+        "id": "3ad40",
+        "ref": [
+            "3p51sc"
+        ],
+        "type": "definitio",
+        "number": 40
+    },
+    "3ad41": {
+        "id": "3ad41",
+        "children": [
+            "3ad41e"
+        ],
+        "ref": [
+            "3p51sc"
+        ],
+        "type": "definitio",
+        "number": 41
+    },
+    "3ad41e": {
+        "id": "3ad41e",
+        "type": "explicatio"
+    },
+    "3ad42": {
+        "id": "3ad42",
+        "children": [
+            "3ad42e"
+        ],
+        "type": "definitio",
+        "number": 42
+    },
+    "3ad42e": {
+        "id": "3ad42e",
+        "ref": [
+            "3p39",
+            "3p52sc",
+            "3p51sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad43": {
+        "id": "3ad43",
+        "type": "definitio",
+        "number": 43
+    },
+    "3ad44": {
+        "id": "3ad44",
+        "children": [
+            "3ad44e"
+        ],
+        "type": "definitio",
+        "number": 44
+    },
+    "3ad44e": {
+        "id": "3ad44e",
+        "ref": [
+            "3p27",
+            "3p31"
+        ],
+        "type": "explicatio"
+    },
+    "3ad45": {
+        "id": "3ad45",
+        "type": "definitio",
+        "number": 45
+    },
+    "3ad46": {
+        "id": "3ad46",
+        "type": "definitio",
+        "number": 46
+    },
+    "3ad47": {
+        "id": "3ad47",
+        "type": "definitio",
+        "number": 47
+    },
+    "3ad48": {
+        "id": "3ad48",
+        "children": [
+            "3ad48e"
+        ],
+        "type": "definitio",
+        "number": 48
+    },
+    "3ad48e": {
+        "id": "3ad48e",
+        "ref": [
+            "3p56sc",
+            "3p29sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad4e": {
+        "id": "3ad4e",
+        "ref": [
+            "2p18sc",
+            "3p11sc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad5": {
+        "id": "3ad5",
+        "ref": [
+            "3p52sc"
+        ],
+        "type": "definitio",
+        "number": 5
+    },
+    "3ad6": {
+        "id": "3ad6",
+        "children": [
+            "3ad6e"
+        ],
+        "type": "definitio",
+        "number": 6
+    },
+    "3ad6e": {
+        "id": "3ad6e",
+        "ref": [
+            "2p48"
+        ],
+        "type": "explicatio"
+    },
+    "3ad7": {
+        "id": "3ad7",
+        "children": [
+            "3ad7e"
+        ],
+        "type": "definitio",
+        "number": 7
+    },
+    "3ad7e": {
+        "id": "3ad7e",
+        "ref": [
+            "3p13csc"
+        ],
+        "type": "explicatio"
+    },
+    "3ad8": {
+        "id": "3ad8",
+        "ref": [
+            "3p15csc"
+        ],
+        "type": "definitio",
+        "number": 8
+    },
+    "3ad9": {
+        "id": "3ad9",
+        "ref": [
+            "3p15csc"
+        ],
+        "type": "definitio",
+        "number": 9
+    },
+    "3agd": {
+        "id": "3agd",
+        "children": [
+            "3agde"
+        ],
+        "type": "affectuum_generalis_definitio"
+    },
+    "3agde": {
+        "id": "3agde",
+        "ref": [
+            "3p3",
+            "2p16c2",
+            "2p11",
+            "2p13"
+        ],
+        "type": "explicatio"
+    },
+    "3def": {
+        "id": "3def",
+        "children": [
+            "3def1",
+            "3def2",
+            "3def3"
+        ],
+        "type": "definitiones"
+    },
+    "3def1": {
+        "id": "3def1",
+        "type": "definitio",
+        "number": 1
+    },
+    "3def2": {
+        "id": "3def2",
+        "ref": [
+            "3def1"
+        ],
+        "type": "definitio",
+        "number": 2
+    },
+    "3def3": {
+        "id": "3def3",
+        "children": [
+            "3def3e"
+        ],
+        "type": "definitio",
+        "number": 3
+    },
+    "3def3e": {
+        "id": "3def3e",
+        "type": "explicatio"
+    },
+    "3p1": {
+        "id": "3p1",
+        "children": [
+            "3p1d",
+            "3p1c"
+        ],
+        "type": "propositio",
+        "number": 1
+    },
+    "3p10": {
+        "id": "3p10",
+        "children": [
+            "3p10d"
+        ],
+        "type": "propositio",
+        "number": 10
+    },
+    "3p10d": {
+        "id": "3p10d",
+        "ref": [
+            "3p5",
+            "2p9c",
+            "2p11",
+            "2p13",
+            "2p11",
+            "2p13",
+            "3p7"
+        ],
+        "type": "demonstratio"
+    },
+    "3p11": {
+        "id": "3p11",
+        "children": [
+            "3p11d",
+            "3p11sc"
+        ],
+        "type": "propositio",
+        "number": 11
+    },
+    "3p11d": {
+        "id": "3p11d",
+        "ref": [
+            "2p7",
+            "2p14"
+        ],
+        "type": "demonstratio"
+    },
+    "3p11sc": {
+        "id": "3p11sc",
+        "ref": [
+            "3p9sc",
+            "3p10",
+            "2p17csc",
+            "2p8c",
+            "2p8csc",
+            "2p17",
+            "2p18",
+            "2p18sc",
+            "3p4",
+            "2p6",
+            "2p8"
+        ],
+        "type": "scholium"
+    },
+    "3p12": {
+        "id": "3p12",
+        "children": [
+            "3p12d"
+        ],
+        "type": "propositio",
+        "number": 12
+    },
+    "3p12d": {
+        "id": "3p12d",
+        "ref": [
+            "2p17",
+            "2p7",
+            "2p17csc",
+            "3post1",
+            "3p11",
+            "3p6",
+            "3p9"
+        ],
+        "type": "demonstratio"
+    },
+    "3p13": {
+        "id": "3p13",
+        "children": [
+            "3p13d",
+            "3p13c"
+        ],
+        "type": "propositio",
+        "number": 13
+    },
+    "3p13c": {
+        "id": "3p13c",
+        "children": [
+            "3p13csc"
+        ],
+        "type": "corollarium"
+    },
+    "3p13csc": {
+        "id": "3p13csc",
+        "type": "scholium"
+    },
+    "3p13d": {
+        "id": "3p13d",
+        "ref": [
+            "3p12",
+            "2p17",
+            "3p9"
+        ],
+        "type": "demonstratio"
+    },
+    "3p14": {
+        "id": "3p14",
+        "children": [
+            "3p14d"
+        ],
+        "type": "propositio",
+        "number": 14
+    },
+    "3p14d": {
+        "id": "3p14d",
+        "ref": [
+            "2p18",
+            "2p16c2",
+            "3def3"
+        ],
+        "type": "demonstratio"
+    },
+    "3p15": {
+        "id": "3p15",
+        "children": [
+            "3p15d",
+            "3p15c"
+        ],
+        "type": "propositio",
+        "number": 15
+    },
+    "3p15c": {
+        "id": "3p15c",
+        "children": [
+            "3p15cd",
+            "3p15csc"
+        ],
+        "type": "corollarium"
+    },
+    "3p15cd": {
+        "id": "3p15cd",
+        "ref": [
+            "3p14",
+            "3p11sc",
+            "3p12",
+            "3p13c",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p15csc": {
+        "id": "3p15csc",
+        "type": "scholium"
+    },
+    "3p15d": {
+        "id": "3p15d",
+        "ref": [
+            "3post1",
+            "3p14",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p16": {
+        "id": "3p16",
+        "children": [
+            "3p16d"
+        ],
+        "type": "propositio",
+        "number": 16
+    },
+    "3p16d": {
+        "id": "3p16d",
+        "ref": [
+            "3p14",
+            "3p15",
+            "3p15c"
+        ],
+        "type": "demonstratio"
+    },
+    "3p17": {
+        "id": "3p17",
+        "children": [
+            "3p17d",
+            "3p17sc"
+        ],
+        "type": "propositio",
+        "number": 17
+    },
+    "3p17d": {
+        "id": "3p17d",
+        "ref": [
+            "3p13csc",
+            "3p16"
+        ],
+        "type": "demonstratio"
+    },
+    "3p17sc": {
+        "id": "3p17sc",
+        "ref": [
+            "2p44c1sc",
+            "2p13post1",
+            "2p13ax1a"
+        ],
+        "type": "scholium"
+    },
+    "3p18": {
+        "id": "3p18",
+        "children": [
+            "3p18d",
+            "3p18sc1",
+            "3p18sc2"
+        ],
+        "type": "propositio",
+        "number": 18
+    },
+    "3p18d": {
+        "id": "3p18d",
+        "ref": [
+            "2p17",
+            "2p17c",
+            "2p44c1sc",
+            "2p16c2"
+        ],
+        "type": "demonstratio"
+    },
+    "3p18sc1": {
+        "id": "3p18sc1",
+        "ref": [
+            "2p17",
+            "2p44c1sc"
+        ],
+        "type": "scholium",
+        "number": 1
+    },
+    "3p18sc2": {
+        "id": "3p18sc2",
+        "type": "scholium",
+        "number": 2
+    },
+    "3p19": {
+        "id": "3p19",
+        "children": [
+            "3p19d"
+        ],
+        "type": "propositio",
+        "number": 19
+    },
+    "3p19d": {
+        "id": "3p19d",
+        "ref": [
+            "3p12",
+            "3p13csc",
+            "2p17",
+            "3p11sc",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p1c": {
+        "id": "3p1c",
+        "type": "corollarium"
+    },
+    "3p1d": {
+        "id": "3p1d",
+        "ref": [
+            "2p40sc1",
+            "2p40sc2",
+            "2p11c",
+            "2p11c",
+            "1p36",
+            "3def1",
+            "2p9",
+            "2p11c",
+            "3def2",
+            "2p11c",
+            "3def2"
+        ],
+        "type": "demonstratio"
+    },
+    "3p2": {
+        "id": "3p2",
+        "children": [
+            "3p2d",
+            "3p2sc"
+        ],
+        "type": "propositio",
+        "number": 2
+    },
+    "3p20": {
+        "id": "3p20",
+        "children": [
+            "3p20d"
+        ],
+        "type": "propositio",
+        "number": 20
+    },
+    "3p20d": {
+        "id": "3p20d",
+        "ref": [
+            "3p13",
+            "3p13csc",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p21": {
+        "id": "3p21",
+        "children": [
+            "3p21d"
+        ],
+        "type": "propositio",
+        "number": 21
+    },
+    "3p21d": {
+        "id": "3p21d",
+        "ref": [
+            "3p19",
+            "3p11sc",
+            "3p11sc",
+            "3p11sc",
+            "3p19"
+        ],
+        "type": "demonstratio"
+    },
+    "3p22": {
+        "id": "3p22",
+        "children": [
+            "3p22d",
+            "3p22sc"
+        ],
+        "type": "propositio",
+        "number": 22
+    },
+    "3p22d": {
+        "id": "3p22d",
+        "ref": [
+            "3p21",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p22sc": {
+        "id": "3p22sc",
+        "ref": [
+            "3p21",
+            "3p21"
+        ],
+        "type": "scholium"
+    },
+    "3p23": {
+        "id": "3p23",
+        "children": [
+            "3p23d",
+            "3p23sc"
+        ],
+        "type": "propositio",
+        "number": 23
+    },
+    "3p23d": {
+        "id": "3p23d",
+        "ref": [
+            "3p11sc",
+            "3p20",
+            "3p11sc",
+            "3p13",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p23sc": {
+        "id": "3p23sc",
+        "ref": [
+            "3p27"
+        ],
+        "type": "scholium"
+    },
+    "3p24": {
+        "id": "3p24",
+        "children": [
+            "3p24d",
+            "3p24sc"
+        ],
+        "type": "propositio",
+        "number": 24
+    },
+    "3p24d": {
+        "id": "3p24d",
+        "ref": [
+            "3p22",
+            "3p13csc",
+            "3p21"
+        ],
+        "type": "demonstratio"
+    },
+    "3p24sc": {
+        "id": "3p24sc",
+        "type": "scholium"
+    },
+    "3p25": {
+        "id": "3p25",
+        "children": [
+            "3p25d"
+        ],
+        "type": "propositio",
+        "number": 25
+    },
+    "3p25d": {
+        "id": "3p25d",
+        "ref": [
+            "3p21",
+            "3p12",
+            "2p17",
+            "2p17c",
+            "3p13"
+        ],
+        "type": "demonstratio"
+    },
+    "3p26": {
+        "id": "3p26",
+        "children": [
+            "3p26d",
+            "3p26sc"
+        ],
+        "type": "propositio",
+        "number": 26
+    },
+    "3p26d": {
+        "id": "3p26d",
+        "ref": [
+            "3p23"
+        ],
+        "type": "demonstratio"
+    },
+    "3p26sc": {
+        "id": "3p26sc",
+        "type": "scholium"
+    },
+    "3p27": {
+        "id": "3p27",
+        "children": [
+            "3p27d",
+            "3p27sc",
+            "3p27c1",
+            "3p27c2",
+            "3p27c3"
+        ],
+        "type": "propositio",
+        "number": 27
+    },
+    "3p27c1": {
+        "id": "3p27c1",
+        "children": [
+            "3p27c1d"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "3p27c1d": {
+        "id": "3p27c1d",
+        "ref": [
+            "3p27"
+        ],
+        "type": "demonstratio"
+    },
+    "3p27c2": {
+        "id": "3p27c2",
+        "children": [
+            "3p27c2d"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "3p27c2d": {
+        "id": "3p27c2d",
+        "ref": [
+            "3p23"
+        ],
+        "type": "demonstratio"
+    },
+    "3p27c3": {
+        "id": "3p27c3",
+        "children": [
+            "3p27c3d",
+            "3p27c3sc"
+        ],
+        "type": "corollarium",
+        "number": 3
+    },
+    "3p27c3d": {
+        "id": "3p27c3d",
+        "ref": [
+            "3p27",
+            "3p13",
+            "3p9sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p27c3sc": {
+        "id": "3p27c3sc",
+        "ref": [
+            "3p22sc"
+        ],
+        "type": "scholium"
+    },
+    "3p27d": {
+        "id": "3p27d",
+        "ref": [
+            "2p17csc",
+            "2p16",
+            "3p23"
+        ],
+        "type": "demonstratio"
+    },
+    "3p27sc": {
+        "id": "3p27sc",
+        "ref": [
+            "3p22sc"
+        ],
+        "type": "scholium"
+    },
+    "3p28": {
+        "id": "3p28",
+        "children": [
+            "3p28d"
+        ],
+        "type": "propositio",
+        "number": 28
+    },
+    "3p28d": {
+        "id": "3p28d",
+        "ref": [
+            "3p12",
+            "2p17",
+            "2p7c",
+            "2p11c",
+            "3p9sc",
+            "3p13csc",
+            "3p20",
+            "3p13"
+        ],
+        "type": "demonstratio"
+    },
+    "3p29": {
+        "id": "3p29",
+        "children": [
+            "3p29d",
+            "3p29sc"
+        ],
+        "type": "propositio",
+        "number": 29
+    },
+    "3p29d": {
+        "id": "3p29d",
+        "ref": [
+            "3p27",
+            "3p13csc",
+            "3p28"
+        ],
+        "type": "demonstratio"
+    },
+    "3p29sc": {
+        "id": "3p29sc",
+        "type": "scholium"
+    },
+    "3p2d": {
+        "id": "3p2d",
+        "ref": [
+            "2p6",
+            "2def1",
+            "2p6",
+            "2p11"
+        ],
+        "type": "demonstratio"
+    },
+    "3p2sc": {
+        "id": "3p2sc",
+        "ref": [
+            "2p7csc",
+            "2p12",
+            "2p49"
+        ],
+        "type": "scholium"
+    },
+    "3p3": {
+        "id": "3p3",
+        "children": [
+            "3p3d",
+            "3p3sc"
+        ],
+        "type": "propositio",
+        "number": 3
+    },
+    "3p30": {
+        "id": "3p30",
+        "children": [
+            "3p30d",
+            "3p30sc"
+        ],
+        "type": "propositio",
+        "number": 30
+    },
+    "3p30d": {
+        "id": "3p30d",
+        "ref": [
+            "3p27",
+            "2p19",
+            "2p23"
+        ],
+        "type": "demonstratio"
+    },
+    "3p30sc": {
+        "id": "3p30sc",
+        "ref": [
+            "3p13csc",
+            "2p17c",
+            "3p25"
+        ],
+        "type": "scholium"
+    },
+    "3p31": {
+        "id": "3p31",
+        "children": [
+            "3p31d",
+            "3p31c"
+        ],
+        "type": "propositio",
+        "number": 31
+    },
+    "3p31c": {
+        "id": "3p31c",
+        "children": [
+            "3p31csc"
+        ],
+        "ref": [
+            "3p28"
+        ],
+        "type": "corollarium"
+    },
+    "3p31csc": {
+        "id": "3p31csc",
+        "ref": [
+            "3p29sc"
+        ],
+        "type": "scholium"
+    },
+    "3p31d": {
+        "id": "3p31d",
+        "ref": [
+            "3p27",
+            "3p27",
+            "3p17sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p32": {
+        "id": "3p32",
+        "children": [
+            "3p32d",
+            "3p32sc"
+        ],
+        "type": "propositio",
+        "number": 32
+    },
+    "3p32d": {
+        "id": "3p32d",
+        "ref": [
+            "3p27",
+            "3p27c1",
+            "3p28"
+        ],
+        "type": "demonstratio"
+    },
+    "3p32sc": {
+        "id": "3p32sc",
+        "ref": [
+            "3p32"
+        ],
+        "type": "scholium"
+    },
+    "3p33": {
+        "id": "3p33",
+        "children": [
+            "3p33d"
+        ],
+        "type": "propositio",
+        "number": 33
+    },
+    "3p33d": {
+        "id": "3p33d",
+        "ref": [
+            "3p12",
+            "3p29",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p34": {
+        "id": "3p34",
+        "children": [
+            "3p34d"
+        ],
+        "type": "propositio",
+        "number": 34
+    },
+    "3p34d": {
+        "id": "3p34d",
+        "ref": [
+            "3p33",
+            "3p13csc",
+            "3p11",
+            "3p11sc",
+            "3p30",
+            "3p30sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p35": {
+        "id": "3p35",
+        "children": [
+            "3p35d",
+            "3p35sc"
+        ],
+        "type": "propositio",
+        "number": 35
+    },
+    "3p35d": {
+        "id": "3p35d",
+        "ref": [
+            "3p34",
+            "3p30sc",
+            "3p28",
+            "3p31",
+            "3p11sc",
+            "3p13csc",
+            "3p15c",
+            "3p23"
+        ],
+        "type": "demonstratio"
+    },
+    "3p35sc": {
+        "id": "3p35sc",
+        "ref": [
+            "3p24",
+            "3p15c"
+        ],
+        "type": "scholium"
+    },
+    "3p36": {
+        "id": "3p36",
+        "children": [
+            "3p36d",
+            "3p36c"
+        ],
+        "type": "propositio",
+        "number": 36
+    },
+    "3p36c": {
+        "id": "3p36c",
+        "children": [
+            "3p36cd",
+            "3p36csc"
+        ],
+        "type": "corollarium"
+    },
+    "3p36cd": {
+        "id": "3p36cd",
+        "ref": [
+            "3p36",
+            "3p19"
+        ],
+        "type": "demonstratio"
+    },
+    "3p36csc": {
+        "id": "3p36csc",
+        "type": "scholium"
+    },
+    "3p36d": {
+        "id": "3p36d",
+        "ref": [
+            "3p15",
+            "3p28"
+        ],
+        "type": "demonstratio"
+    },
+    "3p37": {
+        "id": "3p37",
+        "children": [
+            "3p37d"
+        ],
+        "type": "propositio",
+        "number": 37
+    },
+    "3p37d": {
+        "id": "3p37d",
+        "ref": [
+            "3p11sc",
+            "3p7",
+            "3p5",
+            "3p11sc",
+            "3p9sc",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p38": {
+        "id": "3p38",
+        "children": [
+            "3p38d"
+        ],
+        "type": "propositio",
+        "number": 38
+    },
+    "3p38d": {
+        "id": "3p38d",
+        "ref": [
+            "3p13csc",
+            "3p28",
+            "3p13csc",
+            "3p21",
+            "3p37",
+            "3p33",
+            "3p13c",
+            "3p23",
+            "3p11sc",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p39": {
+        "id": "3p39",
+        "children": [
+            "3p39d",
+            "3p39sc"
+        ],
+        "type": "propositio",
+        "number": 39
+    },
+    "3p39d": {
+        "id": "3p39d",
+        "ref": [
+            "3p13csc",
+            "3p28",
+            "3p28",
+            "3p37"
+        ],
+        "type": "demonstratio"
+    },
+    "3p39sc": {
+        "id": "3p39sc",
+        "ref": [
+            "3p9",
+            "3p28"
+        ],
+        "type": "scholium"
+    },
+    "3p3d": {
+        "id": "3p3d",
+        "ref": [
+            "2p11",
+            "2p13",
+            "2p15",
+            "2p38c",
+            "2p29c",
+            "3p1"
+        ],
+        "type": "demonstratio"
+    },
+    "3p3sc": {
+        "id": "3p3sc",
+        "type": "scholium"
+    },
+    "3p4": {
+        "id": "3p4",
+        "children": [
+            "3p4d"
+        ],
+        "type": "propositio",
+        "number": 4
+    },
+    "3p40": {
+        "id": "3p40",
+        "children": [
+            "3p40d",
+            "3p40sc",
+            "3p40c1",
+            "3p40c2"
+        ],
+        "type": "propositio",
+        "number": 40
+    },
+    "3p40c1": {
+        "id": "3p40c1",
+        "ref": [
+            "3p40"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "3p40c2": {
+        "id": "3p40c2",
+        "children": [
+            "3p40c2d",
+            "3p40c2sc"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "3p40c2d": {
+        "id": "3p40c2d",
+        "ref": [
+            "3p40",
+            "3p26",
+            "3p39"
+        ],
+        "type": "demonstratio"
+    },
+    "3p40c2sc": {
+        "id": "3p40c2sc",
+        "type": "scholium"
+    },
+    "3p40d": {
+        "id": "3p40d",
+        "ref": [
+            "3p27",
+            "3p13csc",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p40sc": {
+        "id": "3p40sc",
+        "ref": [
+            "3p30",
+            "3p30sc",
+            "3p25",
+            "3p39"
+        ],
+        "type": "scholium"
+    },
+    "3p41": {
+        "id": "3p41",
+        "children": [
+            "3p41d",
+            "3p41sc",
+            "3p41c"
+        ],
+        "ref": [
+            "3p15c",
+            "3p16"
+        ],
+        "type": "propositio",
+        "number": 41
+    },
+    "3p41c": {
+        "id": "3p41c",
+        "children": [
+            "3p41csc"
+        ],
+        "type": "corollarium"
+    },
+    "3p41csc": {
+        "id": "3p41csc",
+        "type": "scholium"
+    },
+    "3p41d": {
+        "id": "3p41d",
+        "type": "demonstratio"
+    },
+    "3p41sc": {
+        "id": "3p41sc",
+        "ref": [
+            "3p30",
+            "3p30sc",
+            "3p25",
+            "3p40sc",
+            "3p39",
+            "3p39"
+        ],
+        "type": "scholium"
+    },
+    "3p42": {
+        "id": "3p42",
+        "children": [
+            "3p42d"
+        ],
+        "type": "propositio",
+        "number": 42
+    },
+    "3p42d": {
+        "id": "3p42d",
+        "ref": [
+            "3p33",
+            "3p34",
+            "3p30sc",
+            "3p12",
+            "3p19"
+        ],
+        "type": "demonstratio"
+    },
+    "3p43": {
+        "id": "3p43",
+        "children": [
+            "3p43d"
+        ],
+        "type": "propositio",
+        "number": 43
+    },
+    "3p43d": {
+        "id": "3p43d",
+        "ref": [
+            "3p40",
+            "3p30",
+            "3p29",
+            "3p41",
+            "3p37",
+            "3p26"
+        ],
+        "type": "demonstratio"
+    },
+    "3p44": {
+        "id": "3p44",
+        "children": [
+            "3p44d",
+            "3p44sc"
+        ],
+        "type": "propositio",
+        "number": 44
+    },
+    "3p44d": {
+        "id": "3p44d",
+        "ref": [
+            "3p38",
+            "3p13csc",
+            "3p28",
+            "3p13csc",
+            "3p21",
+            "3p37",
+            "3p33",
+            "3p13c",
+            "3p23",
+            "3p11sc",
+            "3p13csc",
+            "3p13csc",
+            "3p37"
+        ],
+        "type": "demonstratio"
+    },
+    "3p44sc": {
+        "id": "3p44sc",
+        "ref": [
+            "3p6"
+        ],
+        "type": "scholium"
+    },
+    "3p45": {
+        "id": "3p45",
+        "children": [
+            "3p45d"
+        ],
+        "type": "propositio",
+        "number": 45
+    },
+    "3p45d": {
+        "id": "3p45d",
+        "ref": [
+            "3p40",
+            "3p13csc",
+            "3p21",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p46": {
+        "id": "3p46",
+        "children": [
+            "3p46d"
+        ],
+        "type": "propositio",
+        "number": 46
+    },
+    "3p46d": {
+        "id": "3p46d",
+        "ref": [
+            "3p16"
+        ],
+        "type": "demonstratio"
+    },
+    "3p47": {
+        "id": "3p47",
+        "children": [
+            "3p47d",
+            "3p47sc"
+        ],
+        "type": "propositio",
+        "number": 47
+    },
+    "3p47d": {
+        "id": "3p47d",
+        "ref": [
+            "3p27"
+        ],
+        "type": "demonstratio"
+    },
+    "3p47sc": {
+        "id": "3p47sc",
+        "ref": [
+            "2p17c"
+        ],
+        "type": "scholium"
+    },
+    "3p48": {
+        "id": "3p48",
+        "children": [
+            "3p48d"
+        ],
+        "type": "propositio",
+        "number": 48
+    },
+    "3p48d": {
+        "id": "3p48d",
+        "ref": [
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p49": {
+        "id": "3p49",
+        "children": [
+            "3p49d",
+            "3p49sc"
+        ],
+        "type": "propositio",
+        "number": 49
+    },
+    "3p49d": {
+        "id": "3p49d",
+        "ref": [
+            "1def7",
+            "3p13csc",
+            "3p48",
+            "1def7",
+            "3p48"
+        ],
+        "type": "demonstratio"
+    },
+    "3p49sc": {
+        "id": "3p49sc",
+        "ref": [
+            "3p27",
+            "3p34",
+            "3p40",
+            "3p43"
+        ],
+        "type": "scholium"
+    },
+    "3p4d": {
+        "id": "3p4d",
+        "type": "demonstratio"
+    },
+    "3p5": {
+        "id": "3p5",
+        "children": [
+            "3p5d"
+        ],
+        "type": "propositio",
+        "number": 5
+    },
+    "3p50": {
+        "id": "3p50",
+        "children": [
+            "3p50d",
+            "3p50sc"
+        ],
+        "type": "propositio",
+        "number": 50
+    },
+    "3p50d": {
+        "id": "3p50d",
+        "ref": [
+            "3p15",
+            "3post1",
+            "3p14",
+            "3p11sc",
+            "3p18sc2"
+        ],
+        "type": "demonstratio"
+    },
+    "3p50sc": {
+        "id": "3p50sc",
+        "ref": [
+            "3p18sc2",
+            "3p15c",
+            "3p28",
+            "3p25"
+        ],
+        "type": "scholium"
+    },
+    "3p51": {
+        "id": "3p51",
+        "children": [
+            "3p51d",
+            "3p51sc"
+        ],
+        "type": "propositio",
+        "number": 51
+    },
+    "3p51d": {
+        "id": "3p51d",
+        "ref": [
+            "2p13post3",
+            "2p13ax1a",
+            "2p13post3",
+            "2p13ax1a"
+        ],
+        "type": "demonstratio"
+    },
+    "3p51sc": {
+        "id": "3p51sc",
+        "ref": [
+            "3p39sc",
+            "3p28",
+            "3p49"
+        ],
+        "type": "scholium"
+    },
+    "3p52": {
+        "id": "3p52",
+        "children": [
+            "3p52d",
+            "3p52sc"
+        ],
+        "type": "propositio",
+        "number": 52
+    },
+    "3p52d": {
+        "id": "3p52d",
+        "ref": [
+            "2p18",
+            "2p18sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p52sc": {
+        "id": "3p52sc",
+        "ref": [
+            "3p12",
+            "3p15",
+            "3p15c",
+            "3p27"
+        ],
+        "type": "scholium"
+    },
+    "3p53": {
+        "id": "3p53",
+        "children": [
+            "3p53d",
+            "3p53c"
+        ],
+        "type": "propositio",
+        "number": 53
+    },
+    "3p53c": {
+        "id": "3p53c",
+        "ref": [
+            "3p29sc",
+            "3p27"
+        ],
+        "type": "corollarium"
+    },
+    "3p53d": {
+        "id": "3p53d",
+        "ref": [
+            "2p19",
+            "2p23",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p54": {
+        "id": "3p54",
+        "children": [
+            "3p54d"
+        ],
+        "type": "propositio",
+        "number": 54
+    },
+    "3p54d": {
+        "id": "3p54d",
+        "ref": [
+            "3p7"
+        ],
+        "type": "demonstratio"
+    },
+    "3p55": {
+        "id": "3p55",
+        "children": [
+            "3p55d",
+            "3p55c1",
+            "3p55c2"
+        ],
+        "type": "propositio",
+        "number": 55
+    },
+    "3p55c1": {
+        "id": "3p55c1",
+        "children": [
+            "3p55c1sc"
+        ],
+        "ref": [
+            "3p53c"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "3p55c1sc": {
+        "id": "3p55c1sc",
+        "ref": [
+            "3p24sc",
+            "3p32sc",
+            "3p53",
+            "2p40sc1",
+            "3p28"
+        ],
+        "type": "scholium"
+    },
+    "3p55c2": {
+        "id": "3p55c2",
+        "children": [
+            "3p55c2d",
+            "3p55c2sc"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "3p55c2d": {
+        "id": "3p55c2d",
+        "ref": [
+            "3p24sc",
+            "3p13csc",
+            "3p11sc",
+            "3p9sc",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p55c2sc": {
+        "id": "3p55c2sc",
+        "ref": [
+            "3p52sc",
+            "3p55"
+        ],
+        "type": "scholium"
+    },
+    "3p55d": {
+        "id": "3p55d",
+        "ref": [
+            "3p54",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p56": {
+        "id": "3p56",
+        "children": [
+            "3p56d",
+            "3p56sc"
+        ],
+        "type": "propositio",
+        "number": 56
+    },
+    "3p56d": {
+        "id": "3p56d",
+        "ref": [
+            "3p11sc",
+            "3p1",
+            "3p3",
+            "2p40sc1",
+            "2p17",
+            "2p17csc",
+            "3p9sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p56sc": {
+        "id": "3p56sc",
+        "ref": [
+            "3p56"
+        ],
+        "type": "scholium"
+    },
+    "3p57": {
+        "id": "3p57",
+        "children": [
+            "3p57d",
+            "3p57sc"
+        ],
+        "type": "propositio",
+        "number": 57
+    },
+    "3p57d": {
+        "id": "3p57d",
+        "ref": [
+            "2p13ax1a",
+            "3p9sc",
+            "3p11",
+            "3p11sc",
+            "3p9sc",
+            "3p9sc"
+        ],
+        "type": "demonstratio"
+    },
+    "3p57sc": {
+        "id": "3p57sc",
+        "type": "scholium"
+    },
+    "3p58": {
+        "id": "3p58",
+        "children": [
+            "3p58d"
+        ],
+        "type": "propositio",
+        "number": 58
+    },
+    "3p58d": {
+        "id": "3p58d",
+        "ref": [
+            "3p53",
+            "2p43",
+            "2p40sc2",
+            "3p1",
+            "3p9",
+            "3p9sc",
+            "3p1"
+        ],
+        "type": "demonstratio"
+    },
+    "3p59": {
+        "id": "3p59",
+        "children": [
+            "3p59d",
+            "3p59sc"
+        ],
+        "type": "propositio",
+        "number": 59
+    },
+    "3p59d": {
+        "id": "3p59d",
+        "ref": [
+            "3p11",
+            "3p11sc",
+            "3p1",
+            "3p58"
+        ],
+        "type": "demonstratio"
+    },
+    "3p59sc": {
+        "id": "3p59sc",
+        "type": "scholium"
+    },
+    "3p5d": {
+        "id": "3p5d",
+        "ref": [
+            "3p4"
+        ],
+        "type": "demonstratio"
+    },
+    "3p6": {
+        "id": "3p6",
+        "children": [
+            "3p6d"
+        ],
+        "type": "propositio",
+        "number": 6
+    },
+    "3p6d": {
+        "id": "3p6d",
+        "ref": [
+            "1p25c",
+            "1p34",
+            "3p4",
+            "3p5"
+        ],
+        "type": "demonstratio"
+    },
+    "3p7": {
+        "id": "3p7",
+        "children": [
+            "3p7d"
+        ],
+        "type": "propositio",
+        "number": 7
+    },
+    "3p7d": {
+        "id": "3p7d",
+        "ref": [
+            "1p36",
+            "1p29",
+            "3p6"
+        ],
+        "type": "demonstratio"
+    },
+    "3p8": {
+        "id": "3p8",
+        "children": [
+            "3p8d"
+        ],
+        "type": "propositio",
+        "number": 8
+    },
+    "3p8d": {
+        "id": "3p8d",
+        "ref": [
+            "3p4",
+            "3p4"
+        ],
+        "type": "demonstratio"
+    },
+    "3p9": {
+        "id": "3p9",
+        "children": [
+            "3p9d",
+            "3p9sc"
+        ],
+        "type": "propositio",
+        "number": 9
+    },
+    "3p9d": {
+        "id": "3p9d",
+        "ref": [
+            "3p3",
+            "3p7",
+            "3p8",
+            "2p23",
+            "3p7"
+        ],
+        "type": "demonstratio"
+    },
+    "3p9sc": {
+        "id": "3p9sc",
+        "type": "scholium"
+    },
+    "3post": {
+        "id": "3post",
+        "children": [
+            "3post1",
+            "3post2"
+        ],
+        "type": "postulata"
+    },
+    "3post1": {
+        "id": "3post1",
+        "children": [
+            "3post1e"
+        ],
+        "type": "postulatum",
+        "number": 1
+    },
+    "3post1e": {
+        "id": "3post1e",
+        "ref": [
+            "2p13post1",
+            "2p13l5",
+            "2p13l7"
+        ],
+        "type": "explicatio"
+    },
+    "3post2": {
+        "id": "3post2",
+        "ref": [
+            "2p13post5",
+            "2p17csc"
+        ],
+        "type": "postulatum",
+        "number": 2
+    },
+    "3pr": {
+        "id": "3pr",
+        "type": "praefatio"
+    },
+    "4": {
+        "id": "4",
+        "children": [
+            "4pr",
+            "4def",
+            "4ax",
+            "4p1",
+            "4p2",
+            "4p3",
+            "4p4",
+            "4p5",
+            "4p6",
+            "4p7",
+            "4p8",
+            "4p9",
+            "4p10",
+            "4p11",
+            "4p12",
+            "4p13",
+            "4p14",
+            "4p15",
+            "4p16",
+            "4p17",
+            "4p18",
+            "4p19",
+            "4p20",
+            "4p21",
+            "4p22",
+            "4p23",
+            "4p24",
+            "4p25",
+            "4p26",
+            "4p27",
+            "4p28",
+            "4p29",
+            "4p30",
+            "4p31",
+            "4p32",
+            "4p33",
+            "4p34",
+            "4p35",
+            "4p36",
+            "4p37",
+            "4p38",
+            "4p39",
+            "4p40",
+            "4p41",
+            "4p42",
+            "4p43",
+            "4p44",
+            "4p45",
+            "4p46",
+            "4p47",
+            "4p48",
+            "4p49",
+            "4p50",
+            "4p51",
+            "4p52",
+            "4p53",
+            "4p54",
+            "4p55",
+            "4p56",
+            "4p57",
+            "4p58",
+            "4p59",
+            "4p60",
+            "4p61",
+            "4p62",
+            "4p63",
+            "4p64",
+            "4p65",
+            "4p66",
+            "4p67",
+            "4p68",
+            "4p69",
+            "4p70",
+            "4p71",
+            "4p72",
+            "4p73",
+            "4app"
+        ],
+        "type": "pars",
+        "number": 4,
+        "title": "De servitute humana seu de affectuum viribus"
+    },
+    "4app": {
+        "id": "4app",
+        "children": [
+            "4apppr",
+            "4appc1",
+            "4appc2",
+            "4appc3",
+            "4appc4",
+            "4appc5",
+            "4appc6",
+            "4appc7",
+            "4appc8",
+            "4appc9",
+            "4appc10",
+            "4appc11",
+            "4appc12",
+            "4appc13",
+            "4appc14",
+            "4appc15",
+            "4appc16",
+            "4appc17",
+            "4appc18",
+            "4appc19",
+            "4appc20",
+            "4appc21",
+            "4appc22",
+            "4appc23",
+            "4appc24",
+            "4appc25",
+            "4appc26",
+            "4appc27",
+            "4appc28",
+            "4appc29",
+            "4appc30",
+            "4appc31",
+            "4appc32"
+        ],
+        "type": "appendix"
+    },
+    "4appc1": {
+        "id": "4appc1",
+        "type": "caput",
+        "number": 1
+    },
+    "4appc10": {
+        "id": "4appc10",
+        "type": "caput",
+        "number": 10
+    },
+    "4appc11": {
+        "id": "4appc11",
+        "type": "caput",
+        "number": 11
+    },
+    "4appc12": {
+        "id": "4appc12",
+        "type": "caput",
+        "number": 12
+    },
+    "4appc13": {
+        "id": "4appc13",
+        "type": "caput",
+        "number": 13
+    },
+    "4appc14": {
+        "id": "4appc14",
+        "type": "caput",
+        "number": 14
+    },
+    "4appc15": {
+        "id": "4appc15",
+        "ref": [
+            "4p37sc1",
+            "4p37sc2",
+            "4p46sc",
+            "4p73sc"
+        ],
+        "type": "caput",
+        "number": 15
+    },
+    "4appc16": {
+        "id": "4appc16",
+        "type": "caput",
+        "number": 16
+    },
+    "4appc17": {
+        "id": "4appc17",
+        "type": "caput",
+        "number": 17
+    },
+    "4appc18": {
+        "id": "4appc18",
+        "ref": [
+            "4p70sc",
+            "4p71sc"
+        ],
+        "type": "caput",
+        "number": 18
+    },
+    "4appc19": {
+        "id": "4appc19",
+        "ref": [
+            "3p31csc"
+        ],
+        "type": "caput",
+        "number": 19
+    },
+    "4appc2": {
+        "id": "4appc2",
+        "type": "caput",
+        "number": 2
+    },
+    "4appc20": {
+        "id": "4appc20",
+        "type": "caput",
+        "number": 20
+    },
+    "4appc21": {
+        "id": "4appc21",
+        "type": "caput",
+        "number": 21
+    },
+    "4appc22": {
+        "id": "4appc22",
+        "ref": [
+            "4p57sc"
+        ],
+        "type": "caput",
+        "number": 22
+    },
+    "4appc23": {
+        "id": "4appc23",
+        "type": "caput",
+        "number": 23
+    },
+    "4appc24": {
+        "id": "4appc24",
+        "type": "caput",
+        "number": 24
+    },
+    "4appc25": {
+        "id": "4appc25",
+        "ref": [
+            "4p37sc1"
+        ],
+        "type": "caput",
+        "number": 25
+    },
+    "4appc26": {
+        "id": "4appc26",
+        "type": "caput",
+        "number": 26
+    },
+    "4appc27": {
+        "id": "4appc27",
+        "ref": [
+            "4p38",
+            "4p39"
+        ],
+        "type": "caput",
+        "number": 27
+    },
+    "4appc28": {
+        "id": "4appc28",
+        "type": "caput",
+        "number": 28
+    },
+    "4appc29": {
+        "id": "4appc29",
+        "type": "caput",
+        "number": 29
+    },
+    "4appc3": {
+        "id": "4appc3",
+        "type": "caput",
+        "number": 3
+    },
+    "4appc30": {
+        "id": "4appc30",
+        "ref": [
+            "4p44sc",
+            "4p60sc"
+        ],
+        "type": "caput",
+        "number": 30
+    },
+    "4appc31": {
+        "id": "4appc31",
+        "ref": [
+            "4p45sc"
+        ],
+        "type": "caput",
+        "number": 31
+    },
+    "4appc32": {
+        "id": "4appc32",
+        "type": "caput",
+        "number": 32
+    },
+    "4appc4": {
+        "id": "4appc4",
+        "type": "caput",
+        "number": 4
+    },
+    "4appc5": {
+        "id": "4appc5",
+        "type": "caput",
+        "number": 5
+    },
+    "4appc6": {
+        "id": "4appc6",
+        "type": "caput",
+        "number": 6
+    },
+    "4appc7": {
+        "id": "4appc7",
+        "type": "caput",
+        "number": 7
+    },
+    "4appc8": {
+        "id": "4appc8",
+        "type": "caput",
+        "number": 8
+    },
+    "4appc9": {
+        "id": "4appc9",
+        "ref": [
+            "4appc7"
+        ],
+        "type": "caput",
+        "number": 9
+    },
+    "4apppr": {
+        "id": "4apppr",
+        "type": "praefatio"
+    },
+    "4ax": {
+        "id": "4ax",
+        "type": "axioma"
+    },
+    "4def": {
+        "id": "4def",
+        "children": [
+            "4def1",
+            "4def2",
+            "4def3",
+            "4def4",
+            "4def5",
+            "4def6",
+            "4def7",
+            "4def8"
+        ],
+        "type": "definitiones"
+    },
+    "4def1": {
+        "id": "4def1",
+        "ref": [
+            "4pr"
+        ],
+        "type": "definitio",
+        "number": 1
+    },
+    "4def2": {
+        "id": "4def2",
+        "ref": [
+            "4pr"
+        ],
+        "type": "definitio",
+        "number": 2
+    },
+    "4def3": {
+        "id": "4def3",
+        "type": "definitio",
+        "number": 3
+    },
+    "4def4": {
+        "id": "4def4",
+        "ref": [
+            "1p33sc1"
+        ],
+        "type": "definitio",
+        "number": 4
+    },
+    "4def5": {
+        "id": "4def5",
+        "type": "definitio",
+        "number": 5
+    },
+    "4def6": {
+        "id": "4def6",
+        "ref": [
+            "3p18sc1",
+            "3p18sc2"
+        ],
+        "type": "definitio",
+        "number": 6
+    },
+    "4def7": {
+        "id": "4def7",
+        "type": "definitio",
+        "number": 7
+    },
+    "4def8": {
+        "id": "4def8",
+        "ref": [
+            "3p7"
+        ],
+        "type": "definitio",
+        "number": 8
+    },
+    "4p1": {
+        "id": "4p1",
+        "children": [
+            "4p1d",
+            "4p1sc"
+        ],
+        "type": "propositio",
+        "number": 1
+    },
+    "4p10": {
+        "id": "4p10",
+        "children": [
+            "4p10d",
+            "4p10sc"
+        ],
+        "type": "propositio",
+        "number": 10
+    },
+    "4p10d": {
+        "id": "4p10d",
+        "ref": [
+            "4p9"
+        ],
+        "type": "demonstratio"
+    },
+    "4p10sc": {
+        "id": "4p10sc",
+        "ref": [
+            "4def6"
+        ],
+        "type": "scholium"
+    },
+    "4p11": {
+        "id": "4p11",
+        "children": [
+            "4p11d"
+        ],
+        "type": "propositio",
+        "number": 11
+    },
+    "4p11d": {
+        "id": "4p11d",
+        "ref": [
+            "1p33sc1",
+            "4p9"
+        ],
+        "type": "demonstratio"
+    },
+    "4p12": {
+        "id": "4p12",
+        "children": [
+            "4p12d",
+            "4p12c"
+        ],
+        "type": "propositio",
+        "number": 12
+    },
+    "4p12c": {
+        "id": "4p12c",
+        "children": [
+            "4p12cd"
+        ],
+        "type": "corollarium"
+    },
+    "4p12cd": {
+        "id": "4p12cd",
+        "ref": [
+            "4p9c",
+            "4p10",
+            "4p12"
+        ],
+        "type": "demonstratio"
+    },
+    "4p12d": {
+        "id": "4p12d",
+        "ref": [
+            "4def3",
+            "4def4",
+            "3p18"
+        ],
+        "type": "demonstratio"
+    },
+    "4p13": {
+        "id": "4p13",
+        "children": [
+            "4p13d"
+        ],
+        "type": "propositio",
+        "number": 13
+    },
+    "4p13d": {
+        "id": "4p13d",
+        "ref": [
+            "4def3",
+            "2p18",
+            "2p18sc",
+            "2p17c",
+            "4p9"
+        ],
+        "type": "demonstratio"
+    },
+    "4p14": {
+        "id": "4p14",
+        "children": [
+            "4p14d"
+        ],
+        "type": "propositio",
+        "number": 14
+    },
+    "4p14d": {
+        "id": "4p14d",
+        "ref": [
+            "3agd",
+            "4p1",
+            "4p8",
+            "4p7"
+        ],
+        "type": "demonstratio"
+    },
+    "4p15": {
+        "id": "4p15",
+        "children": [
+            "4p15d"
+        ],
+        "type": "propositio",
+        "number": 15
+    },
+    "4p15d": {
+        "id": "4p15d",
+        "ref": [
+            "4p8",
+            "3ad1",
+            "3p37",
+            "3p3",
+            "3def2",
+            "3p7",
+            "4p5",
+            "4p3",
+            "4p7"
+        ],
+        "type": "demonstratio"
+    },
+    "4p16": {
+        "id": "4p16",
+        "children": [
+            "4p16d"
+        ],
+        "type": "propositio",
+        "number": 16
+    },
+    "4p16d": {
+        "id": "4p16d",
+        "ref": [
+            "4p9c",
+            "4p15"
+        ],
+        "type": "demonstratio"
+    },
+    "4p17": {
+        "id": "4p17",
+        "children": [
+            "4p17d",
+            "4p17sc"
+        ],
+        "type": "propositio",
+        "number": 17
+    },
+    "4p17d": {
+        "id": "4p17d",
+        "ref": [
+            "4p16",
+            "4p12c",
+            "4p9c",
+            "4p15"
+        ],
+        "type": "demonstratio"
+    },
+    "4p17sc": {
+        "id": "4p17sc",
+        "type": "scholium"
+    },
+    "4p18": {
+        "id": "4p18",
+        "children": [
+            "4p18d",
+            "4p18sc"
+        ],
+        "type": "propositio",
+        "number": 18
+    },
+    "4p18d": {
+        "id": "4p18d",
+        "ref": [
+            "3ad1",
+            "3p7",
+            "3p11sc",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "4p18sc": {
+        "id": "4p18sc",
+        "ref": [
+            "3p4",
+            "4def8",
+            "3p7",
+            "2p13post4"
+        ],
+        "type": "scholium"
+    },
+    "4p19": {
+        "id": "4p19",
+        "children": [
+            "4p19d"
+        ],
+        "type": "propositio",
+        "number": 19
+    },
+    "4p19d": {
+        "id": "4p19d",
+        "ref": [
+            "4p8",
+            "3p28",
+            "3p9sc",
+            "3ad1"
+        ],
+        "type": "demonstratio"
+    },
+    "4p1d": {
+        "id": "4p1d",
+        "ref": [
+            "2p35",
+            "2p33",
+            "2p32",
+            "3p4"
+        ],
+        "type": "demonstratio"
+    },
+    "4p1sc": {
+        "id": "4p1sc",
+        "ref": [
+            "2p16c2",
+            "2p35sc",
+            "2p17"
+        ],
+        "type": "scholium"
+    },
+    "4p2": {
+        "id": "4p2",
+        "children": [
+            "4p2d"
+        ],
+        "type": "propositio",
+        "number": 2
+    },
+    "4p20": {
+        "id": "4p20",
+        "children": [
+            "4p20d",
+            "4p20sc"
+        ],
+        "type": "propositio",
+        "number": 20
+    },
+    "4p20d": {
+        "id": "4p20d",
+        "ref": [
+            "4def8",
+            "3p7",
+            "3p4",
+            "3p6"
+        ],
+        "type": "demonstratio"
+    },
+    "4p20sc": {
+        "id": "4p20sc",
+        "ref": [
+            "3p10"
+        ],
+        "type": "scholium"
+    },
+    "4p21": {
+        "id": "4p21",
+        "children": [
+            "4p21d"
+        ],
+        "type": "propositio",
+        "number": 21
+    },
+    "4p21d": {
+        "id": "4p21d",
+        "ref": [
+            "3ad1",
+            "3p7"
+        ],
+        "type": "demonstratio"
+    },
+    "4p22": {
+        "id": "4p22",
+        "children": [
+            "4p22d",
+            "4p22c"
+        ],
+        "type": "propositio",
+        "number": 22
+    },
+    "4p22c": {
+        "id": "4p22c",
+        "ref": [
+            "4p22",
+            "4p21"
+        ],
+        "type": "corollarium"
+    },
+    "4p22d": {
+        "id": "4p22d",
+        "ref": [
+            "3p7",
+            "4def8"
+        ],
+        "type": "demonstratio"
+    },
+    "4p23": {
+        "id": "4p23",
+        "children": [
+            "4p23d"
+        ],
+        "type": "propositio",
+        "number": 23
+    },
+    "4p23d": {
+        "id": "4p23d",
+        "ref": [
+            "3p1",
+            "3def1",
+            "3def2",
+            "4def8",
+            "3p1",
+            "3def2",
+            "4def8"
+        ],
+        "type": "demonstratio"
+    },
+    "4p24": {
+        "id": "4p24",
+        "children": [
+            "4p24d"
+        ],
+        "type": "propositio",
+        "number": 24
+    },
+    "4p24d": {
+        "id": "4p24d",
+        "ref": [
+            "4def8",
+            "3p3",
+            "4p22c"
+        ],
+        "type": "demonstratio"
+    },
+    "4p25": {
+        "id": "4p25",
+        "children": [
+            "4p25d"
+        ],
+        "type": "propositio",
+        "number": 25
+    },
+    "4p25d": {
+        "id": "4p25d",
+        "ref": [
+            "3p7",
+            "3p6",
+            "4p22c",
+            "4p22c"
+        ],
+        "type": "demonstratio"
+    },
+    "4p26": {
+        "id": "4p26",
+        "children": [
+            "4p26d"
+        ],
+        "type": "propositio",
+        "number": 26
+    },
+    "4p26d": {
+        "id": "4p26d",
+        "ref": [
+            "3p7",
+            "3p6",
+            "3p9sc",
+            "2p40sc2",
+            "2p40",
+            "4p22c",
+            "4p25",
+            "4def1"
+        ],
+        "type": "demonstratio"
+    },
+    "4p27": {
+        "id": "4p27",
+        "children": [
+            "4p27d"
+        ],
+        "type": "propositio",
+        "number": 27
+    },
+    "4p27d": {
+        "id": "4p27d",
+        "ref": [
+            "4p26",
+            "2p41",
+            "2p43",
+            "2p43sc",
+            "2p40sc1",
+            "2p40sc2"
+        ],
+        "type": "demonstratio"
+    },
+    "4p28": {
+        "id": "4p28",
+        "children": [
+            "4p28d"
+        ],
+        "type": "propositio",
+        "number": 28
+    },
+    "4p28d": {
+        "id": "4p28d",
+        "ref": [
+            "1def6",
+            "1p15",
+            "4p26",
+            "4p27",
+            "4def1",
+            "3p1",
+            "3p3",
+            "4p23"
+        ],
+        "type": "demonstratio"
+    },
+    "4p29": {
+        "id": "4p29",
+        "children": [
+            "4p29d"
+        ],
+        "type": "propositio",
+        "number": 29
+    },
+    "4p29d": {
+        "id": "4p29d",
+        "ref": [
+            "2p10c",
+            "1p28",
+            "2p6",
+            "4p8",
+            "3p11sc"
+        ],
+        "type": "demonstratio"
+    },
+    "4p2d": {
+        "id": "4p2d",
+        "ref": [
+            "3def2",
+            "3def1"
+        ],
+        "type": "demonstratio"
+    },
+    "4p3": {
+        "id": "4p3",
+        "children": [
+            "4p3d"
+        ],
+        "type": "propositio",
+        "number": 3
+    },
+    "4p30": {
+        "id": "4p30",
+        "children": [
+            "4p30d"
+        ],
+        "type": "propositio",
+        "number": 30
+    },
+    "4p30d": {
+        "id": "4p30d",
+        "ref": [
+            "4p8",
+            "3p11sc",
+            "3p4",
+            "3p5"
+        ],
+        "type": "demonstratio"
+    },
+    "4p31": {
+        "id": "4p31",
+        "children": [
+            "4p31d",
+            "4p31c"
+        ],
+        "type": "propositio",
+        "number": 31
+    },
+    "4p31c": {
+        "id": "4p31c",
+        "ref": [
+            "4p29",
+            "4p31"
+        ],
+        "type": "corollarium"
+    },
+    "4p31d": {
+        "id": "4p31d",
+        "ref": [
+            "4p30",
+            "4def1",
+            "3p6"
+        ],
+        "type": "demonstratio"
+    },
+    "4p32": {
+        "id": "4p32",
+        "children": [
+            "4p32d",
+            "4p32sc"
+        ],
+        "type": "propositio",
+        "number": 32
+    },
+    "4p32d": {
+        "id": "4p32d",
+        "ref": [
+            "3p7",
+            "3p3sc"
+        ],
+        "type": "demonstratio"
+    },
+    "4p32sc": {
+        "id": "4p32sc",
+        "type": "scholium"
+    },
+    "4p33": {
+        "id": "4p33",
+        "children": [
+            "4p33d"
+        ],
+        "type": "propositio",
+        "number": 33
+    },
+    "4p33d": {
+        "id": "4p33d",
+        "ref": [
+            "3def1",
+            "3def2",
+            "3p7",
+            "3p56",
+            "3p51",
+            "3p51"
+        ],
+        "type": "demonstratio"
+    },
+    "4p34": {
+        "id": "4p34",
+        "children": [
+            "4p34d",
+            "4p34sc"
+        ],
+        "type": "propositio",
+        "number": 34
+    },
+    "4p34d": {
+        "id": "4p34d",
+        "ref": [
+            "3p16",
+            "3p32",
+            "3p32sc",
+            "3p55c1sc",
+            "3ad7",
+            "3p40",
+            "3p40sc",
+            "3p39",
+            "4p30",
+            "3p59"
+        ],
+        "type": "demonstratio"
+    },
+    "4p34sc": {
+        "id": "4p34sc",
+        "ref": [
+            "4p30",
+            "4p31",
+            "3p31",
+            "3ad6"
+        ],
+        "type": "scholium"
+    },
+    "4p35": {
+        "id": "4p35",
+        "children": [
+            "4p35d",
+            "4p35c1",
+            "4p35c2"
+        ],
+        "type": "propositio",
+        "number": 35
+    },
+    "4p35c1": {
+        "id": "4p35c1",
+        "ref": [
+            "4p31c",
+            "3def2",
+            "4p35"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "4p35c2": {
+        "id": "4p35c2",
+        "children": [
+            "4p35c2sc"
+        ],
+        "ref": [
+            "4p20",
+            "4def8",
+            "3p3",
+            "4p35",
+            "4p35c1"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "4p35c2sc": {
+        "id": "4p35c2sc",
+        "type": "scholium"
+    },
+    "4p35d": {
+        "id": "4p35d",
+        "ref": [
+            "4p33",
+            "4p34",
+            "3p3",
+            "3def2",
+            "4p19",
+            "2p41",
+            "4p31c"
+        ],
+        "type": "demonstratio"
+    },
+    "4p36": {
+        "id": "4p36",
+        "children": [
+            "4p36d",
+            "4p36sc"
+        ],
+        "type": "propositio",
+        "number": 36
+    },
+    "4p36d": {
+        "id": "4p36d",
+        "ref": [
+            "4p24",
+            "4p26",
+            "4p28",
+            "2p47",
+            "2p47sc"
+        ],
+        "type": "demonstratio"
+    },
+    "4p36sc": {
+        "id": "4p36sc",
+        "ref": [
+            "4p34",
+            "4p35",
+            "2p47"
+        ],
+        "type": "scholium"
+    },
+    "4p37": {
+        "id": "4p37",
+        "children": [
+            "4p37d",
+            "4p37a",
+            "4p37sc1",
+            "4p37sc2"
+        ],
+        "type": "propositio",
+        "number": 37
+    },
+    "4p37a": {
+        "id": "4p37a",
+        "ref": [
+            "3p31",
+            "3p31c",
+            "4p36",
+            "3p37"
+        ],
+        "type": "aliter"
+    },
+    "4p37d": {
+        "id": "4p37d",
+        "ref": [
+            "4p35c1",
+            "4p19",
+            "4p24",
+            "4p26",
+            "3ad1",
+            "2p11",
+            "2p47",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "4p37sc1": {
+        "id": "4p37sc1",
+        "ref": [
+            "4p18sc",
+            "3p57sc"
+        ],
+        "type": "scholium",
+        "number": 1
+    },
+    "4p37sc2": {
+        "id": "4p37sc2",
+        "ref": [
+            "3p29sc",
+            "4p19",
+            "4p20",
+            "3p40c2",
+            "3p28",
+            "4p35c1",
+            "4p4c",
+            "4p6",
+            "4p33",
+            "4p34",
+            "4p35c2sc",
+            "4p4c",
+            "4p33",
+            "4p7",
+            "3p39",
+            "4p17sc"
+        ],
+        "type": "scholium",
+        "number": 2
+    },
+    "4p38": {
+        "id": "4p38",
+        "children": [
+            "4p38d"
+        ],
+        "type": "propositio",
+        "number": 38
+    },
+    "4p38d": {
+        "id": "4p38d",
+        "ref": [
+            "2p14",
+            "4p26",
+            "4p27",
+            "2p14",
+            "4p26",
+            "4p27"
+        ],
+        "type": "demonstratio"
+    },
+    "4p39": {
+        "id": "4p39",
+        "children": [
+            "4p39d",
+            "4p39sc"
+        ],
+        "type": "propositio",
+        "number": 39
+    },
+    "4p39d": {
+        "id": "4p39d",
+        "ref": [
+            "2p13post4",
+            "2p13def",
+            "2p13post3",
+            "2p13post6",
+            "4p38",
+            "2p13def",
+            "4pr",
+            "4p38"
+        ],
+        "type": "demonstratio"
+    },
+    "4p39sc": {
+        "id": "4p39sc",
+        "type": "scholium"
+    },
+    "4p3d": {
+        "id": "4p3d",
+        "ref": [
+            "4ax"
+        ],
+        "type": "demonstratio"
+    },
+    "4p4": {
+        "id": "4p4",
+        "children": [
+            "4p4d",
+            "4p4c"
+        ],
+        "type": "propositio",
+        "number": 4
+    },
+    "4p40": {
+        "id": "4p40",
+        "children": [
+            "4p40d"
+        ],
+        "type": "propositio",
+        "number": 40
+    },
+    "4p40d": {
+        "id": "4p40d",
+        "ref": [
+            "4p35",
+            "4p26",
+            "4p27"
+        ],
+        "type": "demonstratio"
+    },
+    "4p41": {
+        "id": "4p41",
+        "children": [
+            "4p41d"
+        ],
+        "type": "propositio",
+        "number": 41
+    },
+    "4p41d": {
+        "id": "4p41d",
+        "ref": [
+            "3p11",
+            "3p11sc",
+            "4p38"
+        ],
+        "type": "demonstratio"
+    },
+    "4p42": {
+        "id": "4p42",
+        "children": [
+            "4p42d"
+        ],
+        "type": "propositio",
+        "number": 42
+    },
+    "4p42d": {
+        "id": "4p42d",
+        "ref": [
+            "3p11sc",
+            "3p11",
+            "4p39",
+            "3p11sc",
+            "4p38"
+        ],
+        "type": "demonstratio"
+    },
+    "4p43": {
+        "id": "4p43",
+        "children": [
+            "4p43d"
+        ],
+        "type": "propositio",
+        "number": 43
+    },
+    "4p43d": {
+        "id": "4p43d",
+        "ref": [
+            "3p11sc",
+            "4p6",
+            "4p38",
+            "4p41",
+            "4p5",
+            "4p3",
+            "4p43d"
+        ],
+        "type": "demonstratio"
+    },
+    "4p44": {
+        "id": "4p44",
+        "children": [
+            "4p44d",
+            "4p44sc"
+        ],
+        "type": "propositio",
+        "number": 44
+    },
+    "4p44d": {
+        "id": "4p44d",
+        "ref": [
+            "3ad6",
+            "3p11sc",
+            "4p43",
+            "3p37",
+            "4p6"
+        ],
+        "type": "demonstratio"
+    },
+    "4p44sc": {
+        "id": "4p44sc",
+        "type": "scholium"
+    },
+    "4p45": {
+        "id": "4p45",
+        "children": [
+            "4p45d",
+            "4p45sc",
+            "4p45c1",
+            "4p45c2"
+        ],
+        "type": "propositio",
+        "number": 45
+    },
+    "4p45c1": {
+        "id": "4p45c1",
+        "ref": [
+            "3p39",
+            "4p37"
+        ],
+        "type": "corollarium",
+        "number": 1
+    },
+    "4p45c2": {
+        "id": "4p45c2",
+        "children": [
+            "4p45c2sc"
+        ],
+        "ref": [
+            "3p39",
+            "4p37sc1",
+            "4p37sc2"
+        ],
+        "type": "corollarium",
+        "number": 2
+    },
+    "4p45c2sc": {
+        "id": "4p45c2sc",
+        "ref": [
+            "4p45c1",
+            "4p41"
+        ],
+        "type": "scholium"
+    },
+    "4p45d": {
+        "id": "4p45d",
+        "ref": [
+            "3p39",
+            "4p37"
+        ],
+        "type": "demonstratio"
+    },
+    "4p45sc": {
+        "id": "4p45sc",
+        "type": "scholium"
+    },
+    "4p46": {
+        "id": "4p46",
+        "children": [
+            "4p46d",
+            "4p46sc"
+        ],
+        "type": "propositio",
+        "number": 46
+    },
+    "4p46d": {
+        "id": "4p46d",
+        "ref": [
+            "4p45c1",
+            "4p19",
+            "4p37",
+            "3p43",
+            "3p44",
+            "3p59sc"
+        ],
+        "type": "demonstratio"
+    },
+    "4p46sc": {
+        "id": "4p46sc",
+        "type": "scholium"
+    },
+    "4p47": {
+        "id": "4p47",
+        "children": [
+            "4p47d",
+            "4p47sc"
+        ],
+        "type": "propositio",
+        "number": 47
+    },
+    "4p47d": {
+        "id": "4p47d",
+        "ref": [
+            "3ad13",
+            "3ad13e",
+            "4p41",
+            "4p43"
+        ],
+        "type": "demonstratio"
+    },
+    "4p47sc": {
+        "id": "4p47sc",
+        "type": "scholium"
+    },
+    "4p48": {
+        "id": "4p48",
+        "children": [
+            "4p48d"
+        ],
+        "type": "propositio",
+        "number": 48
+    },
+    "4p48d": {
+        "id": "4p48d",
+        "ref": [
+            "3ad21",
+            "3ad22",
+            "4p26",
+            "4p27"
+        ],
+        "type": "demonstratio"
+    },
+    "4p49": {
+        "id": "4p49",
+        "children": [
+            "4p49d"
+        ],
+        "type": "propositio",
+        "number": 49
+    },
+    "4p49d": {
+        "id": "4p49d",
+        "ref": [
+            "3p41sc",
+            "3ad30",
+            "3p25",
+            "3ad28"
+        ],
+        "type": "demonstratio"
+    },
+    "4p4c": {
+        "id": "4p4c",
+        "type": "corollarium"
+    },
+    "4p4d": {
+        "id": "4p4d",
+        "ref": [
+            "1p24c",
+            "3p7",
+            "1p34",
+            "3p4",
+            "3p6",
+            "4p3",
+            "1p16",
+            "1p21",
+            "4p4d"
+        ],
+        "type": "demonstratio"
+    },
+    "4p5": {
+        "id": "4p5",
+        "children": [
+            "4p5d"
+        ],
+        "type": "propositio",
+        "number": 5
+    },
+    "4p50": {
+        "id": "4p50",
+        "children": [
+            "4p50d",
+            "4p50c"
+        ],
+        "type": "propositio",
+        "number": 50
+    },
+    "4p50c": {
+        "id": "4p50c",
+        "children": [
+            "4p50csc"
+        ],
+        "type": "corollarium"
+    },
+    "4p50csc": {
+        "id": "4p50csc",
+        "ref": [
+            "3p27"
+        ],
+        "type": "scholium"
+    },
+    "4p50d": {
+        "id": "4p50d",
+        "ref": [
+            "3ad18",
+            "4p41",
+            "3p27c3",
+            "4p37",
+            "4p27"
+        ],
+        "type": "demonstratio"
+    },
+    "4p51": {
+        "id": "4p51",
+        "children": [
+            "4p51d",
+            "4p51a",
+            "4p51sc"
+        ],
+        "type": "propositio",
+        "number": 51
+    },
+    "4p51a": {
+        "id": "4p51a",
+        "ref": [
+            "4p37",
+            "3p11sc",
+            "3ad19"
+        ],
+        "type": "aliter"
+    },
+    "4p51d": {
+        "id": "4p51d",
+        "ref": [
+            "3ad19",
+            "3p59",
+            "3p3"
+        ],
+        "type": "demonstratio"
+    },
+    "4p51sc": {
+        "id": "4p51sc",
+        "ref": [
+            "3ad20",
+            "4p45"
+        ],
+        "type": "scholium"
+    },
+    "4p52": {
+        "id": "4p52",
+        "children": [
+            "4p52d",
+            "4p52sc"
+        ],
+        "type": "propositio",
+        "number": 52
+    },
+    "4p52d": {
+        "id": "4p52d",
+        "ref": [
+            "3ad25",
+            "3p3",
+            "2p40",
+            "2p43",
+            "3def2",
+            "3p3"
+        ],
+        "type": "demonstratio"
+    },
+    "4p52sc": {
+        "id": "4p52sc",
+        "ref": [
+            "4p25",
+            "3p53c",
+            "3p55c1"
+        ],
+        "type": "scholium"
+    },
+    "4p53": {
+        "id": "4p53",
+        "children": [
+            "4p53d"
+        ],
+        "type": "propositio",
+        "number": 53
+    },
+    "4p53d": {
+        "id": "4p53d",
+        "ref": [
+            "3ad26",
+            "3p7",
+            "3p55",
+            "4p26"
+        ],
+        "type": "demonstratio"
+    },
+    "4p54": {
+        "id": "4p54",
+        "children": [
+            "4p54d",
+            "4p54sc"
+        ],
+        "type": "propositio",
+        "number": 54
+    },
+    "4p54d": {
+        "id": "4p54d",
+        "ref": [
+            "3ad27"
+        ],
+        "type": "demonstratio"
+    },
+    "4p54sc": {
+        "id": "4p54sc",
+        "type": "scholium"
+    },
+    "4p55": {
+        "id": "4p55",
+        "children": [
+            "4p55d"
+        ],
+        "type": "propositio",
+        "number": 55
+    },
+    "4p55d": {
+        "id": "4p55d",
+        "ref": [
+            "3ad28",
+            "3ad29"
+        ],
+        "type": "demonstratio"
+    },
+    "4p56": {
+        "id": "4p56",
+        "children": [
+            "4p56d",
+            "4p56c"
+        ],
+        "type": "propositio",
+        "number": 56
+    },
+    "4p56c": {
+        "id": "4p56c",
+        "children": [
+            "4p56csc"
+        ],
+        "type": "corollarium"
+    },
+    "4p56csc": {
+        "id": "4p56csc",
+        "ref": [
+            "4p18"
+        ],
+        "type": "scholium"
+    },
+    "4p56d": {
+        "id": "4p56d",
+        "ref": [
+            "4p22c",
+            "4p24",
+            "4p24",
+            "2p43",
+            "4def8",
+            "4p55"
+        ],
+        "type": "demonstratio"
+    },
+    "4p57": {
+        "id": "4p57",
+        "children": [
+            "4p57d",
+            "4p57sc"
+        ],
+        "type": "propositio",
+        "number": 57
+    },
+    "4p57d": {
+        "id": "4p57d",
+        "ref": [
+            "3ad28",
+            "3ad6",
+            "3p13csc"
+        ],
+        "type": "demonstratio"
+    },
+    "4p57sc": {
+        "id": "4p57sc",
+        "ref": [
+            "3p55c2sc",
+            "3p41sc",
+            "3pr"
+        ],
+        "type": "scholium"
+    },
+    "4p58": {
+        "id": "4p58",
+        "children": [
+            "4p58d",
+            "4p58sc"
+        ],
+        "type": "propositio",
+        "number": 58
+    },
+    "4p58d": {
+        "id": "4p58d",
+        "ref": [
+            "3ad30",
+            "4p37sc1"
+        ],
+        "type": "demonstratio"
+    },
+    "4p58sc": {
+        "id": "4p58sc",
+        "ref": [
+            "4p52sc",
+            "4p44sc"
+        ],
+        "type": "scholium"
+    },
+    "4p59": {
+        "id": "4p59",
+        "children": [
+            "4p59d",
+            "4p59a",
+            "4p59sc"
+        ],
+        "type": "propositio",
+        "number": 59
+    },
+    "4p59a": {
+        "id": "4p59a",
+        "ref": [
+            "4p45c1",
+            "4pr",
+            "4p19"
+        ],
+        "type": "aliter"
+    },
+    "4p59d": {
+        "id": "4p59d",
+        "ref": [
+            "3p3",
+            "3def2",
+            "4p41",
+            "4p41",
+            "4p43",
+            "3p3",
+            "3p3sc",
+            "3ad4e",
+            "3ad1"
+        ],
+        "type": "demonstratio"
+    },
+    "4p59sc": {
+        "id": "4p59sc",
+        "type": "scholium"
+    },
+    "4p5d": {
+        "id": "4p5d",
+        "ref": [
+            "3def1",
+            "3def2",
+            "3p7",
+            "2p16"
+        ],
+        "type": "demonstratio"
+    },
+    "4p6": {
+        "id": "4p6",
+        "children": [
+            "4p6d"
+        ],
+        "type": "propositio",
+        "number": 6
+    },
+    "4p60": {
+        "id": "4p60",
+        "children": [
+            "4p60d",
+            "4p60sc"
+        ],
+        "type": "propositio",
+        "number": 60
+    },
+    "4p60d": {
+        "id": "4p60d",
+        "ref": [
+            "4p6",
+            "3p6",
+            "3p7",
+            "3p12"
+        ],
+        "type": "demonstratio"
+    },
+    "4p60sc": {
+        "id": "4p60sc",
+        "ref": [
+            "4p44sc",
+            "4p9c"
+        ],
+        "type": "scholium"
+    },
+    "4p61": {
+        "id": "4p61",
+        "children": [
+            "4p61d"
+        ],
+        "type": "propositio",
+        "number": 61
+    },
+    "4p61d": {
+        "id": "4p61d",
+        "ref": [
+            "3ad1",
+            "3p3",
+            "3def2"
+        ],
+        "type": "demonstratio"
+    },
+    "4p62": {
+        "id": "4p62",
+        "children": [
+            "4p62d",
+            "4p62sc"
+        ],
+        "type": "propositio",
+        "number": 62
+    },
+    "4p62d": {
+        "id": "4p62d",
+        "ref": [
+            "2p44c2",
+            "2p43",
+            "2p43sc",
+            "2p41",
+            "2def4"
+        ],
+        "type": "demonstratio"
+    },
+    "4p62sc": {
+        "id": "4p62sc",
+        "ref": [
+            "2p31",
+            "2p44c1sc",
+            "4p16"
+        ],
+        "type": "scholium"
+    },
+    "4p63": {
+        "id": "4p63",
+        "children": [
+            "4p63d",
+            "4p63sc",
+            "4p63c"
+        ],
+        "type": "propositio",
+        "number": 63
+    },
+    "4p63c": {
+        "id": "4p63c",
+        "children": [
+            "4p63cd",
+            "4p63csc"
+        ],
+        "type": "corollarium"
+    },
+    "4p63cd": {
+        "id": "4p63cd",
+        "ref": [
+            "3p59",
+            "4p61",
+            "4p8"
+        ],
+        "type": "demonstratio"
+    },
+    "4p63csc": {
+        "id": "4p63csc",
+        "type": "scholium"
+    },
+    "4p63d": {
+        "id": "4p63d",
+        "ref": [
+            "3p3",
+            "3p59",
+            "3ad13"
+        ],
+        "type": "demonstratio"
+    },
+    "4p63sc": {
+        "id": "4p63sc",
+        "type": "scholium"
+    },
+    "4p64": {
+        "id": "4p64",
+        "children": [
+            "4p64d",
+            "4p64c"
+        ],
+        "type": "propositio",
+        "number": 64
+    },
+    "4p64c": {
+        "id": "4p64c",
+        "type": "corollarium"
+    },
+    "4p64d": {
+        "id": "4p64d",
+        "ref": [
+            "4p8",
+            "3ad3",
+            "3p6",
+            "3p7",
+            "3def2",
+            "3p3",
+            "2p29"
+        ],
+        "type": "demonstratio"
+    },
+    "4p65": {
+        "id": "4p65",
+        "children": [
+            "4p65d",
+            "4p65c"
+        ],
+        "type": "propositio",
+        "number": 65
+    },
+    "4p65c": {
+        "id": "4p65c",
+        "ref": [
+            "4p63c"
+        ],
+        "type": "corollarium"
+    },
+    "4p65d": {
+        "id": "4p65d",
+        "ref": [
+            "4pr",
+            "4p63c"
+        ],
+        "type": "demonstratio"
+    },
+    "4p66": {
+        "id": "4p66",
+        "children": [
+            "4p66d",
+            "4p66c"
+        ],
+        "type": "propositio",
+        "number": 66
+    },
+    "4p66c": {
+        "id": "4p66c",
+        "children": [
+            "4p66csc"
+        ],
+        "ref": [
+            "4p66",
+            "4p65c",
+            "4p65"
+        ],
+        "type": "corollarium"
+    },
+    "4p66csc": {
+        "id": "4p66csc",
+        "ref": [
+            "4p1",
+            "4p2",
+            "4p3",
+            "4p4",
+            "4p5",
+            "4p6",
+            "4p7",
+            "4p8",
+            "4p9",
+            "4p10",
+            "4p11",
+            "4p12",
+            "4p13",
+            "4p14",
+            "4p15",
+            "4p16",
+            "4p17",
+            "4p18"
+        ],
+        "type": "scholium"
+    },
+    "4p66d": {
+        "id": "4p66d",
+        "ref": [
+            "4p62",
+            "4p65"
+        ],
+        "type": "demonstratio"
+    },
+    "4p67": {
+        "id": "4p67",
+        "children": [
+            "4p67d"
+        ],
+        "type": "propositio",
+        "number": 67
+    },
+    "4p67d": {
+        "id": "4p67d",
+        "ref": [
+            "4p63",
+            "4p63c",
+            "4p24"
+        ],
+        "type": "demonstratio"
+    },
+    "4p68": {
+        "id": "4p68",
+        "children": [
+            "4p68d",
+            "4p68sc"
+        ],
+        "type": "propositio",
+        "number": 68
+    },
+    "4p68d": {
+        "id": "4p68d",
+        "ref": [
+            "4p64c"
+        ],
+        "type": "demonstratio"
+    },
+    "4p68sc": {
+        "id": "4p68sc",
+        "ref": [
+            "4p4",
+            "3p27",
+            "4p37"
+        ],
+        "type": "scholium"
+    },
+    "4p69": {
+        "id": "4p69",
+        "children": [
+            "4p69d",
+            "4p69c"
+        ],
+        "type": "propositio",
+        "number": 69
+    },
+    "4p69c": {
+        "id": "4p69c",
+        "children": [
+            "4p69csc"
+        ],
+        "type": "corollarium"
+    },
+    "4p69csc": {
+        "id": "4p69csc",
+        "ref": [
+            "3p59sc"
+        ],
+        "type": "scholium"
+    },
+    "4p69d": {
+        "id": "4p69d",
+        "ref": [
+            "4p7",
+            "4p5",
+            "4p3",
+            "3p59sc",
+            "3ad40",
+            "3ad41"
+        ],
+        "type": "demonstratio"
+    },
+    "4p6d": {
+        "id": "4p6d",
+        "ref": [
+            "4p5",
+            "4p3"
+        ],
+        "type": "demonstratio"
+    },
+    "4p7": {
+        "id": "4p7",
+        "children": [
+            "4p7d",
+            "4p7c"
+        ],
+        "type": "propositio",
+        "number": 7
+    },
+    "4p70": {
+        "id": "4p70",
+        "children": [
+            "4p70d",
+            "4p70sc"
+        ],
+        "type": "propositio",
+        "number": 70
+    },
+    "4p70d": {
+        "id": "4p70d",
+        "ref": [
+            "3p39sc",
+            "3p42",
+            "4p37"
+        ],
+        "type": "demonstratio"
+    },
+    "4p70sc": {
+        "id": "4p70sc",
+        "type": "scholium"
+    },
+    "4p71": {
+        "id": "4p71",
+        "children": [
+            "4p71d",
+            "4p71sc"
+        ],
+        "type": "propositio",
+        "number": 71
+    },
+    "4p71d": {
+        "id": "4p71d",
+        "ref": [
+            "4p35",
+            "4p35c1",
+            "4p37",
+            "3ad34"
+        ],
+        "type": "demonstratio"
+    },
+    "4p71sc": {
+        "id": "4p71sc",
+        "type": "scholium"
+    },
+    "4p72": {
+        "id": "4p72",
+        "children": [
+            "4p72d",
+            "4p72sc"
+        ],
+        "type": "propositio",
+        "number": 72
+    },
+    "4p72d": {
+        "id": "4p72d",
+        "ref": [
+            "4p24",
+            "4p24",
+            "4p31c"
+        ],
+        "type": "demonstratio"
+    },
+    "4p72sc": {
+        "id": "4p72sc",
+        "type": "scholium"
+    },
+    "4p73": {
+        "id": "4p73",
+        "children": [
+            "4p73d",
+            "4p73sc"
+        ],
+        "type": "propositio",
+        "number": 73
+    },
+    "4p73d": {
+        "id": "4p73d",
+        "ref": [
+            "4p63",
+            "4p66csc",
+            "4p37",
+            "4p37sc2"
+        ],
+        "type": "demonstratio"
+    },
+    "4p73sc": {
+        "id": "4p73sc",
+        "ref": [
+            "3p59sc",
+            "4p37",
+            "4p46",
+            "4p50csc"
+        ],
+        "type": "scholium"
+    },
+    "4p7c": {
+        "id": "4p7c",
+        "ref": [
+            "4p7",
+            "3agd"
+        ],
+        "type": "corollarium"
+    },
+    "4p7d": {
+        "id": "4p7d",
+        "ref": [
+            "3agd",
+            "4p5",
+            "2p6",
+            "3p5",
+            "4ax",
+            "2p12",
+            "3agd"
+        ],
+        "type": "demonstratio"
+    },
+    "4p8": {
+        "id": "4p8",
+        "children": [
+            "4p8d"
+        ],
+        "type": "propositio",
+        "number": 8
+    },
+    "4p8d": {
+        "id": "4p8d",
+        "ref": [
+            "4def1",
+            "4def2",
+            "3p7",
+            "3p11sc",
+            "2p22",
+            "2p21",
+            "2p21sc",
+            "3agd"
+        ],
+        "type": "demonstratio"
+    },
+    "4p9": {
+        "id": "4p9",
+        "children": [
+            "4p9d",
+            "4p9sc",
+            "4p9c"
+        ],
+        "type": "propositio",
+        "number": 9
+    },
+    "4p9c": {
+        "id": "4p9c",
+        "type": "corollarium"
+    },
+    "4p9d": {
+        "id": "4p9d",
+        "ref": [
+            "2p17csc",
+            "2p16c2",
+            "3agd",
+            "2p17"
+        ],
+        "type": "demonstratio"
+    },
+    "4p9sc": {
+        "id": "4p9sc",
+        "ref": [
+            "3p18"
+        ],
+        "type": "scholium"
+    },
+    "4pr": {
+        "id": "4pr",
+        "ref": [
+            "1p16",
+            "2def6"
+        ],
+        "type": "praefatio"
+    },
+    "5": {
+        "id": "5",
+        "children": [
+            "5pr",
+            "5ax",
+            "5p1",
+            "5p2",
+            "5p3",
+            "5p4",
+            "5p5",
+            "5p6",
+            "5p7",
+            "5p8",
+            "5p9",
+            "5p10",
+            "5p11",
+            "5p12",
+            "5p13",
+            "5p14",
+            "5p15",
+            "5p16",
+            "5p17",
+            "5p18",
+            "5p19",
+            "5p20",
+            "5p21",
+            "5p22",
+            "5p23",
+            "5p24",
+            "5p25",
+            "5p26",
+            "5p27",
+            "5p28",
+            "5p29",
+            "5p30",
+            "5p31",
+            "5p32",
+            "5p33",
+            "5p34",
+            "5p35",
+            "5p36",
+            "5p37",
+            "5p38",
+            "5p39",
+            "5p40",
+            "5p41",
+            "5p42"
+        ],
+        "type": "pars",
+        "number": 5,
+        "title": "De potentia intellectus seu de libertate humana"
+    },
+    "5ax": {
+        "id": "5ax",
+        "children": [
+            "5ax1",
+            "5ax2"
+        ],
+        "type": "axiomata"
+    },
+    "5ax1": {
+        "id": "5ax1",
+        "type": "axioma",
+        "number": 1
+    },
+    "5ax2": {
+        "id": "5ax2",
+        "ref": [
+            "3p7"
+        ],
+        "type": "axioma",
+        "number": 2
+    },
+    "5p1": {
+        "id": "5p1",
+        "children": [
+            "5p1d"
+        ],
+        "type": "propositio",
+        "number": 1
+    },
+    "5p10": {
+        "id": "5p10",
+        "children": [
+            "5p10d",
+            "5p10sc"
+        ],
+        "type": "propositio",
+        "number": 10
+    },
+    "5p10d": {
+        "id": "5p10d",
+        "ref": [
+            "4p30",
+            "4p27",
+            "4p26",
+            "2p40sc2",
+            "2p47sc",
+            "5p1"
+        ],
+        "type": "demonstratio"
+    },
+    "5p10sc": {
+        "id": "5p10sc",
+        "ref": [
+            "5p7",
+            "4p46",
+            "4p46sc",
+            "2p18",
+            "4p52",
+            "5p6",
+            "5p7",
+            "5p8",
+            "4p63c",
+            "3p59"
+        ],
+        "type": "scholium"
+    },
+    "5p11": {
+        "id": "5p11",
+        "children": [
+            "5p11d"
+        ],
+        "type": "propositio",
+        "number": 11
+    },
+    "5p11d": {
+        "id": "5p11d",
+        "ref": [
+            "5p8"
+        ],
+        "type": "demonstratio"
+    },
+    "5p12": {
+        "id": "5p12",
+        "children": [
+            "5p12d"
+        ],
+        "type": "propositio",
+        "number": 12
+    },
+    "5p12d": {
+        "id": "5p12d",
+        "ref": [
+            "2p40sc2",
+            "5p11",
+            "2p18"
+        ],
+        "type": "demonstratio"
+    },
+    "5p13": {
+        "id": "5p13",
+        "children": [
+            "5p13d"
+        ],
+        "type": "propositio",
+        "number": 13
+    },
+    "5p13d": {
+        "id": "5p13d",
+        "ref": [
+            "2p18"
+        ],
+        "type": "demonstratio"
+    },
+    "5p14": {
+        "id": "5p14",
+        "children": [
+            "5p14d"
+        ],
+        "type": "propositio",
+        "number": 14
+    },
+    "5p14d": {
+        "id": "5p14d",
+        "ref": [
+            "5p4",
+            "1p15"
+        ],
+        "type": "demonstratio"
+    },
+    "5p15": {
+        "id": "5p15",
+        "children": [
+            "5p15d"
+        ],
+        "type": "propositio",
+        "number": 15
+    },
+    "5p15d": {
+        "id": "5p15d",
+        "ref": [
+            "3p53",
+            "5p14",
+            "3ad6"
+        ],
+        "type": "demonstratio"
+    },
+    "5p16": {
+        "id": "5p16",
+        "children": [
+            "5p16d"
+        ],
+        "type": "propositio",
+        "number": 16
+    },
+    "5p16d": {
+        "id": "5p16d",
+        "ref": [
+            "5p14",
+            "5p15",
+            "5p11"
+        ],
+        "type": "demonstratio"
+    },
+    "5p17": {
+        "id": "5p17",
+        "children": [
+            "5p17d",
+            "5p17c"
+        ],
+        "type": "propositio",
+        "number": 17
+    },
+    "5p17c": {
+        "id": "5p17c",
+        "ref": [
+            "5p17",
+            "3ad6",
+            "3ad7"
+        ],
+        "type": "corollarium"
+    },
+    "5p17d": {
+        "id": "5p17d",
+        "ref": [
+            "2p32",
+            "2def4",
+            "3agd",
+            "1p20c2",
+            "3ad2",
+            "3ad3"
+        ],
+        "type": "demonstratio"
+    },
+    "5p18": {
+        "id": "5p18",
+        "children": [
+            "5p18d",
+            "5p18c"
+        ],
+        "type": "propositio",
+        "number": 18
+    },
+    "5p18c": {
+        "id": "5p18c",
+        "children": [
+            "5p18csc"
+        ],
+        "type": "corollarium"
+    },
+    "5p18csc": {
+        "id": "5p18csc",
+        "ref": [
+            "5p3",
+            "3p59"
+        ],
+        "type": "scholium"
+    },
+    "5p18d": {
+        "id": "5p18d",
+        "ref": [
+            "2p46",
+            "2p47",
+            "3p3",
+            "3p59",
+            "3ad7"
+        ],
+        "type": "demonstratio"
+    },
+    "5p19": {
+        "id": "5p19",
+        "children": [
+            "5p19d"
+        ],
+        "type": "propositio",
+        "number": 19
+    },
+    "5p19d": {
+        "id": "5p19d",
+        "ref": [
+            "5p17c",
+            "3p19",
+            "3p28"
+        ],
+        "type": "demonstratio"
+    },
+    "5p1d": {
+        "id": "5p1d",
+        "ref": [
+            "2p7",
+            "2p6c",
+            "2p7c",
+            "2p18",
+            "3p2"
+        ],
+        "type": "demonstratio"
+    },
+    "5p2": {
+        "id": "5p2",
+        "children": [
+            "5p2d"
+        ],
+        "type": "propositio",
+        "number": 2
+    },
+    "5p20": {
+        "id": "5p20",
+        "children": [
+            "5p20d",
+            "5p20sc"
+        ],
+        "type": "propositio",
+        "number": 20
+    },
+    "5p20d": {
+        "id": "5p20d",
+        "ref": [
+            "4p28",
+            "4p36",
+            "4p37",
+            "3ad23",
+            "5p18",
+            "3p35sc",
+            "3p31"
+        ],
+        "type": "demonstratio"
+    },
+    "5p20sc": {
+        "id": "5p20sc",
+        "ref": [
+            "5p4csc",
+            "5p2",
+            "5p4csc",
+            "5p7",
+            "5p9",
+            "5p11",
+            "5p10sc",
+            "5p12",
+            "5p13",
+            "5p14",
+            "4p5",
+            "2p47sc",
+            "5p3",
+            "5p4csc",
+            "5p14",
+            "5p15",
+            "2p45",
+            "5p15",
+            "5p16",
+            "3p1",
+            "3p3"
+        ],
+        "type": "scholium"
+    },
+    "5p21": {
+        "id": "5p21",
+        "children": [
+            "5p21d"
+        ],
+        "type": "propositio",
+        "number": 21
+    },
+    "5p21d": {
+        "id": "5p21d",
+        "ref": [
+            "2p8c",
+            "2p26",
+            "2p17csc",
+            "2p18sc"
+        ],
+        "type": "demonstratio"
+    },
+    "5p22": {
+        "id": "5p22",
+        "children": [
+            "5p22d"
+        ],
+        "type": "propositio",
+        "number": 22
+    },
+    "5p22d": {
+        "id": "5p22d",
+        "ref": [
+            "1p25",
+            "1ax4",
+            "1p16",
+            "2p3"
+        ],
+        "type": "demonstratio"
+    },
+    "5p23": {
+        "id": "5p23",
+        "children": [
+            "5p23d",
+            "5p23sc"
+        ],
+        "type": "propositio",
+        "number": 23
+    },
+    "5p23d": {
+        "id": "5p23d",
+        "ref": [
+            "5p22",
+            "2p13",
+            "2p8c",
+            "5p22"
+        ],
+        "type": "demonstratio"
+    },
+    "5p23sc": {
+        "id": "5p23sc",
+        "type": "scholium"
+    },
+    "5p24": {
+        "id": "5p24",
+        "children": [
+            "5p24d"
+        ],
+        "type": "propositio",
+        "number": 24
+    },
+    "5p24d": {
+        "id": "5p24d",
+        "ref": [
+            "1p25c"
+        ],
+        "type": "demonstratio"
+    },
+    "5p25": {
+        "id": "5p25",
+        "children": [
+            "5p25d"
+        ],
+        "type": "propositio",
+        "number": 25
+    },
+    "5p25d": {
+        "id": "5p25d",
+        "ref": [
+            "2p40sc2",
+            "5p24",
+            "4p28",
+            "4def8",
+            "3p7"
+        ],
+        "type": "demonstratio"
+    },
+    "5p26": {
+        "id": "5p26",
+        "children": [
+            "5p26d"
+        ],
+        "type": "propositio",
+        "number": 26
+    },
+    "5p26d": {
+        "id": "5p26d",
+        "ref": [
+            "3ad1"
+        ],
+        "type": "demonstratio"
+    },
+    "5p27": {
+        "id": "5p27",
+        "children": [
+            "5p27d"
+        ],
+        "type": "propositio",
+        "number": 27
+    },
+    "5p27d": {
+        "id": "5p27d",
+        "ref": [
+            "4p28",
+            "5p25",
+            "5p24",
+            "3ad2",
+            "2p43",
+            "3ad25"
+        ],
+        "type": "demonstratio"
+    },
+    "5p28": {
+        "id": "5p28",
+        "children": [
+            "5p28d"
+        ],
+        "type": "propositio",
+        "number": 28
+    },
+    "5p28d": {
+        "id": "5p28d",
+        "ref": [
+            "2p40sc2",
+            "2p40sc2",
+            "2p40sc2",
+            "3ad1"
+        ],
+        "type": "demonstratio"
+    },
+    "5p29": {
+        "id": "5p29",
+        "children": [
+            "5p29d",
+            "5p29sc"
+        ],
+        "type": "propositio",
+        "number": 29
+    },
+    "5p29d": {
+        "id": "5p29d",
+        "ref": [
+            "5p21",
+            "2p26",
+            "1def8",
+            "1def8e",
+            "2p44c2",
+            "5p23",
+            "2p13"
+        ],
+        "type": "demonstratio"
+    },
+    "5p29sc": {
+        "id": "5p29sc",
+        "ref": [
+            "2p45",
+            "2p45sc"
+        ],
+        "type": "scholium"
+    },
+    "5p2d": {
+        "id": "5p2d",
+        "ref": [
+            "3ad6",
+            "3ad7"
+        ],
+        "type": "demonstratio"
+    },
+    "5p3": {
+        "id": "5p3",
+        "children": [
+            "5p3d",
+            "5p3c"
+        ],
+        "type": "propositio",
+        "number": 3
+    },
+    "5p30": {
+        "id": "5p30",
+        "children": [
+            "5p30d"
+        ],
+        "type": "propositio",
+        "number": 30
+    },
+    "5p30d": {
+        "id": "5p30d",
+        "ref": [
+            "1def8"
+        ],
+        "type": "demonstratio"
+    },
+    "5p31": {
+        "id": "5p31",
+        "children": [
+            "5p31d",
+            "5p31sc"
+        ],
+        "type": "propositio",
+        "number": 31
+    },
+    "5p31d": {
+        "id": "5p31d",
+        "ref": [
+            "5p29",
+            "5p21",
+            "5p23",
+            "5p30",
+            "2p46",
+            "2p40",
+            "2p40sc2",
+            "3def1"
+        ],
+        "type": "demonstratio"
+    },
+    "5p31sc": {
+        "id": "5p31sc",
+        "type": "scholium"
+    },
+    "5p32": {
+        "id": "5p32",
+        "children": [
+            "5p32d",
+            "5p32c"
+        ],
+        "type": "propositio",
+        "number": 32
+    },
+    "5p32c": {
+        "id": "5p32c",
+        "ref": [
+            "5p32",
+            "3ad6",
+            "5p29"
+        ],
+        "type": "corollarium"
+    },
+    "5p32d": {
+        "id": "5p32d",
+        "ref": [
+            "5p27",
+            "3ad25",
+            "5p30"
+        ],
+        "type": "demonstratio"
+    },
+    "5p33": {
+        "id": "5p33",
+        "children": [
+            "5p33d",
+            "5p33sc"
+        ],
+        "type": "propositio",
+        "number": 33
+    },
+    "5p33d": {
+        "id": "5p33d",
+        "ref": [
+            "5p31",
+            "1ax3",
+            "1ax3"
+        ],
+        "type": "demonstratio"
+    },
+    "5p33sc": {
+        "id": "5p33sc",
+        "ref": [
+            "5p33",
+            "5p32c"
+        ],
+        "type": "scholium"
+    },
+    "5p34": {
+        "id": "5p34",
+        "children": [
+            "5p34d",
+            "5p34c"
+        ],
+        "type": "propositio",
+        "number": 34
+    },
+    "5p34c": {
+        "id": "5p34c",
+        "children": [
+            "5p34csc"
+        ],
+        "type": "corollarium"
+    },
+    "5p34csc": {
+        "id": "5p34csc",
+        "type": "scholium"
+    },
+    "5p34d": {
+        "id": "5p34d",
+        "ref": [
+            "2p17csc",
+            "2p16c2",
+            "3agd",
+            "5p21"
+        ],
+        "type": "demonstratio"
+    },
+    "5p35": {
+        "id": "5p35",
+        "children": [
+            "5p35d"
+        ],
+        "type": "propositio",
+        "number": 35
+    },
+    "5p35d": {
+        "id": "5p35d",
+        "ref": [
+            "1def6",
+            "2def6",
+            "2p3",
+            "1p11",
+            "1def1",
+            "5p32c"
+        ],
+        "type": "demonstratio"
+    },
+    "5p36": {
+        "id": "5p36",
+        "children": [
+            "5p36d",
+            "5p36c"
+        ],
+        "type": "propositio",
+        "number": 36
+    },
+    "5p36c": {
+        "id": "5p36c",
+        "children": [
+            "5p36csc"
+        ],
+        "type": "corollarium"
+    },
+    "5p36csc": {
+        "id": "5p36csc",
+        "ref": [
+            "3ad25",
+            "3ad30",
+            "5p35",
+            "5p27",
+            "1p15",
+            "2p47sc",
+            "2p40sc2"
+        ],
+        "type": "scholium"
+    },
+    "5p36d": {
+        "id": "5p36d",
+        "ref": [
+            "5p32c",
+            "3p3",
+            "5p32",
+            "5p32c",
+            "1p25c",
+            "2p11c",
+            "5p35"
+        ],
+        "type": "demonstratio"
+    },
+    "5p37": {
+        "id": "5p37",
+        "children": [
+            "5p37d",
+            "5p37sc"
+        ],
+        "type": "propositio",
+        "number": 37
+    },
+    "5p37d": {
+        "id": "5p37d",
+        "ref": [
+            "5p33",
+            "5p29"
+        ],
+        "type": "demonstratio"
+    },
+    "5p37sc": {
+        "id": "5p37sc",
+        "ref": [
+            "4ax"
+        ],
+        "type": "scholium"
+    },
+    "5p38": {
+        "id": "5p38",
+        "children": [
+            "5p38d",
+            "5p38sc"
+        ],
+        "type": "propositio",
+        "number": 38
+    },
+    "5p38d": {
+        "id": "5p38d",
+        "ref": [
+            "2p11",
+            "5p23",
+            "5p29",
+            "5p37",
+            "4p30"
+        ],
+        "type": "demonstratio"
+    },
+    "5p38sc": {
+        "id": "5p38sc",
+        "ref": [
+            "4p39sc",
+            "5p27",
+            "5p21"
+        ],
+        "type": "scholium"
+    },
+    "5p39": {
+        "id": "5p39",
+        "children": [
+            "5p39d",
+            "5p39sc"
+        ],
+        "type": "propositio",
+        "number": 39
+    },
+    "5p39d": {
+        "id": "5p39d",
+        "ref": [
+            "4p38",
+            "4p30",
+            "5p10",
+            "5p14",
+            "5p15",
+            "5p16",
+            "5p33"
+        ],
+        "type": "demonstratio"
+    },
+    "5p39sc": {
+        "id": "5p39sc",
+        "ref": [
+            "5p38sc"
+        ],
+        "type": "scholium"
+    },
+    "5p3c": {
+        "id": "5p3c",
+        "type": "corollarium"
+    },
+    "5p3d": {
+        "id": "5p3d",
+        "ref": [
+            "3agd",
+            "2p21",
+            "2p21sc",
+            "3p3"
+        ],
+        "type": "demonstratio"
+    },
+    "5p4": {
+        "id": "5p4",
+        "children": [
+            "5p4d",
+            "5p4c"
+        ],
+        "type": "propositio",
+        "number": 4
+    },
+    "5p40": {
+        "id": "5p40",
+        "children": [
+            "5p40d",
+            "5p40c"
+        ],
+        "type": "propositio",
+        "number": 40
+    },
+    "5p40c": {
+        "id": "5p40c",
+        "children": [
+            "5p40csc"
+        ],
+        "ref": [
+            "5p23",
+            "5p29",
+            "3p3",
+            "5p21",
+            "3p3",
+            "3agd",
+            "5p40"
+        ],
+        "type": "corollarium"
+    },
+    "5p40csc": {
+        "id": "5p40csc",
+        "ref": [
+            "1p21"
+        ],
+        "type": "scholium"
+    },
+    "5p40d": {
+        "id": "5p40d",
+        "ref": [
+            "2def6",
+            "3p3",
+            "3p3sc"
+        ],
+        "type": "demonstratio"
+    },
+    "5p41": {
+        "id": "5p41",
+        "children": [
+            "5p41d",
+            "5p41sc"
+        ],
+        "type": "propositio",
+        "number": 41
+    },
+    "5p41d": {
+        "id": "5p41d",
+        "ref": [
+            "4p22c",
+            "4p24"
+        ],
+        "type": "demonstratio"
+    },
+    "5p41sc": {
+        "id": "5p41sc",
+        "type": "scholium"
+    },
+    "5p42": {
+        "id": "5p42",
+        "children": [
+            "5p42d",
+            "5p42sc"
+        ],
+        "type": "propositio",
+        "number": 42
+    },
+    "5p42d": {
+        "id": "5p42d",
+        "ref": [
+            "5p36",
+            "5p36csc",
+            "5p32c",
+            "3p59",
+            "3p3",
+            "4def8",
+            "5p32",
+            "5p3c",
+            "5p38"
+        ],
+        "type": "demonstratio"
+    },
+    "5p42sc": {
+        "id": "5p42sc",
+        "type": "scholium"
+    },
+    "5p4c": {
+        "id": "5p4c",
+        "children": [
+            "5p4csc"
+        ],
+        "ref": [
+            "3agd",
+            "5p4"
+        ],
+        "type": "corollarium"
+    },
+    "5p4csc": {
+        "id": "5p4csc",
+        "ref": [
+            "1p36",
+            "2p40",
+            "5p2",
+            "4p61",
+            "3p31c",
+            "4p37sc1",
+            "4p37a",
+            "4p59",
+            "3p3"
+        ],
+        "type": "scholium"
+    },
+    "5p4d": {
+        "id": "5p4d",
+        "ref": [
+            "2p38",
+            "2p12",
+            "2p13l2"
+        ],
+        "type": "demonstratio"
+    },
+    "5p5": {
+        "id": "5p5",
+        "children": [
+            "5p5d"
+        ],
+        "type": "propositio",
+        "number": 5
+    },
+    "5p5d": {
+        "id": "5p5d",
+        "ref": [
+            "3p49",
+            "4p11",
+            "2p35sc"
+        ],
+        "type": "demonstratio"
+    },
+    "5p6": {
+        "id": "5p6",
+        "children": [
+            "5p6d",
+            "5p6sc"
+        ],
+        "type": "propositio",
+        "number": 6
+    },
+    "5p6d": {
+        "id": "5p6d",
+        "ref": [
+            "1p29",
+            "1p28",
+            "5p5",
+            "3p48"
+        ],
+        "type": "demonstratio"
+    },
+    "5p6sc": {
+        "id": "5p6sc",
+        "type": "scholium"
+    },
+    "5p7": {
+        "id": "5p7",
+        "children": [
+            "5p7d"
+        ],
+        "type": "propositio",
+        "number": 7
+    },
+    "5p7d": {
+        "id": "5p7d",
+        "ref": [
+            "2p17",
+            "4p6",
+            "4p9",
+            "2p40sc2",
+            "2p38",
+            "5ax1"
+        ],
+        "type": "demonstratio"
+    },
+    "5p8": {
+        "id": "5p8",
+        "children": [
+            "5p8d",
+            "5p8sc"
+        ],
+        "type": "propositio",
+        "number": 8
+    },
+    "5p8d": {
+        "id": "5p8d",
+        "ref": [
+            "3p7",
+            "4p5"
+        ],
+        "type": "demonstratio"
+    },
+    "5p8sc": {
+        "id": "5p8sc",
+        "ref": [
+            "5ax2"
+        ],
+        "type": "scholium"
+    },
+    "5p9": {
+        "id": "5p9",
+        "children": [
+            "5p9d"
+        ],
+        "type": "propositio",
+        "number": 9
+    },
+    "5p9d": {
+        "id": "5p9d",
+        "ref": [
+            "4p26",
+            "4p27",
+            "3p7",
+            "2p11",
+            "3p48"
+        ],
+        "type": "demonstratio"
+    },
+    "5pr": {
+        "id": "5pr",
+        "type": "praefatio"
+    }
+}

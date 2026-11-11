@@ -1,0 +1,27 @@
+{
+    "name": "French (Saisset)",
+    "language": "fr",
+    "translator": "Saisset",
+    "types": {
+        "ethica": "Éthique",
+        "pars": "Partie",
+        "definitiones": "Définitions",
+        "definitio": "Définition",
+        "explicatio": "Explication",
+        "axiomata": "Axiomes",
+        "axioma": "Axiome",
+        "propositio": "Proposition",
+        "demonstratio": "Démonstration",
+        "corollarium": "Corollaire",
+        "aliter": "Autre Démonstration",
+        "scholium": "Scholie",
+        "appendix": "Appendice",
+        "praefatio": "Préface",
+        "lemma": "Lemme",
+        "postulatum": "Postulat",
+        "postulata": "Postulats",
+        "affectuum_definitiones": "Définition des Passions",
+        "affectuum_generalis_definitio": "Définition Générale des Passions",
+        "caput": "Chapitre"
+    }
+}

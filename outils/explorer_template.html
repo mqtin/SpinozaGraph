@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spinoza — Ethica</title>
+<style>
+:root {
+  --bg: #f7f6f2; --panel: #ffffff; --ink: #1f1d1a; --muted: #6b665d; --faint: #a39e94; --line: #e2ded5; --band: #efece5;
+  --accent: #2f5d8a; --desc: #c0702a; --hl: #fff3c4;
+  --definition: #3b6ea8; --def-affect: #2a8a8a; --axiome: #6b5bb0; --postulat: #2f8a5b; --lemme: #7a8a2f;
+  --proposition: #c0702a; --corollaire: #c9901f; --aliter: #a0522d; --scolie: #a2667e;
+  --preface: #8a857b; --appendice: #8a857b; --chapitre: #8a857b;
+  --star: #d49a0a; --ok: #2f8a5b; --warn: #b7791f; --err: #b83a3a;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --gut: 30px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181a; --panel: #1f2023; --ink: #e8e6e1; --muted: #9a968d; --faint: #6c6961; --line: #33353a; --band: #1c1d20;
+    --accent: #7fb0e0; --desc: #e39a55; --hl: #3d3720;
+    --definition: #6d9fd6; --def-affect: #5cc0c0; --axiome: #a294e0; --postulat: #5fbf8b; --lemme: #b5c45a;
+    --proposition: #e39a55; --corollaire: #e8bd5a; --aliter: #d0805a; --scolie: #cf8fa8;
+    --preface: #8f8a80; --appendice: #8f8a80; --chapitre: #8f8a80;
+    --star: #f0c040;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 14px; }
+button { font: inherit; color: inherit; }
+a { color: var(--accent); }
+
+#app { display: grid; grid-template-columns: 300px 1fr; grid-template-rows: 48px 1fr; height: 100vh; }
+header { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; padding: 0 16px; border-bottom: 1px solid var(--line); background: var(--panel); }
+header h1 { font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 0; letter-spacing: .01em; white-space: nowrap; }
+header .meta { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.navbtn { border: 1px solid var(--line); background: none; border-radius: 6px; width: 30px; height: 28px; cursor: pointer; font-size: 15px; line-height: 1; color: var(--ink); }
+.navbtn:hover:not(:disabled) { background: var(--bg); }
+.navbtn:disabled { opacity: .3; cursor: default; }
+#nav { display: flex; gap: 4px; }
+#trail { display: flex; align-items: center; gap: 2px; min-width: 0; overflow: hidden; font-size: 12px; flex: 1; }
+#trail .step { border: 0; background: none; cursor: pointer; padding: 3px 6px; border-radius: 4px; white-space: nowrap; color: var(--c, var(--muted)); font-weight: 600; }
+#trail .step:hover { background: var(--bg); }
+#trail .step.cur { background: var(--bg); outline: 1px solid var(--c, var(--line)); }
+#trail .step.fwd { opacity: .45; }
+#trail .arrow { color: var(--faint); }
+#trail .lbl { color: var(--muted); margin-right: 4px; white-space: nowrap; }
+#langs { display: flex; gap: 4px; }
+#langs button { width: 34px; height: 28px; border-radius: 999px; border: 1px solid var(--line); background: none; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--muted); }
+#langs button:hover { color: var(--ink); border-color: var(--ink); }
+#langs button.on { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.seq { display: flex; gap: 6px; }
+.seq a { font-size: 12px; text-decoration: none; border: 1px solid var(--line); border-radius: 5px; padding: 2px 8px; color: var(--muted); white-space: nowrap; }
+.seq a:hover { color: var(--ink); border-color: var(--ink); }
+.seq a.off { visibility: hidden; }
+
+/* Barre latérale */
+#side { border-right: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; min-height: 0; }
+#search { margin: 12px 12px 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; }
+#filters { padding: 0 12px 10px; border-bottom: 1px solid var(--line); }
+.seg { display: flex; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+.seg button { flex: 1; border: 0; background: none; padding: 5px 0; cursor: pointer; font-size: 12px; color: var(--muted); font-family: var(--serif); font-weight: 600; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button.on { background: var(--ink); color: var(--panel); }
+.seg button:hover:not(.on) { color: var(--ink); background: var(--bg); }
+#filters details { margin-top: 8px; }
+#filters summary { cursor: pointer; font-size: 12px; color: var(--muted); list-style: none; display: flex; align-items: center; gap: 6px; }
+#filters summary::before { content: "▸"; font-size: 10px; }
+#filters details[open] summary::before { content: "▾"; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.chip { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 2px 9px; font-size: 12px; cursor: pointer; color: var(--muted); }
+.chip.on { color: var(--ink); border-color: var(--ink); }
+.chip .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: 0; }
+.hint { font-size: 11px; color: var(--faint); margin-top: 6px; }
+#list { overflow: auto; flex: 1; padding: 4px 0 16px; }
+.group { padding: 14px 14px 4px; position: sticky; top: 0; background: var(--panel); z-index: 1; }
+.group b { font-family: var(--serif); font-size: 14px; }
+.group span { display: block; font-size: 11px; color: var(--muted); }
+.item { display: flex; gap: 8px; align-items: baseline; width: 100%; text-align: left; border: 0; background: none; padding: 4px 14px; cursor: pointer; border-left: 3px solid transparent; }
+.item.sub { padding-left: 26px; }
+.item.sub .id { font-weight: 500; }
+.item:hover { background: var(--bg); }
+.item.sel { background: var(--bg); border-left-color: var(--accent); }
+.item .id { font-weight: 700; font-variant-numeric: tabular-nums; flex: none; min-width: 52px; }
+.item .t { color: var(--muted); font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.item.home .t { color: var(--ink); font-size: 14px; font-weight: 600; }
+.item .st { color: var(--star); flex: none; font-size: 12px; margin-left: -4px; }
+.favf { margin-top: 8px; border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 2px 10px; font-size: 12px; cursor: pointer; color: var(--muted); }
+.favf:hover { color: var(--ink); }
+.favf.on { color: var(--ink); border-color: var(--star); background: color-mix(in srgb, var(--star) 15%, transparent); }
+.favf .s { color: var(--star); }
+mark { background: var(--hl); color: inherit; padding: 0 1px; }
+
+/* Zone principale */
+#main { display: grid; grid-template-columns: 1fr 6px var(--readerW, 42%); min-height: 0; min-width: 0; }
+#main.reading { grid-template-columns: 0 0 1fr; }
+#main.reading #graphwrap, #main.reading #resizer { display: none; }
+#graphwrap { position: relative; min-width: 0; overflow: hidden; }
+#graph { position: absolute; top: 0; bottom: 0; left: var(--gut); right: 0; width: calc(100% - var(--gut)); height: 100%; display: block; cursor: grab; user-select: none; }
+#graph.drag { cursor: grabbing; }
+#toolbar { position: absolute; top: 10px; left: calc(var(--gut) + 10px); width: max-content; max-width: calc(100% - var(--gut) - 20px); display: flex; gap: 4px; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.08); z-index: 3; }
+#toolbar button { border: 0; background: none; padding: 4px 9px; border-radius: 5px; cursor: pointer; font-size: 12px; color: var(--muted); }
+#toolbar button:hover { background: var(--bg); color: var(--ink); }
+#toolbar button.on { background: var(--bg); color: var(--ink); font-weight: 600; box-shadow: inset 0 0 0 1px var(--line); }
+#toolbar .sep { width: 1px; background: var(--line); margin: 2px 2px; }
+#legend { position: absolute; bottom: 10px; left: calc(var(--gut) + 10px); font-size: 11px; color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; display: flex; gap: 10px; flex-wrap: wrap; max-width: calc(100% - var(--gut) - 20px); z-index: 3; }
+#legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; background: var(--c); }
+#legend span.line::before { height: 2px; vertical-align: 3px; }
+#legend span.dash::before { height: 0; border-top: 2px dashed var(--c); background: none; vertical-align: 3px; }
+#empty { position: absolute; inset: 0 0 0 var(--gut); display: none; align-items: center; justify-content: center; color: var(--muted); }
+#resizer { cursor: col-resize; background: var(--line); opacity: .5; }
+#resizer:hover { opacity: 1; }
+/* Marge des parties : hors du graphe, ne recouvre jamais les nœuds */
+#gutter { position: absolute; top: 0; bottom: 0; left: 0; width: var(--gut); background: var(--panel); border-right: 1px solid var(--line); overflow: hidden; z-index: 2; }
+.glabel { position: absolute; left: 3px; right: 3px; border-radius: 6px; background: var(--band); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer; }
+.glabel:hover { border-color: var(--ink); }
+.glabel span { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 100%; font-family: var(--serif); font-size: 12.5px; padding: 6px 0; }
+.glabel b { font-weight: 700; }
+.glabel i { color: var(--muted); }
+#tip { position: absolute; z-index: 4; pointer-events: none; display: none; max-width: 340px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--c); border-radius: 6px; padding: 8px 10px; box-shadow: 0 4px 14px rgba(0,0,0,.15); font-size: 12px; line-height: 1.45; }
+#tip b { color: var(--c); }
+#tip .n { color: var(--muted); display: block; margin-bottom: 4px; }
+#tip .s { font-family: var(--serif); font-size: 13.5px; font-style: italic; }
+
+/* Graphe */
+.band { fill: var(--band); }
+.node rect.box { fill: var(--panel); stroke: var(--c); stroke-width: 1.3; }
+.node .bar { fill: var(--c); stroke: none; }
+.node text { fill: var(--ink); font-size: 12px; pointer-events: none; }
+.node text.nid { font-weight: 700; fill: var(--c); font-size: 13px; }
+.node text.kind { fill: var(--muted); font-size: 11px; }
+.node text.snip { font-family: var(--serif); font-size: 12.5px; }
+.node text.big { display: none; font-weight: 700; fill: var(--c); font-size: 26px; }
+.node { cursor: pointer; transition: opacity .12s; }
+.node.sel rect.box { stroke-width: 3.5; fill: var(--hl); }
+.node.dim { opacity: .14; }
+/* Favoris : étoile dans le coin du nœud, agrandie quand on voit de loin */
+.node .star path { fill: var(--star); stroke: var(--panel); stroke-width: 1.5; }
+.node .star.kid path { fill: var(--panel); stroke: var(--star); stroke-width: 2; }
+#graph.mid .node .star path { transform: scale(3); }
+#graph.far .node .star path { transform: scale(6.5); }
+#graph.mid .node text:not(.big), #graph.far .node text { display: none; }
+#graph.mid .node text.big { display: block; }
+#graph.far .node rect.box { fill: var(--c); fill-opacity: .35; }
+#graph.far .node.sel rect.box, #graph.mid .node.sel rect.box { fill: var(--hl); fill-opacity: 1; stroke: var(--ink); stroke-width: 6; }
+.edge { fill: none; stroke: var(--faint); stroke-width: 1.2; opacity: .55; }
+.edge.struct { stroke-dasharray: 2 4; stroke-linecap: round; }
+.edge.xpart { stroke-dasharray: 6 4; opacity: .35; }
+#graph.m-all .edge.xpart:not(.anc):not(.desc):not(.hl) { display: none; }
+.edge.voir { stroke: var(--scolie); stroke-dasharray: 5 4; opacity: .55; }
+.edge.anc { stroke: var(--accent); stroke-width: 2.4; opacity: .95; stroke-dasharray: none; }
+.edge.desc { stroke: var(--desc); stroke-width: 2.4; opacity: .95; stroke-dasharray: none; }
+.edge.dim { display: none; }
+#graph.hovering .node:not(.hov):not(.nb) { opacity: .2; }
+#graph.hovering .edge:not(.hl) { opacity: .05; }
+#graph.hovering .edge.hl { display: inline; stroke: var(--ink); stroke-width: 2; opacity: .9; }
+.arrow path { fill: var(--faint); }
+#arrow-anc path { fill: var(--accent); }
+#arrow-desc path { fill: var(--desc); }
+
+/* Lecteur */
+#reader { overflow: auto; background: var(--panel); border-left: 1px solid var(--line); min-width: 0; }
+#reader .inner { max-width: 720px; margin: 0 auto; padding: 22px 32px 80px; }
+#reader .crumbs { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+#reader .crumbs button { border: 1px solid var(--line); background: none; border-radius: 5px; padding: 2px 8px; cursor: pointer; font-size: 12px; color: var(--muted); }
+#reader .crumbs button:hover { color: var(--ink); }
+.kicker { font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-bottom: 2px; }
+#reader h1.title { font-family: var(--serif); font-size: 28px; font-weight: 600; margin: 0 0 6px; line-height: 1.2; }
+.starbtn { border: 0; background: none; cursor: pointer; font-size: 26px; line-height: 1; color: var(--faint); padding: 0 0 0 10px; vertical-align: 1px; }
+.starbtn:hover, .starbtn.on { color: var(--star); }
+#reader h1.title .eid { color: var(--c); margin-right: 10px; font-family: var(--sans); font-size: 18px; font-weight: 700; vertical-align: 3px; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.badge { font-size: 11px; border-radius: 4px; padding: 2px 7px; border: 1px solid var(--line); color: var(--muted); }
+.badge b { color: var(--ink); font-weight: 600; }
+.badge.type { background: var(--c); color: #fff; border-color: var(--c); }
+.fallback { font-size: 12px; color: var(--warn); margin: -8px 0 14px; }
+.md { font-family: var(--serif); font-size: 17.5px; line-height: 1.7; }
+.md h1, .md h2, .md h3 { font-family: var(--sans); line-height: 1.3; }
+.md h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 32px 0 8px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.md h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 26px 0 4px; font-weight: 600; }
+.md p { margin: 0 0 12px; }
+.md ul, .md ol { padding-left: 22px; }
+.md code { font-family: ui-monospace, Consolas, monospace; font-size: .82em; background: var(--bg); padding: 1px 4px; border-radius: 3px; }
+.md pre { background: var(--bg); padding: 12px; border-radius: 6px; overflow: auto; font-size: 13px; }
+.md table { border-collapse: collapse; font-family: var(--sans); font-size: 13px; margin: 12px 0; width: 100%; }
+.md th, .md td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+.md blockquote { margin: 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
+/* Renvois dans le texte : discrets, cliquables */
+.md a.ref { color: var(--c); text-decoration: underline; text-decoration-style: dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; border-radius: 3px; }
+.md a.ref:hover { background: var(--hl); text-decoration-style: solid; }
+.statement { font-size: 19px; line-height: 1.6; background: var(--bg); border-left: 3px solid var(--c); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 18px; }
+.statement p:last-child { margin: 0; }
+.relsec { margin-top: 30px; }
+.relsec h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 22px 0 6px; font-weight: 600; display: flex; gap: 8px; align-items: baseline; }
+.relsec h4 .n { font-weight: 400; letter-spacing: 0; text-transform: none; }
+.rows { display: flex; flex-direction: column; }
+.rows a { display: flex; gap: 10px; align-items: baseline; padding: 4px 8px; border-radius: 5px; text-decoration: none; color: var(--ink); min-width: 0; }
+.rows a:hover { background: var(--bg); }
+.rows .rid { color: var(--c); font-weight: 700; flex: none; min-width: 62px; font-size: 13px; }
+.rows .rn { color: var(--muted); flex: none; font-size: 12px; min-width: 96px; }
+.rows .rs { color: var(--ink); font-family: var(--serif); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.pills { line-height: 1.9; }
+.pill { display: inline-block; border: 1px solid var(--c, var(--line)); color: var(--c, var(--ink)); border-radius: 4px; padding: 0 6px; margin: 0 4px 4px 0; cursor: pointer; font-weight: 600; font-size: 12px; background: var(--panel); text-decoration: none; line-height: 1.6; }
+.pill:hover { background: var(--c); color: #fff; }
+details.chain { margin-top: 6px; }
+details.chain summary { cursor: pointer; font-size: 13px; color: var(--muted); }
+details.chain .byp { margin: 8px 0 0; }
+details.chain .byp div { margin: 6px 0; }
+details.chain .byp b { font-family: var(--serif); font-size: 13px; margin-right: 6px; }
+.file { color: var(--faint); font-size: 12px; margin-top: 30px; font-family: ui-monospace, Consolas, monospace; }
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; margin: 16px 0 24px; }
+.stat { background: var(--bg); border-radius: 8px; padding: 10px 12px; border-top: 3px solid var(--c, var(--line)); }
+.stat .n { font-size: 22px; font-weight: 700; }
+.stat .l { color: var(--muted); font-size: 12px; }
+.kbd { font-family: ui-monospace, Consolas, monospace; border: 1px solid var(--line); border-radius: 3px; padding: 0 4px; font-size: 11px; }
+.home p, .home li { font-size: 14px; line-height: 1.6; }
+.problems li { color: var(--err); font-size: 13px; }
+@media (max-width: 800px) {
+  #app { grid-template-columns: 1fr; grid-template-rows: auto auto 1fr; }
+  header { flex-wrap: wrap; padding: 8px 16px; gap: 8px; }
+  #side { max-height: 30vh; border-right: 0; border-bottom: 1px solid var(--line); }
+  #main { grid-template-columns: 1fr; grid-template-rows: 50vh auto; }
+  #resizer { display: none; }
+  #reader .inner { padding: 16px; }
+  .rows .rn { display: none; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1 id="booktitle">Spinoza — Ethica</h1>
+    <div id="nav">
+      <button class="navbtn" id="back">←</button>
+      <button class="navbtn" id="fwd">→</button>
+    </div>
+    <div id="trail"></div>
+    <div id="langs" role="group"></div>
+    <span class="meta" id="meta"></span>
+  </header>
+  <aside id="side">
+    <input id="search" type="search" autocomplete="off">
+    <div id="filters"></div>
+    <nav id="list"></nav>
+  </aside>
+  <section id="main">
+    <div id="graphwrap">
+      <div id="gutter"></div>
+      <svg id="graph">
+        <defs>
+          <marker id="arrow" class="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z"/></marker>
+          <marker id="arrow-anc" class="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z"/></marker>
+          <marker id="arrow-desc" class="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z"/></marker>
+        </defs>
+        <g id="viewport"><g id="bands"></g><g id="edges"></g><g id="nodes"></g></g>
+      </svg>
+      <div id="tip"></div>
+      <div id="toolbar">
+        <button data-mode="all" class="on"></button>
+        <button data-mode="anc"></button>
+        <button data-mode="desc"></button>
+        <button data-mode="near"></button>
+        <span class="sep"></span>
+        <button id="fold"></button>
+        <button id="voir"></button>
+        <span class="sep"></span>
+        <button id="fit"></button>
+        <button id="read"></button>
+      </div>
+      <div id="legend"></div>
+      <div id="empty"></div>
+    </div>
+    <div id="resizer"></div>
+    <article id="reader"><div class="inner" id="readerInner"></div></article>
+  </section>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+// ---------- Interface : français et anglais ----------
+// Interface en français, anglais et allemand. Le latin n'a pas d'interface propre : avec LA, l'interface reste dans la dernière langue utilisée.
+const I18N = {
+  fr: {
+    search: "Rechercher (id ou texte) — touche /", all: "Tout", allParts: "Toutes les parties", ctrlAdd: "Clic : seulement cette partie (re-clic : toutes) · Ctrl+clic : ajouter ou retirer",
+    types: "Types d'éléments", typesHint: "Clic : afficher / masquer · double-clic : seulement ce type",
+    overview: "Vue d'ensemble", documents: "Documents", history: "Historique", back: "Précédent (Alt+←)", fwd: "Suivant (Alt+→)",
+    elements: "éléments", langGroup: "Langue",
+    mAll: "Tout", mAllT: "Tout le graphe ; la sélection met en évidence ses appuis et ses conséquences (touche 1)",
+    mAnc: "Chemin vers", mAncT: "Seulement le chemin qui mène à l'élément sélectionné (touche 2)",
+    mDesc: "Conséquences", mDescT: "Seulement ce qui découle de l'élément sélectionné (touche 3)",
+    mNear: "Voisinage", mNearT: "Voisins directs (touche 4)",
+    fold: "Replier", foldT: "Replier corollaires, scolies et autres démonstrations dans leur proposition (touche P)",
+    voir: "Renvois « voir »", voirT: "Afficher les renvois non démonstratifs : scolies, préfaces, définitions des affects… (touche V)",
+    fit: "Recadrer", fitT: "Recadrer (touche F)", read: "Lecture", readT: "Masquer le graphe pour lire (touche R)",
+    resize: "Glisser pour redimensionner", empty: "Aucun élément à afficher avec ces filtres.", partClick: "Clic : seulement cette partie (re-clic : toutes)",
+    legSupports: "appuis", legConseq: "conséquences", legVoir: "voir", legPref: "Préfaces, appendices",
+    attached: "rattaché(s)", pathTo: "Chemin vers", conseq: "Conséquences",
+    secParent: "Rattaché à", secKids: "Corollaires, scolies…", secDeps: "S'appuie sur", start: "— (point de départ)",
+    secUsed: "Sert d'appui à", secVoir: "Renvoie à (voir)", secVoirBy: "Évoqué par (voir)",
+    chain: (n, s) => `Chemin complet : ${n} éléments (${s})`, corrected: "corrigé",
+    fallback: l => `Pas de texte en ${l} pour cet élément : texte latin affiché.`, unknown: "Élément inconnu", docMissing: "Document introuvable.",
+    statSupports: "Appuis", statVoir: "Renvois « voir »", texts: "Textes", problems: "Problèmes", shortcuts: "Raccourcis", update: "Mise à jour",
+    source: `Découpage, mise en forme des textes et renvois : dépôt <a href="https://codeberg.org/lou/ethica" target="_blank" rel="noopener">lou/ethica</a> de lou (CC BY-SA 4.0). Le texte latin et les renvois viennent de la <a href="https://github.com/BapMel/spinozabase" target="_blank" rel="noopener">SpinozaBase</a> de Baptiste Mélès, d'après l'édition de Gilles Louise (GPL-3.0). Les traductions sont dans le domaine public ; les mentions de chaque édition numérisée sont reproduites ci-dessus. Corrections propres au projet : <code>corrections.yaml</code>. Code : GPL-3.0 ; données : CC BY-SA 4.0 (voir LICENSE et NOTICE.md).`, provenance: "Provenance et droits",
+    home1: `Chaque nœud est un élément du texte ; chaque flèche va d'un appui vers ce qui s'appuie sur lui. Chaque partie occupe une bande ; dans une bande, on lit de gauche à droite, des points de départ vers ce qui en découle. Les appuis pris dans une partie précédente (en pointillés) n'apparaissent qu'au survol ou pour l'élément sélectionné.`,
+    home2: `Un renvoi cité dans une démonstration, un corollaire ou une autre démonstration est un <b>appui</b>. Les renvois des scolies, préfaces et définitions sont des renvois <b>« voir »</b>, masqués par défaut. Sélectionnez un élément pour voir en <span style="color:var(--accent)">bleu</span> le chemin qui y mène, et en <span style="color:var(--desc)">orange</span> ce qui en découle. <b>Replier</b> range les corollaires, scolies et autres démonstrations dans leur proposition (« +n »). Dans le texte, les renvois soulignés en pointillés mènent à l'élément cité.`,
+    keys: `<span class="kbd">/</span> rechercher · <span class="kbd">F</span> recadrer · <span class="kbd">R</span> lecture · <span class="kbd">S</span> favori · <span class="kbd">P</span> replier · <span class="kbd">V</span> renvois « voir » · <span class="kbd">1</span>–<span class="kbd">4</span> modes du graphe · <span class="kbd">[</span> <span class="kbd">]</span> élément précédent / suivant dans le texte · <span class="kbd">Échap</span> accueil · <span class="kbd">Alt+←</span> <span class="kbd">Alt+→</span> historique · Ctrl+clic sur une partie : en ajouter une autre`,
+    updateText: `Ce fichier est généré : <code>python outils/generate.py</code> puis <code>python outils/build_explorer.py</code>.`,
+    prevNext: k => `touche ${k}`,
+    starAdd: "Ajouter aux favoris (touche S)", starDel: "Retirer des favoris (touche S)", favorites: "Favoris", favOnly: "Favoris seulement",
+    favNone: "Aucun favori pour l'instant : cliquez sur l'étoile ☆ à côté du titre d'un élément, ou appuyez sur S.",
+    typeLabel: { definition: "Définitions", "def-affect": "Déf. des affects", axiome: "Axiomes", postulat: "Postulats", lemme: "Lemmes", proposition: "Propositions", corollaire: "Corollaires", aliter: "Autres démonstrations", scolie: "Scolies", preface: "Préfaces", appendice: "Appendice", chapitre: "Chapitres (app. IV)" },
+  },
+  en: {
+    search: "Search (id or text) — key /", all: "All", allParts: "All parts", ctrlAdd: "Click: only this part (click again: all) · Ctrl+click: add or remove",
+    types: "Element types", typesHint: "Click: show / hide · double-click: only this type",
+    overview: "Overview", documents: "Documents", history: "History", back: "Back (Alt+←)", fwd: "Forward (Alt+→)",
+    elements: "elements", langGroup: "Language",
+    mAll: "All", mAllT: "Whole graph; the selection highlights what it rests on and what follows from it (key 1)",
+    mAnc: "Path to", mAncT: "Only the path leading to the selected element (key 2)",
+    mDesc: "Consequences", mDescT: "Only what follows from the selected element (key 3)",
+    mNear: "Neighbours", mNearT: "Direct neighbours (key 4)",
+    fold: "Fold", foldT: "Fold corollaries, scholia and alternative proofs into their proposition (key P)",
+    voir: "“See” references", voirT: "Show non-demonstrative references: scholia, prefaces, definitions of the emotions… (key V)",
+    fit: "Fit", fitT: "Fit to screen (key F)", read: "Reading", readT: "Hide the graph to read (key R)",
+    resize: "Drag to resize", empty: "No element to show with these filters.", partClick: "Click: only this part (click again: all)",
+    legSupports: "supports", legConseq: "consequences", legVoir: "see", legPref: "Prefaces, appendices",
+    attached: "attached", pathTo: "Path to", conseq: "Consequences",
+    secParent: "Attached to", secKids: "Corollaries, scholia…", secDeps: "Relies on", start: "— (starting point)",
+    secUsed: "Supports", secVoir: "Refers to (see)", secVoirBy: "Referred to by (see)",
+    chain: (n, s) => `Full path: ${n} elements (${s})`, corrected: "corrected",
+    fallback: l => `No ${l} text for this element: showing the Latin.`, unknown: "Unknown element", docMissing: "Document not found.",
+    statSupports: "Supports", statVoir: "“See” references", texts: "Texts", problems: "Problems", shortcuts: "Shortcuts", update: "Updating",
+    source: `Segmentation, text formatting and references: the <a href="https://codeberg.org/lou/ethica" target="_blank" rel="noopener">lou/ethica</a> repository by lou (CC BY-SA 4.0). The Latin text and references come from the <a href="https://github.com/BapMel/spinozabase" target="_blank" rel="noopener">SpinozaBase</a> by Baptiste Mélès, adapted from Gilles Louise's edition (GPL-3.0). The translations are in the public domain; each digitized edition's notice is reproduced above. Project-specific corrections: <code>corrections.yaml</code>. Code: GPL-3.0; data: CC BY-SA 4.0 (see LICENSE and NOTICE.md).`, provenance: "Provenance and rights",
+    home1: `Each node is an element of the text; each arrow goes from a support to what rests on it. Each part occupies a band; within a band, read from left to right, from starting points to what follows from them. Supports taken from an earlier part (dashed) only appear on hover or for the selected element.`,
+    home2: `A reference cited in a proof, a corollary or an alternative proof is a <b>support</b>. References in scholia, prefaces and definitions are <b>“see”</b> references, hidden by default. Select an element to see in <span style="color:var(--accent)">blue</span> the path leading to it, and in <span style="color:var(--desc)">orange</span> what follows from it. <b>Fold</b> tucks corollaries, scholia and alternative proofs into their proposition (“+n”). In the text, references underlined with dots lead to the cited element.`,
+    keys: `<span class="kbd">/</span> search · <span class="kbd">F</span> fit · <span class="kbd">R</span> reading · <span class="kbd">S</span> favourite · <span class="kbd">P</span> fold · <span class="kbd">V</span> “see” references · <span class="kbd">1</span>–<span class="kbd">4</span> graph modes · <span class="kbd">[</span> <span class="kbd">]</span> previous / next element in the text · <span class="kbd">Esc</span> home · <span class="kbd">Alt+←</span> <span class="kbd">Alt+→</span> history · Ctrl+click on a part: add another`,
+    updateText: `This file is generated: <code>python outils/generate.py</code> then <code>python outils/build_explorer.py</code>.`,
+    prevNext: k => `key ${k}`,
+    starAdd: "Add to favourites (key S)", starDel: "Remove from favourites (key S)", favorites: "Favourites", favOnly: "Favourites only",
+    favNone: "No favourites yet: click the star ☆ next to an element's title, or press S.",
+    typeLabel: { definition: "Definitions", "def-affect": "Def. of the emotions", axiome: "Axioms", postulat: "Postulates", lemme: "Lemmas", proposition: "Propositions", corollaire: "Corollaries", aliter: "Alternative proofs", scolie: "Scholia", preface: "Prefaces", appendice: "Appendix", chapitre: "Chapters (app. IV)" },
+  },
+  de: {
+    search: "Suchen (ID oder Text) — Taste /", all: "Alle", allParts: "Alle Teile", ctrlAdd: "Klick: nur dieser Teil (erneut: alle) · Strg+Klick: hinzufügen oder entfernen",
+    types: "Elementtypen", typesHint: "Klick: ein- / ausblenden · Doppelklick: nur dieser Typ",
+    overview: "Übersicht", documents: "Dokumente", history: "Verlauf", back: "Zurück (Alt+←)", fwd: "Vorwärts (Alt+→)",
+    elements: "Elemente", langGroup: "Sprache",
+    mAll: "Alle", mAllT: "Ganzer Graph; die Auswahl hebt ihre Grundlagen und Folgerungen hervor (Taste 1)",
+    mAnc: "Weg zu", mAncT: "Nur der Weg, der zum ausgewählten Element führt (Taste 2)",
+    mDesc: "Folgerungen", mDescT: "Nur was aus dem ausgewählten Element folgt (Taste 3)",
+    mNear: "Nachbarn", mNearT: "Direkte Nachbarn (Taste 4)",
+    fold: "Einklappen", foldT: "Zusätze, Anmerkungen und andere Beweise in ihren Lehrsatz einklappen (Taste P)",
+    voir: "„Siehe“-Verweise", voirT: "Nicht beweisende Verweise zeigen: Anmerkungen, Vorworte, Definitionen der Affekte… (Taste V)",
+    fit: "Einpassen", fitT: "An den Bildschirm anpassen (Taste F)", read: "Lesen", readT: "Graph ausblenden, um zu lesen (Taste R)",
+    resize: "Ziehen, um die Größe zu ändern", empty: "Mit diesen Filtern gibt es kein Element.", partClick: "Klick: nur dieser Teil (erneut: alle)",
+    legSupports: "Grundlagen", legConseq: "Folgerungen", legVoir: "siehe", legPref: "Vorworte, Anhänge",
+    attached: "zugeordnet", pathTo: "Weg zu", conseq: "Folgerungen",
+    secParent: "Gehört zu", secKids: "Zusätze, Anmerkungen…", secDeps: "Stützt sich auf", start: "— (Ausgangspunkt)",
+    secUsed: "Grundlage für", secVoir: "Verweist auf (siehe)", secVoirBy: "Erwähnt von (siehe)",
+    chain: (n, s) => `Vollständiger Weg: ${n} Elemente (${s})`, corrected: "korrigiert",
+    fallback: l => `Kein Text auf ${l} für dieses Element: lateinischer Text angezeigt.`, unknown: "Unbekanntes Element", docMissing: "Dokument nicht gefunden.",
+    statSupports: "Grundlagen", statVoir: "„Siehe“-Verweise", texts: "Texte", problems: "Probleme", shortcuts: "Tastenkürzel", update: "Aktualisierung",
+    source: `Gliederung, Textaufbereitung und Verweise: Repository <a href="https://codeberg.org/lou/ethica" target="_blank" rel="noopener">lou/ethica</a> von lou (CC BY-SA 4.0). Der lateinische Text und die Verweise stammen aus der <a href="https://github.com/BapMel/spinozabase" target="_blank" rel="noopener">SpinozaBase</a> von Baptiste Mélès, nach der Ausgabe von Gilles Louise (GPL-3.0). Die Übersetzungen sind gemeinfrei; die Hinweise der digitalisierten Ausgaben sind oben wiedergegeben. Projekteigene Korrekturen: <code>corrections.yaml</code>. Code: GPL-3.0; Daten: CC BY-SA 4.0 (siehe LICENSE und NOTICE.md).`, provenance: "Herkunft und Rechte",
+    home1: `Jeder Knoten ist ein Element des Textes; jeder Pfeil führt von einer Grundlage zu dem, was sich auf sie stützt. Jeder Teil nimmt ein Band ein; innerhalb eines Bandes liest man von links nach rechts, von den Ausgangspunkten zu dem, was daraus folgt. Grundlagen aus einem früheren Teil (gestrichelt) erscheinen nur beim Überfahren oder für das ausgewählte Element.`,
+    home2: `Ein Verweis in einem Beweis, einem Zusatz oder einem anderen Beweis ist eine <b>Grundlage</b>. Verweise in Anmerkungen, Vorworten und Definitionen sind <b>„Siehe“</b>-Verweise und standardmäßig ausgeblendet. Wählen Sie ein Element, um in <span style="color:var(--accent)">Blau</span> den Weg dorthin und in <span style="color:var(--desc)">Orange</span> die Folgerungen zu sehen. <b>Einklappen</b> ordnet Zusätze, Anmerkungen und andere Beweise ihrem Lehrsatz zu („+n“). Im Text führen gepunktet unterstrichene Verweise zum zitierten Element.`,
+    keys: `<span class="kbd">/</span> suchen · <span class="kbd">F</span> einpassen · <span class="kbd">R</span> lesen · <span class="kbd">S</span> Favorit · <span class="kbd">P</span> einklappen · <span class="kbd">V</span> „Siehe“-Verweise · <span class="kbd">1</span>–<span class="kbd">4</span> Graphmodi · <span class="kbd">[</span> <span class="kbd">]</span> vorheriges / nächstes Element im Text · <span class="kbd">Esc</span> Übersicht · <span class="kbd">Alt+←</span> <span class="kbd">Alt+→</span> Verlauf · Strg+Klick auf einen Teil: weiteren hinzufügen`,
+    updateText: `Diese Datei wird erzeugt: <code>python outils/generate.py</code>, dann <code>python outils/build_explorer.py</code>.`,
+    prevNext: k => `Taste ${k}`,
+    starAdd: "Zu den Favoriten hinzufügen (Taste S)", starDel: "Aus den Favoriten entfernen (Taste S)", favorites: "Favoriten", favOnly: "Nur Favoriten",
+    favNone: "Noch keine Favoriten: Klicken Sie auf den Stern ☆ neben dem Titel eines Elements oder drücken Sie S.",
+    typeLabel: { definition: "Definitionen", "def-affect": "Def. der Affekte", axiome: "Axiome", postulat: "Postulate", lemme: "Hilfssätze", proposition: "Lehrsätze", corollaire: "Zusätze", aliter: "Andere Beweise", scolie: "Anmerkungen", preface: "Vorworte", appendice: "Anhang", chapitre: "Kapitel (Anh. IV)" },
+  },
+};
+
+// ---------- Modèle ----------
+const TYPES = ["definition", "def-affect", "axiome", "postulat", "lemme", "proposition", "corollaire", "aliter", "scolie", "preface", "appendice", "chapitre"];
+const FOLDABLE = new Set(["corollaire", "scolie", "aliter"]);
+const ROMAN = ["", "I", "II", "III", "IV", "V"];
+const PARTS = [1, 2, 3, 4, 5];
+const LANG_CODES = Object.keys(DATA.langs);
+
+const els = DATA.elements;
+const byId = new Map(els.map(e => [e.id, e]));
+const order = new Map(els.map((e, i) => [e.id, i]));
+const color = id => `var(--${byId.get(id)?.type || "muted"})`;
+const kidsOf = new Map(els.map(e => [e.id, []]));
+for (const e of els) if (e.parent && kidsOf.has(e.parent)) kidsOf.get(e.parent).push(e.id);
+const foldedCount = new Map();
+for (const e of els) if (e.repli) foldedCount.set(e.repli, (foldedCount.get(e.repli) || 0) + 1);
+
+// Arêtes : logiques (depends_on), structurelles (corollaire/scolie <- proposition ; aliter -> proposition), « voir ».
+function structural(e) {
+  if (!e.parent || !byId.has(e.parent)) return null;
+  if (e.type === "corollaire" || e.type === "scolie") return [e.parent, e.id];
+  if (e.type === "aliter") return [e.id, e.parent];
+  return null;
+}
+function buildMaps(V) {
+  const P = new Map(), C = new Map(), VP = new Map(), kind = new Map();
+  const add = (m, k, v) => { if (!m.has(k)) m.set(k, []); if (!m.get(k).includes(v)) m.get(k).push(v); };
+  for (const e of els) { P.set(V(e.id), P.get(V(e.id)) || []); C.set(V(e.id), C.get(V(e.id)) || []); }
+  for (const e of els) {
+    const b = V(e.id);
+    for (const d of e.depends_on) { const a = V(d); if (a !== b && byId.has(d)) { add(P, b, a); add(C, a, b); kind.set(a + ">" + b, "log"); } }
+    const s = structural(e);
+    if (s) { const a = V(s[0]), c = V(s[1]); if (a !== c) { add(P, c, a); add(C, a, c); if (!kind.has(a + ">" + c)) kind.set(a + ">" + c, "struct"); } }
+    for (const d of e.voir) { const a = V(d); if (a !== b && byId.has(d)) add(VP, b, a); }
+  }
+  return { P, C, VP, kind };
+}
+const RAW = buildMaps(id => id);
+const VOIRBY = new Map();
+for (const e of els) for (const d of e.voir) (VOIRBY.get(d) || VOIRBY.set(d, []).get(d)).push(e.id);
+function closure(start, next) {
+  const seen = new Set(), stack = [...(next.get(start) || [])];
+  while (stack.length) { const x = stack.pop(); if (seen.has(x) || x === start) continue; seen.add(x); stack.push(...(next.get(x) || [])); }
+  return seen;
+}
+
+// ---------- Utilitaires ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fold = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/æ/g, "ae").replace(/œ/g, "oe").toLowerCase();
+const svgEl = (tag, attrs = {}) => { const n = document.createElementNS("http://www.w3.org/2000/svg", tag); for (const k in attrs) n.setAttribute(k, attrs[k]); return n; };
+const store = { get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+// Texte sans balisage de liens [[id|texte]]
+const plain = s => s.replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, "$1").replace(/\[\[([^\]]+)\]\]/g, "$1");
+
+// ---------- État et langue ----------
+const state = {
+  lang: LANG_CODES.includes(store.get("ethica-lang", "en")) ? store.get("ethica-lang", "en") : LANG_CODES[0],
+  ui: I18N[store.get("ethica-ui", "en")] ? store.get("ethica-ui", "en") : "en",
+  sel: null, view: "home", mode: "all", q: "",
+  folded: store.get("ethica-folded", true), showVoir: store.get("ethica-voir", false),
+  types: new Set(TYPES), parts: new Set(PARTS),
+  zoom: { k: 1, x: 0, y: 0 }, favOnly: false,
+};
+// Favoris : identifiants marqués d'une étoile, gardés dans le navigateur (localStorage).
+const stars = new Set((store.get("ethica-stars", []) || []).filter(id => byId.has(id)));
+function toggleStar(id) {
+  if (!byId.has(id)) return;
+  stars.has(id) ? stars.delete(id) : stars.add(id);
+  store.set("ethica-stars", [...stars].sort((a, b) => order.get(a) - order.get(b)));
+  if (!stars.size) state.favOnly = false;
+  renderFilters(); renderList(); clickedInGraph = true; renderGraph(false);
+  if (state.view === "home") renderHome();
+  const b = $("#starbtn"); if (b && state.sel === id) syncStarBtn(b, id);
+}
+function syncStarBtn(b, id) {
+  const on = stars.has(id);
+  b.classList.toggle("on", on); b.textContent = on ? "★" : "☆";
+  b.title = on ? T().starDel : T().starAdd; b.setAttribute("aria-pressed", on);
+}
+if (I18N[state.lang]) state.ui = state.lang;
+const T = () => I18N[state.ui];
+const typeLabel = t => T().typeLabel[t] || t;
+const L = () => DATA.langs[state.lang];
+const tname = t => L().types[t] || DATA.langs.la?.types?.[t] || t;
+const partTitle = p => (L().parts || {})[p] || (DATA.langs.la?.parts || {})[p] || "";
+const partName = p => `${tname("pars")} ${ROMAN[p]}`;
+const bookTitle = () => `Spinoza — ${tname("ethica")}`;
+function textOf(e) {
+  const t = e.text[state.lang];
+  return t ? { t, fallback: false } : { t: e.text.la || "", fallback: true };
+}
+const plainCache = new Map();
+function plainText(e) {
+  const key = state.lang + e.id;
+  if (!plainCache.has(key)) plainCache.set(key, plain(textOf(e).t));
+  return plainCache.get(key);
+}
+function snippet(e, n = 90) {
+  const t = plainText(e).split(/\n###\s/)[0].replace(/[*_`#>]/g, "").replace(/\s+/g, " ").trim();
+  return t.length > n ? t.slice(0, n - 1).trimEnd() + "…" : t;
+}
+function shortName(e) { return tname(e.type_la) + (e.numero != null ? " " + e.numero : ""); }
+function fullName(e, withPart = true) {
+  const chain = [];
+  for (let x = e; x; x = byId.get(x.parent)) chain.unshift(shortName(x));
+  if (/^\dad\d/.test(e.id)) chain.unshift(tname("affectuum_definitiones"));
+  if (/^\dappc\d/.test(e.id)) chain.unshift(tname("appendix"));
+  return (withPart ? partName(e.partie) + " · " : "") + chain.join(" · ");
+}
+// Textes fixes de l'interface (barre d'outils, recherche…), dans la langue d'interface.
+function renderChrome() {
+  const t = T();
+  document.documentElement.lang = state.lang;
+  $("#booktitle").textContent = bookTitle();
+  document.title = bookTitle();
+  $("#search").placeholder = t.search;
+  $("#back").title = t.back; $("#fwd").title = t.fwd;
+  $("#langs").setAttribute("aria-label", t.langGroup);
+  const btn = (sel, label, title) => { const b = $(sel); b.textContent = label; b.title = title; };
+  btn('[data-mode="all"]', t.mAll, t.mAllT); btn('[data-mode="anc"]', t.mAnc, t.mAncT);
+  btn('[data-mode="desc"]', t.mDesc, t.mDescT); btn('[data-mode="near"]', t.mNear, t.mNearT);
+  btn("#fold", t.fold, t.foldT); btn("#voir", t.voir, t.voirT); btn("#fit", t.fit, t.fitT); btn("#read", t.read, t.readT);
+  $("#resizer").title = t.resize;
+  $("#empty").textContent = t.empty;
+  $("#meta").textContent = `${els.length} ${t.elements} · ${DATA.generated}`;
+  $("#langs").innerHTML = LANG_CODES.map(c => `<button data-lang="${c}" class="${c === state.lang ? "on" : ""}" title="${esc(DATA.langs[c].name)}" aria-pressed="${c === state.lang}">${c.toUpperCase()}</button>`).join("");
+  renderLegend();
+}
+$("#langs").onclick = ev => {
+  const b = ev.target.closest("[data-lang]"); if (!b || b.dataset.lang === state.lang) return;
+  state.lang = b.dataset.lang; store.set("ethica-lang", state.lang);
+  if (I18N[state.lang]) { state.ui = state.lang; store.set("ethica-ui", state.ui); }
+  renderChrome(); renderFilters(); renderList(); renderGraph(false); rerenderReader();
+};
+
+function pill(id) {
+  const e = byId.get(id); if (!e) return `<span class="pill">${esc(id)}</span>`;
+  return `<a class="pill" style="--c:${color(id)}" href="#${esc(id)}" title="${esc(fullName(e) + "\n\n" + snippet(e, 240))}">${esc(id)}</a>`;
+}
+function row(id) {
+  const e = byId.get(id);
+  return `<a href="#${esc(id)}" style="--c:${color(id)}" title="${esc(fullName(e))}"><span class="rid">${esc(id)}</span><span class="rn">${esc(shortName(e))}</span><span class="rs">${esc(snippet(e, 160))}</span></a>`;
+}
+
+// ---------- Markdown minimal ----------
+function inline(s) {
+  const keep = [];
+  const hold = h => `\u0000${keep.push(h) - 1}\u0000`;
+  s = s.replace(/`([^`]+)`/g, (_, c) => hold(`<code>${esc(c)}</code>`));
+  s = s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (m, id, t) => {
+    const e = byId.get(id);
+    return e ? hold(`<a class="ref" style="--c:${color(id)}" href="#${esc(id)}" data-ref="${esc(id)}" title="${esc(id + " — " + fullName(e))}">${esc(t || id)}</a>`) : esc(t || id);
+  });
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, u) => hold(`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`));
+  s = s.replace(/https?:\/\/[^\s<>»)]+/g, u => hold(`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`));
+  s = esc(s);
+  s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|[^*\w])\*(?!\s)([^*]+?)\*(?!\w)/g, "$1<em>$2</em>");
+  return s.replace(/\u0000(\d+)\u0000/g, (_, i) => keep[+i]);
+}
+function markdown(src) {
+  const lines = src.replace(/\r\n/g, "\n").split("\n");
+  let out = "", i = 0;
+  const isBlockStart = l => /^(#{1,6}\s|```|>|\s*([-*+]|\d+\.)\s|\|)/.test(l) || /^(-{3,}|\*{3,})\s*$/.test(l);
+  while (i < lines.length) {
+    const l = lines[i];
+    if (!l.trim()) { i++; continue; }
+    if (l.startsWith("```")) {
+      const buf = []; i++;
+      while (i < lines.length && !lines[i].startsWith("```")) buf.push(lines[i++]);
+      i++; out += `<pre><code>${esc(buf.join("\n"))}</code></pre>`; continue;
+    }
+    let m;
+    if ((m = l.match(/^(#{1,6})\s+(.*)$/))) { const n = m[1].length; out += `<h${n}>${inline(m[2])}</h${n}>`; i++; continue; }
+    if (/^(-{3,}|\*{3,})\s*$/.test(l)) { out += "<hr>"; i++; continue; }
+    if (l.startsWith("|") && i + 1 < lines.length && /^\|?\s*:?-{2,}/.test(lines[i + 1])) {
+      const r = x => x.trim().replace(/^\||\|$/g, "").split("|").map(c => c.trim());
+      out += "<table><thead><tr>" + r(l).map(c => `<th>${inline(c)}</th>`).join("") + "</tr></thead><tbody>";
+      i += 2;
+      while (i < lines.length && lines[i].trim().startsWith("|")) out += "<tr>" + r(lines[i++]).map(c => `<td>${inline(c)}</td>`).join("") + "</tr>";
+      out += "</tbody></table>"; continue;
+    }
+    if (l.startsWith(">")) {
+      const buf = [];
+      while (i < lines.length && lines[i].startsWith(">")) buf.push(lines[i++].replace(/^>\s?/, ""));
+      out += `<blockquote>${markdown(buf.join("\n"))}</blockquote>`; continue;
+    }
+    if (/^\s*([-*+]|\d+\.)\s/.test(l)) {
+      const tag = /^\s*\d/.test(l) ? "ol" : "ul"; out += `<${tag}>`;
+      while (i < lines.length && /^\s*([-*+]|\d+\.)\s/.test(lines[i])) {
+        let item = lines[i++].replace(/^\s*([-*+]|\d+\.)\s+/, "");
+        while (i < lines.length && lines[i].trim() && /^\s{2,}/.test(lines[i]) && !/^\s*([-*+]|\d+\.)\s/.test(lines[i])) item += " " + lines[i++].trim();
+        out += `<li>${inline(item)}</li>`;
+      }
+      out += `</${tag}>`; continue;
+    }
+    const buf = [];
+    while (i < lines.length && lines[i].trim() && !isBlockStart(lines[i])) buf.push(lines[i++]);
+    if (!buf.length) buf.push(lines[i++]);
+    out += `<p>${inline(buf.join(" "))}</p>`;
+  }
+  return out;
+}
+const ID_RE = /\b([1-5](?:p\d+[a-z0-9]*|def\d+e?|ax\d+|ad\d+e?|agd|app(?:c\d+)?|pr|post\d+e?))\b/g;
+function linkify(root) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), targets = [];
+  while (walker.nextNode()) { const n = walker.currentNode; if (!n.parentElement.closest("a, code, pre")) targets.push(n); }
+  for (const n of targets) {
+    if (!ID_RE.test(n.nodeValue)) continue;
+    ID_RE.lastIndex = 0;
+    const frag = document.createDocumentFragment(); let last = 0;
+    n.nodeValue.replace(ID_RE, (m, id, off) => {
+      if (!byId.has(id)) return m;
+      frag.append(n.nodeValue.slice(last, off));
+      const a = document.createElement("a"); a.className = "ref"; a.href = "#" + id; a.textContent = id; a.dataset.ref = id;
+      a.style.setProperty("--c", color(id)); a.title = fullName(byId.get(id)); frag.append(a);
+      last = off + m.length; return m;
+    });
+    frag.append(n.nodeValue.slice(last)); n.replaceWith(frag);
+  }
+}
+
+// ---------- Filtres et liste ----------
+const passes = e => state.types.has(e.type) && state.parts.has(e.partie);
+function matches(e) {
+  if (!passes(e)) return null;
+  if (!state.q) return { snip: null };
+  const q = fold(state.q);
+  if (fold(e.id).startsWith(q)) return { snip: null };
+  const t = plainText(e), f = fold(t), k = f.indexOf(q);
+  if (k < 0) return null;
+  return { snip: t.slice(Math.max(0, k - 20), k + q.length + 80).replace(/[*_]/g, "").replace(/\s+/g, " ") };
+}
+function hlText(text) {
+  if (!state.q) return esc(text);
+  const f = fold(text), q = fold(state.q), k = f.indexOf(q);
+  return k < 0 ? esc(text) : esc(text.slice(0, k)) + "<mark>" + esc(text.slice(k, k + q.length)) + "</mark>" + esc(text.slice(k + q.length));
+}
+let typesOpen = false;
+function renderFilters() {
+  const t = T();
+  const present = TYPES.filter(x => els.some(e => e.type === x));
+  const nOn = present.filter(x => state.types.has(x)).length;
+  const allParts = state.parts.size === PARTS.length;
+  $("#filters").innerHTML =
+    `<div class="seg">${[`<button data-part="all" class="${allParts ? "on" : ""}" title="${esc(t.allParts)}">${esc(t.all)}</button>`,
+      ...PARTS.map(p => `<button data-part="${p}" class="${!allParts && state.parts.has(p) ? "on" : ""}" title="${esc(partName(p) + " — " + partTitle(p) + "\n" + t.ctrlAdd)}">${ROMAN[p]}</button>`)].join("")}</div>` +
+    `<details ${typesOpen ? "open" : ""}><summary>${esc(t.types)} · ${nOn}/${present.length}</summary>
+      <div class="chips">${present.map(x => `<button class="chip ${state.types.has(x) ? "on" : ""}" data-type="${x}"><span class="dot" style="background:var(--${x})"></span>${esc(typeLabel(x))}</button>`).join("")}</div>
+      <div class="hint">${esc(t.typesHint)}</div></details>` +
+    (stars.size ? `<button class="favf ${state.favOnly ? "on" : ""}" data-fav="1" aria-pressed="${state.favOnly}"><span class="s">★</span> ${esc(t.favOnly)} · ${stars.size}</button>` : "");
+  $("#filters details").ontoggle = ev => { typesOpen = ev.target.open; };
+}
+function setParts(v, add) {
+  if (v === "all") PARTS.forEach(p => state.parts.add(p));
+  else if (add) { const p = +v; if (state.parts.size === PARTS.length) { state.parts.clear(); state.parts.add(p); } else if (state.parts.has(p) && state.parts.size > 1) state.parts.delete(p); else state.parts.add(p); }
+  else if (state.parts.size === 1 && state.parts.has(+v)) PARTS.forEach(p => state.parts.add(p)); // re-clic : toutes les parties
+  else { state.parts.clear(); state.parts.add(+v); }
+  renderFilters(); renderList(); renderGraph(true);
+}
+$("#filters").onclick = ev => {
+  const b = ev.target.closest("button"); if (!b) return;
+  if (b.dataset.part) return setParts(b.dataset.part, ev.ctrlKey || ev.metaKey);
+  if (b.dataset.fav) { state.favOnly = !state.favOnly; renderFilters(); renderList(); return; }
+  if (b.dataset.type) {
+    state.types.has(b.dataset.type) ? state.types.delete(b.dataset.type) : state.types.add(b.dataset.type);
+    renderFilters(); renderList(); renderGraph(true);
+  }
+};
+$("#filters").ondblclick = ev => {
+  const b = ev.target.closest("[data-type]"); if (!b) return;
+  const v = b.dataset.type, solo = state.types.size === 1 && state.types.has(v);
+  state.types.clear(); (solo ? TYPES : [v]).forEach(x => state.types.add(x));
+  renderFilters(); renderList(); renderGraph(true);
+};
+function renderList() {
+  let h = `<button class="item home ${state.view === "home" ? "sel" : ""}" data-go="home"><span class="t">${esc(T().overview)}</span></button>`;
+  for (const p of PARTS) {
+    const rows = els.filter(e => e.partie === p && (!state.favOnly || stars.has(e.id))).map(e => [e, matches(e)]).filter(([, m]) => m);
+    if (!rows.length) continue;
+    h += `<div class="group"><b>${esc(partName(p))}</b><span>${esc(partTitle(p))} · ${rows.length}</span></div>`;
+    for (const [e, m] of rows) h += `<button class="item ${FOLDABLE.has(e.type) ? "sub" : ""} ${state.sel === e.id && state.view === "el" ? "sel" : ""}" data-go="${e.id}" title="${esc(fullName(e))}">
+      <span class="id" style="color:var(--${e.type})">${hlText(e.id)}</span>${stars.has(e.id) ? `<span class="st">★</span>` : ""}<span class="t">${m.snip ? "…" + hlText(m.snip) : esc(snippet(e, 120))}</span></button>`;
+  }
+  const docs = DATA.documents.filter(d => !state.q || fold(d.name + " " + d.body).includes(fold(state.q)));
+  if (docs.length) {
+    h += `<div class="group"><b>${esc(T().documents)}</b></div>`;
+    for (const d of docs) h += `<button class="item ${state.view === "doc:" + d.name ? "sel" : ""}" data-go="doc:${esc(d.name)}"><span class="t">${esc(d.name)}</span></button>`;
+  }
+  $("#list").innerHTML = h;
+}
+$("#list").onclick = ev => { const b = ev.target.closest("[data-go]"); if (b) go(b.dataset.go); };
+$("#search").oninput = ev => { state.q = ev.target.value.trim(); renderList(); };
+
+// ---------- Graphe ----------
+// Une bande horizontale par partie ; dans chaque bande, colonnes par profondeur (appuis internes à la partie),
+// colonnes trop hautes coupées en sous-colonnes ; nœuds sans lien rangés en grille sous la bande.
+// Le nom des parties est dans la marge de gauche (#gutter), jamais sur le graphe.
+const NW = 210, NH = 64, GX = 64, GY = 14, ROWS = 12, HEAD = 22, GAP = 48;
+let layout = { pos: new Map(), w: 0, h: 0, bands: [] };
+let VIS = null;
+const vid = id => state.folded ? (byId.get(id)?.repli || id) : id;
+function rebuildVisual() { VIS = buildMaps(vid); }
+
+function visibleSet() {
+  let ids = els.filter(e => (!state.folded || !e.repli) && passes(e)).map(e => e.id);
+  const s = state.sel && byId.has(state.sel) ? vid(state.sel) : null;
+  if (s && state.mode !== "all") {
+    const keep = new Set([s]);
+    if (state.mode === "anc") closure(s, VIS.P).forEach(x => keep.add(x));
+    if (state.mode === "desc") closure(s, VIS.C).forEach(x => keep.add(x));
+    if (state.mode === "near") [...(VIS.P.get(s) || []), ...(VIS.C.get(s) || []), ...(state.showVoir ? VIS.VP.get(s) || [] : [])].forEach(x => keep.add(x));
+    ids = ids.filter(x => keep.has(x));
+  }
+  return new Set(ids);
+}
+function computeLayout(vis) {
+  const part = id => byId.get(id).partie;
+  const P = id => (VIS.P.get(id) || []).filter(p => vis.has(p));
+  const C = id => (VIS.C.get(id) || []).filter(c => vis.has(c));
+  const Pin = id => P(id).filter(p => part(p) === part(id));
+  const Cin = id => C(id).filter(c => part(c) === part(id));
+  const ord = (a, b) => order.get(a) - order.get(b);
+  const depth = new Map(), onStack = new Set();
+  const d = id => {
+    if (depth.has(id)) return depth.get(id);
+    if (onStack.has(id)) return 0;
+    onStack.add(id);
+    const v = Pin(id).reduce((m, p) => Math.max(m, d(p) + 1), 0);
+    onStack.delete(id); depth.set(id, v); return v;
+  };
+  // La mise en page ne dépend pas de la sélection : sélectionner ne déplace aucun nœud.
+  const isolated = new Set([...vis].filter(id => !P(id).length && !C(id).length));
+  const pos = new Map(), bands = [];
+  let y0 = 0, W = 0;
+  for (const p of PARTS) {
+    const ids = [...vis].filter(id => part(id) === p);
+    if (!ids.length) continue;
+    const linked = ids.filter(id => !isolated.has(id)).sort(ord);
+    linked.forEach(d);
+    const cols = [];
+    for (const id of linked) (cols[depth.get(id)] ||= []).push(id);
+    const idx = new Map();
+    const reindex = () => cols.forEach(c => c && c.forEach((id, i) => idx.set(id, i)));
+    reindex();
+    const bary = (id, nb) => { const n = nb(id); return n.length ? n.reduce((s, x) => s + idx.get(x), 0) / n.length : idx.get(id); };
+    for (let it = 0; it < 6; it++) {
+      for (let c = 1; c < cols.length; c++) if (cols[c]) { cols[c].sort((a, b) => bary(a, Pin) - bary(b, Pin) || ord(a, b)); reindex(); }
+      for (let c = cols.length - 2; c >= 0; c--) if (cols[c]) { cols[c].sort((a, b) => bary(a, Cin) - bary(b, Cin) || ord(a, b)); reindex(); }
+    }
+    const tallest = Math.max(0, ...cols.filter(Boolean).map(c => c.length));
+    const R = Math.max(ROWS, Math.ceil(Math.sqrt(linked.length * 1.2)));
+    const rowsUsed = Math.min(R, tallest);
+    const top = y0 + HEAD;
+    let cx = 0;
+    for (const c of cols) {
+      if (!c) continue;
+      for (let k = 0; k < c.length; k += R) {
+        const chunk = c.slice(k, k + R), off = (rowsUsed - chunk.length) * (NH + GY) / 2;
+        chunk.forEach((id, i) => pos.set(id, { x: cx * (NW + GX), y: top + off + i * (NH + GY) }));
+        cx++;
+      }
+    }
+    const iso = ids.filter(id => isolated.has(id)).sort(ord);
+    const gridCols = Math.max(Math.min(iso.length, 6), cx);
+    const gy = top + rowsUsed * (NH + GY) + (rowsUsed && iso.length ? 24 : 0);
+    iso.forEach((id, i) => pos.set(id, { x: (i % gridCols) * (NW + GX), y: gy + Math.floor(i / gridCols) * (NH + GY) }));
+    const w = Math.max(cx, iso.length ? Math.min(iso.length, gridCols) : 0) * (NW + GX) - GX;
+    const h = HEAD + rowsUsed * (NH + GY) + (rowsUsed && iso.length ? 24 : 0) + Math.ceil(iso.length / gridCols) * (NH + GY) + 8;
+    bands.push({ p, y: y0, h });
+    W = Math.max(W, w);
+    y0 += h + GAP;
+  }
+  return { pos, bands, w: Math.max(1, W), h: Math.max(1, y0 - GAP) };
+}
+function wrap(text, maxChars, maxLines) {
+  const words = text.split(" "), lines = [];
+  let cur = "";
+  for (const w of words) {
+    if ((cur + " " + w).trim().length <= maxChars) cur = (cur + " " + w).trim();
+    else { lines.push(cur); cur = w; if (lines.length === maxLines) break; }
+  }
+  if (lines.length < maxLines && cur) lines.push(cur);
+  if (lines.length === maxLines && words.join(" ").length > lines.join(" ").length + 1) lines[maxLines - 1] = lines[maxLines - 1].replace(/\s*\S*$/, "") + "…";
+  return lines.slice(0, maxLines);
+}
+let nodeEls = new Map(), edgeEls = new Map();
+const STAR_PATH = "M" + Array.from({ length: 10 }, (_, i) => { const r = i % 2 ? 4 : 9, a = Math.PI / 5 * i - Math.PI / 2; return `${(r * Math.cos(a)).toFixed(2)},${(r * Math.sin(a)).toFixed(2)}`; }).join(" L") + " Z";
+function renderGraph(refit = false) {
+  const vis = visibleSet();
+  layout = computeLayout(vis);
+  $("#empty").style.display = vis.size ? "none" : "flex";
+  const svg = $("#graph");
+  svg.classList.toggle("m-all", state.mode === "all");
+  const sel = state.view === "el" && byId.has(state.sel) ? vid(state.sel) : null;
+  const anc = sel ? closure(sel, VIS.P) : new Set(), desc = sel ? closure(sel, VIS.C) : new Set();
+  const gB = $("#bands"), gE = $("#edges"), gN = $("#nodes");
+  gB.innerHTML = ""; gE.innerHTML = ""; gN.innerHTML = "";
+  nodeEls = new Map(); edgeEls = new Map();
+  for (const b of layout.bands) gB.append(svgEl("rect", { class: "band", x: -24, y: b.y, width: layout.w + 48, height: b.h, rx: 12 }));
+  const edgePath = (a, b) => {
+    if (b.y >= a.y + NH + HEAD && Math.abs(b.x - a.x) < 3 * (NW + GX) || b.x <= a.x) {
+      const x1 = a.x + NW / 2, y1 = a.y + NH, x2 = b.x + NW / 2, y2 = b.y, dy = Math.max(40, (y2 - y1) / 2);
+      return `M${x1},${y1} C${x1},${y1 + dy} ${x2},${y2 - dy} ${x2},${y2}`;
+    }
+    const x1 = a.x + NW, y1 = a.y + NH / 2, x2 = b.x, y2 = b.y + NH / 2, mx = (x1 + x2) / 2;
+    return `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`;
+  };
+  const addEdge = (p, id, cls) => {
+    const el = svgEl("path", { class: cls, d: edgePath(layout.pos.get(p), layout.pos.get(id)) });
+    const mk = cls.includes("anc") ? "arrow-anc" : cls.includes("desc") ? "arrow-desc" : (cls.includes("voir") ? "" : "arrow");
+    if (mk) el.setAttribute("marker-end", `url(#${mk})`);
+    el.dataset.a = p; el.dataset.b = id;
+    gE.append(el);
+    for (const k of [p, id]) (edgeEls.get(k) || edgeEls.set(k, []).get(k)).push(el);
+  };
+  for (const id of vis) for (const p of VIS.P.get(id) || []) {
+    if (!vis.has(p)) continue;
+    let cls = "edge";
+    if (VIS.kind.get(p + ">" + id) === "struct") cls += " struct";
+    if (byId.get(p).partie !== byId.get(id).partie) cls += " xpart";
+    if (sel) {
+      if ((anc.has(p) || p === sel) && (anc.has(id) || id === sel)) cls += " anc";
+      else if ((desc.has(id) || id === sel) && (desc.has(p) || p === sel)) cls += " desc";
+      else cls += " dim";
+    }
+    addEdge(p, id, cls);
+  }
+  if (state.showVoir) for (const id of vis) for (const p of VIS.VP.get(id) || []) {
+    if (!vis.has(p) || (VIS.P.get(id) || []).includes(p)) continue;
+    addEdge(p, id, "edge voir" + (sel && p !== sel && id !== sel ? " dim" : ""));
+  }
+  const starKid = new Set(state.folded ? [...stars].map(s => byId.get(s).repli).filter(Boolean) : []);
+  for (const id of vis) {
+    const e = byId.get(id), p = layout.pos.get(id);
+    const g = svgEl("g", { class: `node ${id === sel ? "sel" : ""} ${sel && id !== sel && !anc.has(id) && !desc.has(id) ? "dim" : ""}`, transform: `translate(${p.x},${p.y})`, "data-id": id });
+    g.style.setProperty("--c", color(id));
+    g.append(svgEl("rect", { class: "box", width: NW, height: NH, rx: 7 }));
+    g.append(svgEl("rect", { class: "bar", width: 5, height: NH - 2, x: 1, y: 1, rx: 3 }));
+    const nk = state.folded ? foldedCount.get(id) || 0 : 0;
+    const t1 = svgEl("text", { class: "nid", x: 14, y: 19 }); t1.textContent = id + (nk ? `  +${nk}` : ""); g.append(t1);
+    const tk = svgEl("text", { class: "kind", x: NW - 10, y: 19, "text-anchor": "end" }); tk.textContent = shortName(e); g.append(tk);
+    wrap(snippet(e, 200), 31, 2).forEach((line, i) => { const t = svgEl("text", { class: "snip", x: 14, y: 38 + i * 16 }); t.textContent = line; g.append(t); });
+    const tb = svgEl("text", { class: "big", x: NW / 2, y: NH / 2 + 9, "text-anchor": "middle" }); tb.textContent = id; g.append(tb);
+    if (stars.has(id) || starKid.has(id)) {
+      const st = svgEl("g", { class: "star" + (stars.has(id) ? "" : " kid"), transform: `translate(${NW - 3},3)` });
+      st.append(svgEl("path", { d: STAR_PATH })); g.append(st);
+    }
+    gN.append(g); nodeEls.set(id, g);
+  }
+  if (refit) fit();
+  else if (sel && layout.pos.has(sel) && !clickedInGraph) focusOn(sel);
+  clickedInGraph = false;
+  renderGutter();
+}
+// Un clic dans le graphe sélectionne sans déplacer la vue (le nœud reste sous la souris) ;
+// une sélection depuis la liste ou le texte centre la vue sur l'élément.
+let clickedInGraph = false;
+function applyZoom() {
+  const z = state.zoom, svg = $("#graph");
+  $("#viewport").setAttribute("transform", `translate(${z.x},${z.y}) scale(${z.k})`);
+  svg.classList.toggle("far", z.k < 0.3);
+  svg.classList.toggle("mid", z.k >= 0.3 && z.k < 0.58);
+  renderGutter();
+}
+// Marge des parties : une étiquette verticale par bande, alignée sur la bande, cliquable (filtre la partie).
+function renderGutter() {
+  const z = state.zoom, H = $("#graphwrap").getBoundingClientRect().height;
+  $("#gutter").innerHTML = layout.bands.map(b => {
+    const top = Math.max(b.y * z.k + z.y, 2), bottom = Math.min((b.y + b.h) * z.k + z.y, H - 2);
+    if (bottom - top < 14) return "";
+    return `<div class="glabel" data-part="${b.p}" style="top:${top}px;height:${bottom - top}px" title="${esc(partName(b.p) + " — " + partTitle(b.p) + "\n" + T().partClick)}"><span><b>${ROMAN[b.p]}</b>${bottom - top > 120 ? ` <i>${esc(partTitle(b.p))}</i>` : ""}</span></div>`;
+  }).join("");
+}
+$("#gutter").onclick = ev => { const g = ev.target.closest("[data-part]"); if (g) setParts(g.dataset.part, ev.ctrlKey || ev.metaKey); };
+function fit() {
+  const r = $("#graph").getBoundingClientRect(); if (!r.width) return;
+  const pad = 30, top = 56, bottom = 50;
+  const k = Math.min((r.width - pad * 2) / (layout.w + 48), (r.height - top - bottom) / layout.h, 1.2);
+  state.zoom = { k, x: (r.width - layout.w * k) / 2, y: top + Math.max(0, (r.height - top - bottom - layout.h * k) / 2) };
+  applyZoom();
+}
+// Zoom animé vers l'échelle k, en gardant fixe le point (mx, my) de l'écran.
+let zoomAnim = 0;
+function zoomAt(k, mx, my, ms = 260) {
+  const z0 = { ...state.zoom }, t0 = performance.now(), me = ++zoomAnim;
+  const apply = t => {
+    const e = 1 - Math.pow(1 - t, 3), kk = z0.k * Math.pow(k / z0.k, e);
+    state.zoom = { k: kk, x: mx - (mx - z0.x) * kk / z0.k, y: my - (my - z0.y) * kk / z0.k };
+    applyZoom();
+  };
+  const step = () => {
+    if (me !== zoomAnim) return;                       // une autre animation a pris le relais
+    const t = Math.max(0, Math.min(1, (performance.now() - t0) / ms));
+    apply(t);
+    if (t < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+  setTimeout(() => { if (me === zoomAnim) { zoomAnim++; apply(1); } }, ms + 60); // garantit l'état final
+}
+function focusOn(id) {
+  const r = $("#graph").getBoundingClientRect(), p = layout.pos.get(id), z = state.zoom;
+  if (!p || !r.width) return;
+  const sx = p.x * z.k + z.x, sy = p.y * z.k + z.y;
+  const readable = z.k >= 0.58, inside = sx > 20 && sy > 56 && sx + NW * z.k < r.width - 20 && sy + NH * z.k < r.height - 50;
+  if (readable && inside) return;
+  if (!readable) z.k = 0.85;
+  z.x = r.width / 2 - (p.x + NW / 2) * z.k; z.y = r.height / 2 - (p.y + NH / 2) * z.k; applyZoom();
+}
+// Survol (graphe ou renvoi du texte) : voisins directs, et carte d'information sur le graphe.
+function hover(id, ev) {
+  const svg = $("#graph"), tip = $("#tip");
+  svg.querySelectorAll(".hov, .nb, .hl").forEach(x => x.classList.remove("hov", "nb", "hl"));
+  if (!id || !nodeEls.has(id)) { svg.classList.remove("hovering"); tip.style.display = "none"; return; }
+  // Survoler l'élément sélectionné ne change pas la mise en évidence (chemin et conséquences restent affichés).
+  const selV = state.view === "el" && byId.has(state.sel) ? vid(state.sel) : null;
+  if (id !== selV) {
+    svg.classList.add("hovering");
+    nodeEls.get(id).classList.add("hov");
+    for (const el of edgeEls.get(id) || []) { el.classList.add("hl"); nodeEls.get(el.dataset.a === id ? el.dataset.b : el.dataset.a)?.classList.add("nb"); }
+  } else svg.classList.remove("hovering");
+  if (!ev) { tip.style.display = "none"; return; }
+  const e = byId.get(id), r = $("#graphwrap").getBoundingClientRect();
+  tip.style.setProperty("--c", color(id));
+  const nk = state.folded ? foldedCount.get(id) || 0 : 0;
+  tip.innerHTML = `<b>${esc(id)}</b> <span class="n">${esc(fullName(e))}${nk ? ` · +${nk} ${esc(T().attached)}` : ""}${stars.has(id) ? ` · <span style="color:var(--star)">★</span>` : ""}</span><span class="s">${esc(snippet(e, 260))}</span>`;
+  tip.style.display = "block";
+  const x = ev.clientX - r.left + 16, y = ev.clientY - r.top + 16;
+  tip.style.left = Math.min(x, r.width - tip.offsetWidth - 10) + "px";
+  tip.style.top = Math.min(y, r.height - tip.offsetHeight - 10) + "px";
+}
+(() => {
+  const svg = $("#graph"); let drag = null, moved = false, hov = null;
+  svg.addEventListener("wheel", ev => {
+    ev.preventDefault();
+    zoomAnim++;
+    const r = svg.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top, z = state.zoom;
+    const k = Math.min(3, Math.max(0.04, z.k * Math.exp(-ev.deltaY * 0.0015)));
+    z.x = mx - (mx - z.x) * k / z.k; z.y = my - (my - z.y) * k / z.k; z.k = k; applyZoom();
+    // Le contenu a bougé sous la souris : on recalcule le survol à partir de ce qui s'y trouve maintenant.
+    const n = document.elementFromPoint(ev.clientX, ev.clientY)?.closest?.(".node");
+    hov = n ? n.dataset.id : null; hover(hov, n ? ev : null);
+  }, { passive: false });
+  svg.addEventListener("pointerdown", ev => { drag = { x: ev.clientX, y: ev.clientY, zx: state.zoom.x, zy: state.zoom.y }; moved = false; hover(null); });
+  svg.addEventListener("pointermove", ev => {
+    if (drag) return;
+    const n = ev.target.closest && ev.target.closest(".node"), id = n ? n.dataset.id : null;
+    if (id !== hov || id) { hov = id; hover(id, ev); }
+  });
+  svg.addEventListener("pointerleave", () => { hov = null; hover(null); });
+  window.addEventListener("pointermove", ev => {
+    if (!drag) return;
+    const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) { moved = true; svg.classList.add("drag"); }
+    if (moved) { zoomAnim++; state.zoom.x = drag.zx + dx; state.zoom.y = drag.zy + dy; applyZoom(); }
+  });
+  window.addEventListener("pointerup", ev => {
+    if (drag && !moved) {
+      const n = ev.target.closest && ev.target.closest(".node");
+      if (n) {
+        clickedInGraph = true; hov = null; hover(null); go(n.dataset.id);
+        // Vu de loin, le clic zoome sur le nœud, en le gardant sous la souris.
+        if (state.zoom.k < 0.58) { const r = svg.getBoundingClientRect(); zoomAt(0.85, ev.clientX - r.left, ev.clientY - r.top); }
+      }
+      else if (ev.target.closest && ev.target.closest("#graph")) go("home");
+    }
+    drag = null; svg.classList.remove("drag");
+  });
+  // Survoler un renvoi dans le texte met en évidence l'élément cité dans le graphe.
+  $("#reader").addEventListener("mouseover", ev => { const a = ev.target.closest("a[data-ref], a.pill, .rows a"); if (a) hover(vid((a.dataset.ref || a.getAttribute("href").slice(1)))); });
+  $("#reader").addEventListener("mouseout", ev => { if (ev.target.closest("a")) hover(null); });
+})();
+function syncToggles() {
+  $("#fold").classList.toggle("on", state.folded);
+  $("#voir").classList.toggle("on", state.showVoir);
+}
+$("#toolbar").onclick = ev => {
+  const b = ev.target.closest("button"); if (!b) return;
+  if (b.dataset.mode) {
+    state.mode = b.dataset.mode;
+    document.querySelectorAll("#toolbar [data-mode]").forEach(x => x.classList.toggle("on", x === b));
+    renderGraph(true);
+  } else if (b.id === "fold") {
+    state.folded = !state.folded; store.set("ethica-folded", state.folded); rebuildVisual(); syncToggles(); renderGraph(true);
+  } else if (b.id === "voir") {
+    state.showVoir = !state.showVoir; store.set("ethica-voir", state.showVoir); syncToggles(); renderLegend(); renderGraph(false);
+  }
+};
+$("#fit").onclick = fit;
+$("#read").onclick = () => { $("#main").classList.toggle("reading"); if (!$("#main").classList.contains("reading")) fit(); };
+function renderLegend() {
+  const t = T();
+  const groups = ["definition", "def-affect", "axiome", "postulat", "lemme", "proposition", "corollaire", "scolie"].map(x => [x, typeLabel(x)]);
+  $("#legend").innerHTML = groups.map(([x, l]) => `<span style="--c:var(--${x})">${esc(l)}</span>`).join("")
+    + `<span style="--c:var(--preface)">${esc(t.legPref)}</span>`
+    + `<span class="line" style="--c:var(--accent)">${esc(t.legSupports)}</span><span class="line" style="--c:var(--desc)">${esc(t.legConseq)}</span>`
+    + (state.showVoir ? `<span class="dash" style="--c:var(--scolie)">${esc(t.legVoir)}</span>` : "");
+}
+(() => {
+  const rz = $("#resizer"); let on = false;
+  rz.addEventListener("pointerdown", ev => { on = true; rz.setPointerCapture(ev.pointerId); });
+  rz.addEventListener("pointermove", ev => {
+    if (!on) return;
+    const r = $("#main").getBoundingClientRect();
+    const w = Math.min(r.width - 200, Math.max(320, r.right - ev.clientX));
+    $("#main").style.setProperty("--readerW", w + "px");
+  });
+  rz.addEventListener("pointerup", () => { on = false; fit(); });
+})();
+
+// ---------- Lecteur ----------
+function chainBlock(ids) {
+  if (!ids.length) return "";
+  const byPart = PARTS.map(p => [p, ids.filter(x => byId.get(x).partie === p).sort((a, b) => order.get(a) - order.get(b))]).filter(([, l]) => l.length);
+  return `<details class="chain"><summary>${esc(T().chain(ids.length, byPart.map(([p, l]) => `${ROMAN[p]} : ${l.length}`).join(", ")))}</summary>
+    <div class="byp">${byPart.map(([p, l]) => `<div class="pills"><b>${esc(partName(p))}</b>${l.map(pill).join("")}</div>`).join("")}</div></details>`;
+}
+function renderElement(id) {
+  const e = byId.get(id), inner = $("#readerInner"), t = T();
+  if (!e) { inner.innerHTML = `<p>${esc(t.unknown)} : <b>${esc(id)}</b>.</p>`; return; }
+  inner.style.setProperty("--c", color(id));
+  const anc = [...closure(id, RAW.P)];
+  const used = (RAW.C.get(id) || []).filter(x => byId.get(x).depends_on.includes(id)).sort((a, b) => order.get(a) - order.get(b));
+  const { t: text, fallback } = textOf(e);
+  const [head, ...rest] = text.split(/\n(?=###\s)/);
+  const kids = kidsOf.get(id) || [];
+  const voirBy = VOIRBY.get(id) || [];
+  const sec = (title, n, body) => body ? `<h4>${esc(title)}${n != null ? ` <span class="n">${n}</span>` : ""}</h4>${body}` : "";
+  inner.innerHTML = `
+    <div class="crumbs">${seqLinks(id)}<span style="margin-left:auto"></span>
+      <button data-m="anc">${esc(t.pathTo)} ${esc(id)}</button><button data-m="desc">${esc(t.conseq)}</button></div>
+    <div class="kicker">${esc(partName(e.partie))} — ${esc(partTitle(e.partie))}</div>
+    <h1 class="title"><span class="eid">${esc(id)}</span>${esc(fullName(e, false))}<button class="starbtn" id="starbtn"></button></h1>
+    <div class="badges">
+      <span class="badge type">${esc(typeLabel(e.type))}</span>
+      <span class="badge">${esc(DATA.langs[fallback ? "la" : state.lang].name)}</span>
+      ${e.corrections.length ? `<span class="badge">${esc(t.corrected)} : <b>${esc(e.corrections.join(", "))}</b></span>` : ""}
+    </div>
+    ${fallback ? `<p class="fallback">${esc(t.fallback(L().name))}</p>` : ""}
+    <div class="md" id="body"><div class="statement">${markdown(head)}</div>${markdown(rest.join("\n"))}</div>
+    <div class="relsec">
+      ${e.parent ? sec(t.secParent, null, `<div class="rows">${row(e.parent)}</div>`) : ""}
+      ${sec(t.secKids, kids.length, kids.length ? `<div class="rows">${kids.map(row).join("")}</div>` : "")}
+      ${sec(t.secDeps, e.depends_on.length, e.depends_on.length ? `<div class="rows">${e.depends_on.map(row).join("")}</div>${anc.length > e.depends_on.length ? chainBlock(anc) : ""}` : `<div class="rows" style="color:var(--muted);padding:4px 8px">${esc(t.start)}</div>`)}
+      ${sec(t.secUsed, used.length, used.length ? (used.length > 12 ? `<div class="pills">${used.map(pill).join("")}</div>` : `<div class="rows">${used.map(row).join("")}</div>`) : "")}
+      ${sec(t.secVoir, e.voir.length, e.voir.length ? `<div class="pills">${e.voir.map(pill).join("")}</div>` : "")}
+      ${sec(t.secVoirBy, voirBy.length, voirBy.length ? `<div class="pills">${voirBy.map(pill).join("")}</div>` : "")}
+    </div>
+    <div class="file">${esc(e.file)}</div>`;
+  const sb = $("#starbtn"); syncStarBtn(sb, id); sb.onclick = () => toggleStar(id);
+  inner.querySelectorAll(".crumbs [data-m]").forEach(b => b.onclick = () => $(`#toolbar [data-mode="${b.dataset.m}"]`).click());
+}
+function seqLinks(id) {
+  const i = order.get(id), prev = els[i - 1]?.id, next = els[i + 1]?.id;
+  const a = (x, left) => x ? `<a href="#${esc(x)}" title="${esc(fullName(byId.get(x)))} (${esc(T().prevNext(left ? "[" : "]"))})" style="--c:${color(x)}">${left ? "‹ " + esc(x) : esc(x) + " ›"}</a>` : `<a class="off">·</a>`;
+  return `<span class="seq">${a(prev, true)}${a(next, false)}</span>`;
+}
+function stepSeq(delta) {
+  if (state.view !== "el" || !byId.has(state.sel)) return;
+  const x = els[order.get(state.sel) + delta]; if (x) go(x.id);
+}
+function renderDoc(name) {
+  const d = DATA.documents.find(x => x.name === name), inner = $("#readerInner"); inner.style.removeProperty("--c");
+  if (!d) { inner.innerHTML = `<p>${esc(T().docMissing)}</p>`; return; }
+  inner.innerHTML = `<div class="md" id="body" style="font-size:15px">${markdown(d.body)}</div><div class="file">${esc(d.name)}</div>`;
+  linkify($("#body"));
+}
+function renderHome() {
+  const inner = $("#readerInner"), t = T(); inner.style.removeProperty("--c");
+  const count = x => els.filter(e => e.type === x).length;
+  const nLog = els.reduce((n, e) => n + e.depends_on.length, 0), nVoir = els.reduce((n, e) => n + e.voir.length, 0);
+  inner.innerHTML = `<div class="home">
+    <h1 class="title">${esc(bookTitle())}</h1>
+    <p>${t.home1}</p>
+    <p>${t.home2}</p>
+    <div class="md"><h2><span style="color:var(--star)">★</span> ${esc(t.favorites)}${stars.size ? ` · ${stars.size}` : ""}</h2></div>
+    ${stars.size ? `<div class="rows">${[...stars].sort((a, b) => order.get(a) - order.get(b)).map(row).join("")}</div>` : `<p style="color:var(--muted)">${esc(t.favNone)}</p>`}
+    <div class="stats">
+      ${TYPES.filter(count).map(x => `<div class="stat" style="--c:var(--${x})"><div class="n">${count(x)}</div><div class="l">${esc(typeLabel(x))}</div></div>`).join("")}
+      <div class="stat" style="--c:var(--accent)"><div class="n">${nLog}</div><div class="l">${esc(t.statSupports)}</div></div>
+      <div class="stat" style="--c:var(--scolie)"><div class="n">${nVoir}</div><div class="l">${esc(t.statVoir)}</div></div>
+    </div>
+    <div class="md"><h2>${esc(t.texts)}</h2></div>
+    <ul>${LANG_CODES.map(c => `<li><b>${c.toUpperCase()}</b> · ${esc(DATA.langs[c].name)}${DATA.langs[c].year ? ` (${esc(DATA.langs[c].year)})` : ""}${DATA.langs[c].provenance ? `<details class="chain"><summary>${esc(t.provenance)}</summary><div class="md" style="font-size:13px">${markdown(DATA.langs[c].provenance)}</div></details>` : ""}</li>`).join("")}</ul>
+    <p style="font-size:12px;color:var(--muted)">${t.source}</p>
+    ${DATA.problems.length ? `<div class="md"><h2>${esc(t.problems)}</h2></div><ul class="problems">${DATA.problems.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
+    <div class="md"><h2>${esc(t.shortcuts)}</h2></div>
+    <p style="font-size:13px;line-height:1.9">${t.keys}</p>
+    <div class="md"><h2>${esc(t.update)}</h2></div>
+    <p style="font-size:13px">${t.updateText}</p>
+  </div>`;
+}
+function rerenderReader() {
+  const h = decodeURIComponent(location.hash.slice(1)) || "home";
+  if (h === "home") renderHome(); else if (h.startsWith("doc:")) renderDoc(h.slice(4)); else renderElement(h);
+  renderTrail();
+}
+
+// ---------- Historique (synchronisé avec celui du navigateur) ----------
+const HKEY = "ethica-history";
+let hist = { stack: [], i: -1 };
+try { hist = JSON.parse(sessionStorage.getItem(HKEY)) || hist; } catch {}
+function track(h) {
+  const st = history.state;
+  if (st && typeof st.i === "number" && hist.stack[st.i] === h) hist.i = st.i;
+  else if (hist.stack[hist.i] !== h) {
+    hist.stack = hist.stack.slice(0, hist.i + 1); hist.stack.push(h); hist.i = hist.stack.length - 1;
+    if (hist.stack.length > 200) { hist.stack.shift(); hist.i--; }
+    history.replaceState({ i: hist.i }, "");
+  } else history.replaceState({ i: hist.i }, "");
+  try { sessionStorage.setItem(HKEY, JSON.stringify(hist)); } catch {}
+  renderTrail();
+}
+function label(h) {
+  if (h === "home") return { t: T().overview };
+  if (h.startsWith("doc:")) return { t: h.slice(4) };
+  const e = byId.get(h);
+  return { id: h, t: e ? fullName(e) : "?", c: color(h) };
+}
+function renderTrail() {
+  $("#back").disabled = hist.i <= 0;
+  $("#fwd").disabled = hist.i >= hist.stack.length - 1;
+  const from = Math.max(0, hist.i - 7), to = Math.min(hist.stack.length, hist.i + 3), steps = [];
+  for (let k = from; k < to; k++) {
+    const Lb = label(hist.stack[k]), cur = k === hist.i;
+    steps.push(`<button class="step ${cur ? "cur" : ""} ${k > hist.i ? "fwd" : ""}" data-k="${k}" ${Lb.c ? `style="--c:${Lb.c}"` : ""} title="${esc((Lb.id ? Lb.id + " — " : "") + Lb.t)}">${esc(Lb.id || Lb.t)}</button>`);
+  }
+  $("#trail").innerHTML = hist.stack.length > 1 ? `<span class="lbl">${from > 0 ? "… " : ""}${esc(T().history)}</span>` + steps.join(`<span class="arrow">›</span>`) : "";
+}
+function go(h) {
+  h = String(h || "home");
+  if (hist.stack[hist.i] === h) return;
+  if (hist.i > 0 && hist.stack[hist.i - 1] === h) history.back();
+  else if (hist.stack[hist.i + 1] === h) history.forward();
+  else location.hash = h;
+}
+document.addEventListener("click", ev => {
+  if (ev.button !== 0 || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.altKey) return;
+  const a = ev.target.closest && ev.target.closest('a[href^="#"]');
+  if (!a) return;
+  ev.preventDefault();
+  go(decodeURIComponent(a.getAttribute("href").slice(1)));
+});
+$("#back").onclick = () => history.back();
+$("#fwd").onclick = () => history.forward();
+$("#trail").onclick = ev => { const b = ev.target.closest("[data-k]"); if (b) { const d = +b.dataset.k - hist.i; if (d) history.go(d); } };
+
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1)) || "home";
+  track(h);
+  const prevSel = state.sel;
+  hover(null);
+  if (h === "home") { state.view = "home"; state.sel = null; renderHome(); }
+  else if (h.startsWith("doc:")) { state.view = "doc:" + h.slice(4); state.sel = null; renderDoc(h.slice(4)); }
+  else { state.view = "el"; state.sel = h; renderElement(h); }
+  $("#reader").scrollTop = 0;
+  renderList();
+  renderGraph(state.mode !== "all" && prevSel !== state.sel);
+  document.querySelector("#list .sel")?.scrollIntoView({ block: "nearest" });
+}
+window.addEventListener("hashchange", route);
+window.addEventListener("resize", () => fit());
+document.addEventListener("keydown", ev => {
+  if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
+  if (ev.target.matches?.("input")) { if (ev.key === "Escape") { ev.target.value = ""; state.q = ""; renderList(); ev.target.blur(); } return; }
+  const k = ev.key.toLowerCase();
+  if (ev.key === "/") { ev.preventDefault(); $("#search").focus(); }
+  else if (ev.key === "Escape") go("home");
+  else if (ev.key === "[") stepSeq(-1);
+  else if (ev.key === "]") stepSeq(1);
+  else if (ev.key === "Backspace") history.back();
+  else if (k === "f") fit();
+  else if (k === "r") $("#read").click();
+  else if (k === "p") $("#fold").click();
+  else if (k === "v") $("#voir").click();
+  else if (k === "s" && state.view === "el") toggleStar(state.sel);
+  else if ("1234".includes(ev.key)) document.querySelectorAll("#toolbar [data-mode]")[+ev.key - 1].click();
+});
+
+rebuildVisual(); syncToggles(); renderChrome(); renderFilters();
+route();
+requestAnimationFrame(() => { const s = state.sel && vid(state.sel); if (state.mode === "all" && s && layout.pos.has(s)) { fit(); focusOn(s); } else fit(); });
+</script>
+</body>
+</html>

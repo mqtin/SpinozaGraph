@@ -1,0 +1,28 @@
+{
+    "name": "French (Appuhn)",
+    "language": "fr",
+    "translator": "Charles Appuhn",
+    "year": "1929",
+    "types": {
+        "ethica": "Éthique",
+        "pars": "Partie",
+        "definitiones": "Définitions",
+        "definitio": "Définition",
+        "explicatio": "Explication",
+        "axiomata": "Axiomes",
+        "axioma": "Axiome",
+        "propositio": "Proposition",
+        "demonstratio": "Démonstration",
+        "corollarium": "Corollaire",
+        "aliter": "Autre Démonstration",
+        "scholium": "Scolie",
+        "appendix": "Appendice",
+        "praefatio": "Préface",
+        "lemma": "Lemme",
+        "postulatum": "Postulat",
+        "postulata": "Postulats",
+        "affectuum_definitiones": "Définitions des Affections",
+        "affectuum_generalis_definitio": "Définition Générale des Affections",
+        "caput": "Chapitre"
+    }
+}

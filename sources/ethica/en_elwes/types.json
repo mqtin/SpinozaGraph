@@ -1,0 +1,27 @@
+{
+    "name": "English (Elwes)",
+    "language": "en",
+    "translator": "Elwes",
+    "types": {
+        "ethica": "Ethics",
+        "pars": "Part",
+        "definitiones": "Definitions",
+        "definitio": "Definition",
+        "explicatio": "Explanation",
+        "axiomata": "Axioms",
+        "axioma": "Axiom",
+        "propositio": "Proposition",
+        "demonstratio": "Proof",
+        "corollarium": "Corollary",
+        "aliter": "Another Proof",
+        "scholium": "Note",
+        "appendix": "Appendix",
+        "praefatio": "Preface",
+        "lemma": "Lemma",
+        "postulatum": "Postulate",
+        "postulata": "Postulates",
+        "affectuum_definitiones": "Definitions of the Emotions",
+        "affectuum_generalis_definitio": "General Definition of the Emotions",
+        "caput": "Paragraph"
+    }
+}

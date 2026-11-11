@@ -1,0 +1,27 @@
+{
+    "name": "German (Auerbach)",
+    "language": "de",
+    "translator": "Auerbach",
+    "types":{
+        "ethica": "Ethik",
+        "pars": "Teil",
+        "definitiones": "Definitionen",
+        "definitio": "Definition",
+        "explicatio": "Erläuterung",
+        "axiomata": "Axiome",
+        "axioma": "Axiom",
+        "propositio": "Lehrsatz",
+        "demonstratio": "Beweis",
+        "corollarium": "Folgesatz",
+        "aliter": "Anderer Beweis",
+        "scholium": "Anmerkung",
+        "appendix": "Anhang",
+        "praefatio": "Vorrede",
+        "lemma": "Lehnsatz",
+        "postulatum": "Postulat",
+        "postulata": "Postulate",
+        "affectuum_definitiones": "Definitionen der Affekte",
+        "affectuum_generalis_definitio": "Allgemeine Definition der Affekte",
+        "caput": "§"
+    }
+}
